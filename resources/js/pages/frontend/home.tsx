@@ -31,9 +31,7 @@ export default function Home({ projectData }: Props) {
       */}
       <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen">
 
-        {/* TOP/LEFT: The Map Section 
-            Removed 'sticky' and 'h-[50vh]' to allow normal scrolling on mobile.
-        */}
+        {/* TOP/LEFT: The Map Section */}
         <div className="w-full lg:w-[60%] flex items-center justify-center bg-zinc-50 overflow-hidden py-8 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center">
             {/* We use a wrapper with a defined aspect ratio on mobile to keep the SVG large */}
