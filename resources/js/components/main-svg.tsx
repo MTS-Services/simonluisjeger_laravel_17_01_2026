@@ -1,3 +1,5 @@
+import React from 'react';
+// Imports
 import ArtProjectAtMit from "./svg-paths/art-project-at-mit";
 import ArtProjectInStudioCalder from "./svg-paths/art-project-in-studio-calder";
 import ArtProjectParasit from "./svg-paths/art-project-parasit";
@@ -17,74 +19,67 @@ import WaterWave from "./svg-paths/water-wave";
 import SnowborderOutline from "./svg-paths/snowborder-outline";
 import WaterMask from "./svg-paths/water-mask";
 
-export default function MainSvg() {
+// The 11 IDs you requested
+export type ProjectID =
+  | 'simon_jeger' | 'liseagle_perching' | 'art_calder' | 'triamp'
+  | 'balloon' | 'liseagle_morphing' | 'dipper' | 'art_parasit'
+  | 'airflow' | 'tensegrity' | 'art_mit' | 'snowboarder';
+
+interface MainSvgProps {
+  onSelect: (id: ProjectID) => void;
+  activeId: ProjectID | null;
+}
+
+export default function MainSvg({ onSelect, activeId }: MainSvgProps) {
+
+  const InteractiveGroup = ({ id, children }: { id: ProjectID, children: React.ReactNode }) => (
+    <g
+      className={`map-element ${activeId === id ? 'is-active' : ''}`}
+      onClick={(e) => {
+        e.stopPropagation();
+        onSelect(id);
+      }}
+    >
+      {children}
+    </g>
+  );
+
   return (
-    <>
-        <svg
-          width="1000"
-          height="1000"
-          viewBox="0 0 5000 5000"
-          fill="none"
-          version="1.1"
-          id="svg1151"
-          inkscape:export-filename="Drones.jpg"
-          inkscape:export-xdpi="96"
-          inkscape:export-ydpi="96"
-          xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 1000 5500 3500"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid meet"
+      style={{ display: 'block', width: '100%', height: '100%' }}
+    >
+      {/* BACKGROUNDS */}
+      <BaseLayer />
+      <SnowborderOutline />
+      <WaterMask />
+      <WaterWave />
+      <Mount />
+      <TreeOne />
+      <TreeTwo />
 
-          {/* Snowborder outline */}
-          <SnowborderOutline />
+      {/* 11 INTERACTIVE ELEMENTS */}
+      <InteractiveGroup id="simon_jeger">
+        {/* Using an invisible rect as a placeholder for the top-left area if text is gone */}
+        <rect x="50" y="50" width="1000" height="400" fill="transparent" />
+      </InteractiveGroup>
 
-          {/* Water hide mask */}
-          <WaterMask />
-
-          {/* Base Layer */}
-          <BaseLayer />
-
-          {/* Art project at MIT */}
-          <ArtProjectAtMit />
-
-          {/* Drone with airflow Sensor */}
-          <DroneWithAirflowSensor />
-
-          {/* Water Wave */}
-          <WaterWave />
-
-          {/* Dipper */}
-          <Dipper />
-
-          {/* Art project parasit */}
-          <ArtProjectParasit />
-
-          {/* Art project in Studio Calder */}
-          <ArtProjectInStudioCalder />
-          
-          {/* Balloon */}
-          <Balloon />
-
-          {/* Electric Jaguar E type */}
-        <ElectricJaguarEType />
-
-          {/* Tensegrity Drone */}
-          <TensegrityDrone />
-
-        {/* Tree One  */}
-        <TreeOne />
-        {/* Tree Two  */}
-        <TreeTwo />
-          
-        {/* Mount */}
-          <Mount />
-
-        {/* Snowboarder */}
-          <Snowboarder />
-
-        {/* LisEagle perching */}
-        <LisEaglePerching />
-
-          {/* LisEagle morphing */}
-          <LisEagleMorphing />
-        </svg>
-    </>
-  )
+      <InteractiveGroup id="snowboarder"><Snowboarder /></InteractiveGroup>
+      <InteractiveGroup id="liseagle_perching"><LisEaglePerching /></InteractiveGroup>
+      <InteractiveGroup id="art_calder"><ArtProjectInStudioCalder /></InteractiveGroup>
+      <InteractiveGroup id="triamp"><ElectricJaguarEType /></InteractiveGroup>
+      <InteractiveGroup id="balloon"><Balloon /></InteractiveGroup>
+      <InteractiveGroup id="liseagle_morphing"><LisEagleMorphing /></InteractiveGroup>
+      <InteractiveGroup id="dipper"><Dipper /></InteractiveGroup>
+      <InteractiveGroup id="art_parasit"><ArtProjectParasit /></InteractiveGroup>
+      <InteractiveGroup id="airflow"><DroneWithAirflowSensor /></InteractiveGroup>
+      <InteractiveGroup id="tensegrity"><TensegrityDrone /></InteractiveGroup>
+      <InteractiveGroup id="art_mit"><ArtProjectAtMit /></InteractiveGroup>
+    </svg>
+  );
 }

@@ -812,3 +812,43 @@
         font-size: 0.8125rem;
     }
 }
+
+/* No changes needed to global scroll, just focus on SVG interaction */
+.map-element {
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-box: fill-box;
+    transform-origin: center;
+    pointer-events: visiblePainted;
+}
+
+.map-element path,
+.map-element circle {
+    stroke: #000;
+    stroke-width: 2px;
+    /* Slightly thicker base line */
+    transition: stroke 0.2s, stroke-width 0.2s;
+}
+
+/* HOVER EFFECT: Scale + Thick Black Outline */
+.map-element:hover {
+    transform: scale(1.01);
+    /* Increased scale from 1.1 to 1.2 */
+    z-index: 50;
+}
+
+.map-element:hover path {
+    stroke-width: 3px !important;
+    /* Bold black outline */
+    stroke: #000 !important;
+}
+
+/* ACTIVE/SELECTED EFFECT: Bold Red Outline */
+.map-element.is-active path,
+.map-element.is-active circle,
+.map-element.is-active rect {
+    stroke: #FF0000 !important;
+    stroke-width: 2px !important;
+    stroke: #FF0000 !important;
+    /* Even bolder red */
+}
