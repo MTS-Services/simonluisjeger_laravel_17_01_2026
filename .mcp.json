@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "php",
+            "args": [
+                "artisan",
+                "boost:mcp"
+            ]
+        }
+    },
+    "registries": {
+        "@acme": "https://acme.com/r/{name}.json"
+    }
+}

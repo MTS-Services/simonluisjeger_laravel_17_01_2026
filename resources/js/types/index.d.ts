@@ -1,0 +1,73 @@
+import { InertiaLinkProps } from '@inertiajs/react';
+import { LucideIcon } from 'lucide-react';
+
+export interface Auth {
+    user: User;
+}
+
+export interface BreadcrumbItem {
+    title: string;
+    href: string;
+}
+
+export interface NavGroup {
+    title: string;
+    items: NavItemType[];
+}
+
+export interface NavItemType {
+    title: string;
+    href: NonNullable<InertiaLinkProps['href']>;
+    icon?: LucideIcon | string | null;
+    slug?: string;
+    isActive?: boolean;
+    children?: NavItemType[];
+    permission?: string;
+    onClick?: (item: NavItemType, event?: React.MouseEvent) => void;
+    badge?: string | number;
+    disabled?: boolean;
+    external?: boolean;
+    target?: '_blank' | '_self' | '_parent' | '_top';
+    className?: string;
+    description?: string;
+    [key: string]: any;
+}
+
+// Alias for backward compatibility
+export type NavItem = NavItemType;
+
+export interface SharedData {
+    name: string;
+    auth: Auth;
+    sidebarOpen: boolean;
+    [key: string]: unknown;
+}
+
+export interface User {
+    id: number;
+    name: string;
+    email: string;
+    avatar?: string;
+    email_verified_at: string | null;
+    two_factor_enabled?: boolean;
+    permissions?: string[];
+    all_permissions?: string[];
+    created_at: string;
+    updated_at: string;
+    [key: string]: unknown;
+}
+
+export interface NavItemProps {
+    item: NavItemType;
+    isCollapsed: boolean;
+    level?: number;
+    isActive?: boolean;
+    currentRoute?: string;
+    permissions?: string[];
+    activeSlug?: string;
+}
+
+export interface DropdownPosition {
+    top: number;
+    left: number;
+}
