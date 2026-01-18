@@ -48,7 +48,7 @@ export default function MainSvg({ onSelect, activeId }: MainSvgProps) {
     <svg
       width="100%"
       height="100%"
-      viewBox="0 1000 5500 3500"
+      viewBox="250 600 4500 4500"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid meet"
