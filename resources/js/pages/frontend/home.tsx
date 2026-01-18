@@ -65,10 +65,10 @@ export default function Home({ projectData }: Props) {
 
   return (
     <main className="min-h-screen bg-white w-full">
-      <Head title="Simon Jeger" />
+      {/* <Head title="Simon Jeger" /> */}
 
-      <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen">
-        <div className="w-full flex-1 flex items-center justify-center bg-zinc-50 overflow-hidden py-8 lg:py-0 lg:h-full">
+      <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen ">
+        <div className="w-full flex-1 flex items-center justify-center overflow-hidden pt-8 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center">
             <MainSvg activeId={selectedId} onSelect={setSelectedId} />
           </div>
