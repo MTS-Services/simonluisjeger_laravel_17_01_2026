@@ -11,7 +11,7 @@ class VideoController extends Controller
 {
     public function stream(Request $request, string $filename)
     {
-        $path = 'videos/' . $filename;
+        $path = $filename;
 
         if (!Storage::disk('public')->exists($path)) {
             abort(404, 'Video not found');
