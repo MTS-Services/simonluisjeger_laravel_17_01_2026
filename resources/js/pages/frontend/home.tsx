@@ -1,11 +1,10 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import MainSvg, { ProjectID } from "@/components/main-svg";
 import { Head } from "@inertiajs/react";
 import { useAppearance } from "@/hooks/use-appearance";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Define the shape of the URL object from your Seeder
 interface ProjectUrl {
   label: string;
   url: string;
@@ -17,8 +16,9 @@ interface ProjectRecord {
   title: string;
   description: string;
   video: string;
-  urls: ProjectUrl[]; // Updated to match JSON column
-  date: string | null; // Added date column
+  video_url: string;
+  urls: ProjectUrl[];
+  date: string | null;
 }
 
 interface Props {
@@ -28,8 +28,9 @@ interface Props {
 export default function Home({ projectData }: Props) {
   const [selectedId, setSelectedId] = useState<ProjectID | null>(null);
   const { appearance, updateAppearance } = useAppearance();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoLoading, setIsVideoLoading] = useState(false);
 
-  // Force light mode as per your requirement
   useEffect(() => {
     if (appearance !== 'light') {
       updateAppearance('light');
@@ -40,39 +41,67 @@ export default function Home({ projectData }: Props) {
     return projectData.find(p => p.key === selectedId);
   }, [selectedId, projectData]);
 
+  // Reset video when project changes
+  useEffect(() => {
+    if (videoRef.current && activeProject) {
+      setIsVideoLoading(true);
+      videoRef.current.load();
+    }
+  }, [activeProject?.key]);
+
+  // Video event handlers
+  const handleVideoLoadStart = () => {
+    setIsVideoLoading(true);
+  };
+
+  const handleVideoCanPlay = () => {
+    setIsVideoLoading(false);
+  };
+
+  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    console.error('Video error:', e);
+    setIsVideoLoading(false);
+  };
+
   return (
     <main className="min-h-screen bg-white w-full">
       <Head title="Simon Jeger" />
 
       <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen">
-
-        {/* TOP/LEFT: The Map Section */}
         <div className="w-full flex-1 flex items-center justify-center bg-zinc-50 overflow-hidden py-8 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center">
             <MainSvg activeId={selectedId} onSelect={setSelectedId} />
           </div>
         </div>
 
-        {/* BOTTOM/RIGHT: Information Section */}
         <div className="w-full flex-1 flex items-start lg:items-center justify-center p-6 md:p-8 bg-white">
           {activeProject ? (
             <div className="w-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
-
-              {/* Video Area */}
-              <div className="aspect-video bg-zinc-900 border-b border-zinc-800">
-
+              <div className="aspect-video bg-zinc-900 border-b border-zinc-800 relative">
+                {isVideoLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin" />
+                      <span className="text-sm text-white/70">Loading video...</span>
+                    </div>
+                  </div>
+                )}
                 <video
-                  key={activeProject.key}
-                  src={`storage/${activeProject.video}`}
-                  autoPlay
-                  loop
-                  controls={true}
-                  
+                  ref={videoRef}
+                  key={activeProject.video_url}
                   className="w-full h-full aspect-video bg-zinc-900"
-                />
+                  controls
+                  playsInline
+                  preload="metadata"
+                  onLoadStart={handleVideoLoadStart}
+                  onCanPlay={handleVideoCanPlay}
+                  onError={handleVideoError}
+                >
+                  <source src={activeProject.video_url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
 
-              {/* Red Info Area */}
               <div className="bg-[#FF0000] p-6 lg:p-8">
                 <div className="flex justify-between items-start mb-2">
                   <h2 className="text-base lg:text-lg font-bold capitalize">
@@ -87,7 +116,6 @@ export default function Home({ projectData }: Props) {
                   {activeProject.description}
                 </p>
 
-                {/* Dynamic Links from JSON column */}
                 <div className="flex flex-wrap items-center border-t border-white/30 pt-6 gap-x-6 gap-y-2">
                   {activeProject.urls && activeProject.urls.map((link, index) => (
                     <a
@@ -101,8 +129,12 @@ export default function Home({ projectData }: Props) {
                     </a>
                   ))}
 
-                  {/* Close button - Optional*/}
-                  <Button variant="outline" size="icon" className="text-black ml-auto" onClick={() => setSelectedId(null)}>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="text-black ml-auto"
+                    onClick={() => setSelectedId(null)}
+                  >
                     <X />
                   </Button>
                 </div>

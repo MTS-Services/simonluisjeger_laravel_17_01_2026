@@ -19,7 +19,7 @@ class InformationSeeder extends Seeder
                 'key' => 'simon_jeger',
                 'title' => 'Simon Jeger',
                 'description' => "Outside of research I snowboard, travel and pet all animals I come across.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
                 'urls' => [
                     [
                         'label' => 'Google Scholar',
@@ -45,7 +45,7 @@ class InformationSeeder extends Seeder
                 'key' => 'liseagle_perching',
                 'title' => 'LisEagle perching',
                 'description' => "Replicating and explaining agile perching maneuvers in birds using an avian inspired drone.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4', // Just filename - model will convert to route
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -62,7 +62,7 @@ class InformationSeeder extends Seeder
                 'key' => 'art_calder',
                 'title' => 'Artwork with N-04008',
                 'description' => "Piece with Sarah Oppenheimer that invites communication through a tactile, luminous network.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -75,7 +75,7 @@ class InformationSeeder extends Seeder
                 'key' => 'triamp',
                 'title' => 'Triamp',
                 'description' => "Conversion of three vintage cars to fully electric vehicles.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -92,7 +92,7 @@ class InformationSeeder extends Seeder
                 'key' => 'balloon',
                 'title' => 'Autonomous Balloon',
                 'description' => "Reinforcement learning leverages wind for outdoor balloon navigation.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -109,7 +109,7 @@ class InformationSeeder extends Seeder
                 'key' => 'tensegrity',
                 'title' => 'Tensegrity Drone',
                 'description' => "Collision-resilient winged drones enabled by tensegrity structures",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -126,7 +126,7 @@ class InformationSeeder extends Seeder
                 'key' => 'liseagle_morphing',
                 'title' => 'LisEagle morphing',
                 'description' => "Adaptive morphing of wing and tail for stable, resilient, and energy-efficient flight of avian-inspired drone.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -143,7 +143,7 @@ class InformationSeeder extends Seeder
                 'key' => 'dipper',
                 'title' => 'Dipper',
                 'description' => "An aerial aquatic uncrewed vehicle, capable of flying, diving, and transitioning between the two media.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -160,7 +160,7 @@ class InformationSeeder extends Seeder
                 'key' => 'art_parasit',
                 'title' => 'Artwork Parasit',
                 'description' => "Connecting existing park benches and translating touch into sound.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -177,7 +177,7 @@ class InformationSeeder extends Seeder
                 'key' => 'airflow',
                 'title' => 'Airflow Sensor',
                 'description' => "Lightweight sensor that measures airspeed, angle of attack and angle of side slip.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -193,8 +193,8 @@ class InformationSeeder extends Seeder
             [
                 'key' => 'art_mit',
                 'title' => 'Artwork N-05001',
-                'description' => "Permanent Piece with Sarah Oppenheimer for MIT’s Metropolitan Warehouse that reacts to its surroundings",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'description' => "Permanent Piece with Sarah Oppenheimer for MIT's Metropolitan Warehouse that reacts to its surroundings",
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -211,7 +211,7 @@ class InformationSeeder extends Seeder
                 'key' => 'snowboarder',
                 'title' => 'Simon Jeger',
                 'description' => "Outside of research I snowboard, travel and pet all animals I come across.",
-                'video' => 'videos/demo.mp4', // Dummy video link
+                'video' => 'demo.mp4',
                 'urls' => [
                     [
                         'label' => 'Google Scholar',
