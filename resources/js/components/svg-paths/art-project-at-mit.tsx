@@ -14,7 +14,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4156.01,668.589)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect13"
             x="0"
             y="0" />
@@ -24,7 +24,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,3647.31,633.031)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect14"
             x="0"
             y="0" />
@@ -34,7 +34,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4257.86,680.373)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect15"
             x="0"
             y="0" />
@@ -44,7 +44,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4351.33,737.765)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect16"
             x="0"
             y="0" />
@@ -54,7 +54,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4336.9,631.227)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect17"
             x="0"
             y="0" />
@@ -64,7 +64,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4407.28,680.584)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect18"
             x="0"
             y="0" />
@@ -74,7 +74,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4320.9,631.948)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect19"
             x="0"
             y="0" />
@@ -84,7 +84,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4334.14,649.771)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect20"
             x="0"
             y="0" />
@@ -92,13 +92,13 @@ export default function ArtProjectAtMit() {
             d="m 4254.58,681.442 93.44,53.927 3.18,13.992 -93.44,-53.927 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path20" />
             <path
             d="m 4254.13,681.483 7.01,3.897 3.93,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path21" />
             <path
             d="m 4266.97,700.641 -1.28,0.869 c -0.26,0.176 -0.61,0.038 -0.69,-0.268 l -3.56,-14.941 c -0.05,-0.193 0.16,-0.347 0.33,-0.245 l 2.41,1.442 c 0.11,0.063 0.19,0.167 0.21,0.288 l 2.77,12.384 c 0.04,0.18 -0.03,0.367 -0.19,0.471 z"
@@ -109,7 +109,7 @@ export default function ArtProjectAtMit() {
             d="m 4265.55,688.111 7.01,3.897 3.92,16.044 -7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path23" />
             <path
             d="m 4278.39,707.269 -1.28,0.869 c -0.26,0.176 -0.62,0.038 -0.69,-0.268 l -3.57,-14.941 c -0.04,-0.193 0.17,-0.347 0.34,-0.245 l 2.41,1.442 c 0.11,0.063 0.18,0.167 0.21,0.288 l 2.77,12.384 c 0.04,0.18 -0.04,0.367 -0.19,0.471 z"
@@ -120,7 +120,7 @@ export default function ArtProjectAtMit() {
             d="m 4276.96,694.739 7.02,3.897 3.92,16.044 -7.02,-3.898 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path25" />
             <path
             d="m 4289.81,713.897 -1.28,0.868 c -0.26,0.177 -0.62,0.039 -0.69,-0.267 l -3.57,-14.941 c -0.05,-0.193 0.16,-0.347 0.33,-0.245 l 2.42,1.442 c 0.1,0.063 0.18,0.167 0.21,0.288 l 2.76,12.384 c 0.04,0.18 -0.03,0.367 -0.18,0.471 z"
@@ -131,7 +131,7 @@ export default function ArtProjectAtMit() {
             d="m 4288.38,701.366 7.01,3.898 3.93,16.043 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path27" />
             <path
             d="m 4301.22,720.524 -1.28,0.869 c -0.26,0.177 -0.61,0.039 -0.69,-0.268 l -3.56,-14.94 c -0.05,-0.194 0.16,-0.348 0.33,-0.246 l 2.41,1.442 c 0.11,0.064 0.19,0.168 0.21,0.288 l 2.77,12.385 c 0.04,0.18 -0.03,0.367 -0.19,0.47 z"
@@ -142,7 +142,7 @@ export default function ArtProjectAtMit() {
             d="m 4299.8,707.994 7.01,3.897 3.92,16.044 -7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path29" />
             <path
             d="m 4312.64,727.152 -1.28,0.869 c -0.26,0.177 -0.62,0.039 -0.69,-0.268 l -3.57,-14.94 c -0.04,-0.194 0.17,-0.348 0.34,-0.246 l 2.41,1.442 c 0.11,0.064 0.18,0.168 0.21,0.288 l 2.77,12.385 c 0.04,0.18 -0.04,0.366 -0.19,0.47 z"
@@ -153,7 +153,7 @@ export default function ArtProjectAtMit() {
             d="m 4311.21,714.622 7.02,3.897 3.92,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path31" />
             <path
             d="m 4324.06,733.78 -1.28,0.869 c -0.26,0.177 -0.62,0.038 -0.69,-0.268 l -3.57,-14.94 c -0.05,-0.194 0.16,-0.348 0.33,-0.246 l 2.42,1.442 c 0.1,0.063 0.18,0.167 0.21,0.288 l 2.76,12.384 c 0.04,0.181 -0.03,0.367 -0.18,0.471 z"
@@ -164,7 +164,7 @@ export default function ArtProjectAtMit() {
             d="m 4322.63,721.25 7.01,3.897 3.93,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path33" />
             <path
             d="m 4335.47,740.408 -1.28,0.869 c -0.26,0.177 -0.61,0.038 -0.69,-0.268 l -3.56,-14.941 c -0.05,-0.193 0.16,-0.347 0.33,-0.245 l 2.41,1.442 c 0.11,0.063 0.19,0.167 0.21,0.288 l 2.77,12.384 c 0.04,0.181 -0.03,0.367 -0.19,0.471 z"
@@ -175,7 +175,7 @@ export default function ArtProjectAtMit() {
             d="m 4334.05,727.878 7.01,3.897 3.92,16.044 -7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path35" />
             <path
             d="m 4346.89,747.036 -1.28,0.868 c -0.26,0.177 -0.62,0.039 -0.69,-0.267 l -3.57,-14.941 c -0.04,-0.194 0.17,-0.347 0.34,-0.245 l 2.41,1.442 c 0.11,0.063 0.18,0.167 0.21,0.288 l 2.77,12.384 c 0.04,0.18 -0.04,0.367 -0.19,0.471 z"
@@ -186,13 +186,13 @@ export default function ArtProjectAtMit() {
             d="m 4425.86,694.273 -71.01,40.98 -3.18,13.992 71.01,-40.98 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path37" />
             <path
             d="m 4426.31,694.314 -7.01,3.897 -3.93,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path38" />
             <path
             d="m 4413.47,713.472 1.28,0.869 c 0.26,0.177 0.61,0.038 0.69,-0.268 l 3.56,-14.941 c 0.05,-0.193 -0.16,-0.347 -0.33,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.181 0.03,0.367 0.19,0.471 z"
@@ -203,7 +203,7 @@ export default function ArtProjectAtMit() {
             d="m 4414.89,700.942 -7.01,3.897 -3.92,16.043 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path40" />
             <path
             d="m 4402.05,720.099 1.28,0.869 c 0.26,0.177 0.62,0.039 0.69,-0.267 l 3.57,-14.941 c 0.04,-0.194 -0.17,-0.347 -0.34,-0.245 l -2.41,1.441 c -0.11,0.064 -0.18,0.168 -0.21,0.289 l -2.77,12.384 c -0.04,0.18 0.04,0.367 0.19,0.47 z"
@@ -214,7 +214,7 @@ export default function ArtProjectAtMit() {
             d="m 4403.48,707.57 -7.02,3.897 -3.92,16.043 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path42" />
             <path
             d="m 4390.63,726.727 1.28,0.869 c 0.26,0.177 0.62,0.039 0.69,-0.267 l 3.57,-14.941 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.245 l -2.42,1.441 c -0.1,0.064 -0.18,0.168 -0.2,0.289 l -2.77,12.384 c -0.04,0.18 0.03,0.367 0.18,0.47 z"
@@ -225,7 +225,7 @@ export default function ArtProjectAtMit() {
             d="m 4392.06,714.197 -7.01,3.897 -3.93,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path44" />
             <path
             d="m 4379.22,733.355 1.28,0.869 c 0.26,0.177 0.61,0.038 0.69,-0.268 l 3.56,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.246 l -2.41,1.442 c -0.11,0.063 -0.18,0.168 -0.21,0.288 l -2.77,12.385 c -0.04,0.18 0.03,0.366 0.19,0.47 z"
@@ -236,7 +236,7 @@ export default function ArtProjectAtMit() {
             d="m 4380.64,720.825 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path46" />
             <path
             d="m 4367.8,739.983 1.28,0.869 c 0.26,0.177 0.62,0.038 0.69,-0.268 l 3.57,-14.94 c 0.04,-0.194 -0.17,-0.348 -0.34,-0.246 l -2.41,1.442 c -0.11,0.063 -0.18,0.168 -0.21,0.288 l -2.77,12.385 c -0.04,0.18 0.04,0.366 0.19,0.47 z"
@@ -247,7 +247,7 @@ export default function ArtProjectAtMit() {
             d="m 4369.23,727.453 -7.02,3.897 -3.92,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path48" />
             <path
             d="m 4356.38,746.611 1.28,0.869 c 0.26,0.176 0.62,0.038 0.69,-0.268 l 3.57,-14.941 c 0.05,-0.193 -0.16,-0.347 -0.33,-0.245 l -2.42,1.442 c -0.1,0.063 -0.18,0.167 -0.2,0.288 l -2.77,12.384 c -0.04,0.18 0.03,0.367 0.18,0.471 z"
@@ -276,7 +276,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4281.12,671.752)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect53"
             x="0"
             y="0" />
@@ -295,7 +295,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4267.06,657.266)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect55"
             x="0"
             y="0" />
@@ -303,13 +303,13 @@ export default function ArtProjectAtMit() {
             d="m 4258.01,662.605 11.34,6.551 -0.93,8.333 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path56" />
             <path
             d="m 4278.51,663.995 -9.22,5.21 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path57" />
             <rect
             width="14.7252"
@@ -317,7 +317,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4268.44,677.541)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect57"
             x="0"
             y="0" />
@@ -328,7 +328,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4330.37,621.211)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect58"
             x="0"
             y="0" />
@@ -336,13 +336,13 @@ export default function ArtProjectAtMit() {
             d="m 4321.32,626.55 11.34,6.551 -0.93,8.334 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path58" />
             <path
             d="m 4341.82,627.941 -9.22,5.209 -0.79,8.26 12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path59" />
             <rect
             width="14.7252"
@@ -350,7 +350,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4331.75,641.486)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect59"
             x="0"
             y="0" />
@@ -361,7 +361,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4287.96,669.416)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect60"
             x="0"
             y="0" />
@@ -369,13 +369,13 @@ export default function ArtProjectAtMit() {
             d="m 4278.92,674.755 11.33,6.551 -0.92,8.334 -13.9,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path60" />
             <path
             d="m 4299.41,676.146 -9.21,5.21 -0.8,8.259 12.72,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path61" />
             <rect
             width="14.7252"
@@ -383,7 +383,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4289.35,689.691)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect61"
             x="0"
             y="0" />
@@ -394,7 +394,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4351.27,633.362)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect62"
             x="0"
             y="0" />
@@ -402,13 +402,13 @@ export default function ArtProjectAtMit() {
             d="m 4342.22,638.701 11.34,6.551 -0.92,8.333 -13.9,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path62" />
             <path
             d="m 4362.72,640.091 -9.21,5.21 -0.8,8.259 12.72,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path63" />
             <rect
             width="14.7252"
@@ -416,7 +416,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4352.66,653.637)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect63"
             x="0"
             y="0" />
@@ -427,7 +427,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4414.51,670.256)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect64"
             x="0"
             y="0" />
@@ -435,13 +435,13 @@ export default function ArtProjectAtMit() {
             d="m 4423.56,675.595 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path64" />
             <path
             d="m 4403.06,676.986 9.22,5.209 0.79,8.26 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path65" />
             <rect
             width="14.7252"
@@ -449,7 +449,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4413.13,690.531)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect65"
             x="0"
             y="0" />
@@ -460,7 +460,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4308.75,681.437)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect66"
             x="0"
             y="0" />
@@ -468,13 +468,13 @@ export default function ArtProjectAtMit() {
             d="m 4299.7,686.776 11.34,6.551 -0.93,8.333 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path66" />
             <path
             d="m 4320.2,688.166 -9.22,5.21 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path67" />
             <rect
             width="14.7252"
@@ -482,7 +482,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4310.13,701.711)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect67"
             x="0"
             y="0" />
@@ -493,7 +493,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4372.06,645.382)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect68"
             x="0"
             y="0" />
@@ -501,13 +501,13 @@ export default function ArtProjectAtMit() {
             d="m 4363.01,650.721 11.34,6.551 -0.93,8.333 -13.89,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path68" />
             <path
             d="m 4383.51,652.112 -9.22,5.209 -0.79,8.26 12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path69" />
             <rect
             width="14.7252"
@@ -515,7 +515,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4373.44,665.657)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect69"
             x="0"
             y="0" />
@@ -526,7 +526,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4393.73,682.276)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect70"
             x="0"
             y="0" />
@@ -534,13 +534,13 @@ export default function ArtProjectAtMit() {
             d="m 4402.78,687.616 -11.34,6.55 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path70" />
             <path
             d="m 4382.28,689.006 9.22,5.21 0.79,8.259 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path71" />
             <rect
             width="14.7252"
@@ -548,7 +548,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4392.35,702.551)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect71"
             x="0"
             y="0" />
@@ -559,7 +559,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4311.07,631.64)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect72"
             x="0"
             y="0" />
@@ -567,13 +567,13 @@ export default function ArtProjectAtMit() {
             d="m 4320.12,636.979 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path72" />
             <path
             d="m 4299.62,638.37 9.22,5.209 0.79,8.26 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path73" />
             <rect
             width="14.7252"
@@ -581,7 +581,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4309.69,651.915)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect73"
             x="0"
             y="0" />
@@ -592,7 +592,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4330.03,693.501)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect74"
             x="0"
             y="0" />
@@ -600,13 +600,13 @@ export default function ArtProjectAtMit() {
             d="m 4320.98,698.841 11.34,6.551 -0.93,8.333 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path74" />
             <path
             d="m 4341.48,700.231 -9.22,5.21 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path75" />
             <rect
             width="14.7252"
@@ -614,7 +614,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4331.41,713.776)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect75"
             x="0"
             y="0" />
@@ -625,7 +625,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4393.33,657.447)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect76"
             x="0"
             y="0" />
@@ -633,13 +633,13 @@ export default function ArtProjectAtMit() {
             d="m 4384.29,662.786 11.34,6.551 -0.93,8.333 -13.89,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path76" />
             <path
             d="m 4404.79,664.176 -9.22,5.21 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path77" />
             <rect
             width="14.7252"
@@ -647,7 +647,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4394.72,677.722)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect77"
             x="0"
             y="0" />
@@ -658,7 +658,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4372.45,694.341)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect78"
             x="0"
             y="0" />
@@ -666,13 +666,13 @@ export default function ArtProjectAtMit() {
             d="m 4381.5,699.68 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path78" />
             <path
             d="m 4361,701.071 9.22,5.21 0.79,8.259 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path79" />
             <rect
             width="14.7252"
@@ -680,7 +680,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4371.07,714.616)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect79"
             x="0"
             y="0" />
@@ -691,7 +691,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4289.79,643.705)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect80"
             x="0"
             y="0" />
@@ -699,13 +699,13 @@ export default function ArtProjectAtMit() {
             d="m 4298.84,649.044 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path80" />
             <path
             d="m 4278.34,650.435 9.22,5.209 0.79,8.26 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path81" />
             <rect
             width="14.7252"
@@ -713,7 +713,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4288.41,663.98)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect81"
             x="0"
             y="0" />
@@ -724,7 +724,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4350.52,705.909)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect82"
             x="0"
             y="0" />
@@ -732,13 +732,13 @@ export default function ArtProjectAtMit() {
             d="m 4341.47,711.248 11.34,6.551 -0.93,8.334 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path82" />
             <path
             d="m 4361.97,712.639 -9.22,5.21 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path83" />
             <rect
             width="14.7252"
@@ -746,7 +746,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4351.9,726.184)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect83"
             x="0"
             y="0" />
@@ -764,7 +764,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,3906.16,786.127)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect85"
             x="0"
             y="0" />
@@ -774,7 +774,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,3271.73,425.642)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect86"
             x="0"
             y="0" />
@@ -784,7 +784,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,3321.75,473.953)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect87"
             x="0"
             y="0" />
@@ -802,7 +802,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,3915.13,504.618)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect88"
             x="0"
             y="0" />
@@ -812,7 +812,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3389.07,433.31)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect89"
             x="0"
             y="0" />
@@ -820,193 +820,193 @@ export default function ArtProjectAtMit() {
             d="m 3405.24,443.762 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path89" />
             <path
             d="m 3441.87,464.911 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path90" />
             <path
             d="m 3478.5,486.06 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path91" />
             <path
             d="m 3515.13,507.209 36.64,21.149 v 34.987 l -36.64,-21.15 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path92" />
             <path
             d="m 3405.24,478.748 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path93" />
             <path
             d="m 3441.87,499.897 36.63,21.149 v 34.987 l -36.63,-21.15 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path94" />
             <path
             d="m 3478.5,521.046 36.63,21.149 v 34.987 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path95" />
             <path
             d="m 3515.13,542.195 36.64,21.15 v 34.986 l -36.64,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path96" />
             <path
             d="m 3405.24,513.734 36.63,21.149 v 34.987 l -36.63,-21.15 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path97" />
             <path
             d="m 3441.87,534.883 36.63,21.149 v 34.987 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path98" />
             <path
             d="m 3478.5,556.032 36.63,21.15 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path99" />
             <path
             d="m 3515.13,577.182 36.64,21.149 v 34.986 l -36.64,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path100" />
             <path
             d="m 3405.24,548.72 36.63,21.15 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path101" />
             <path
             d="m 3441.87,569.87 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path102" />
             <path
             d="m 3478.5,591.019 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path103" />
             <path
             d="m 3515.13,612.168 36.64,21.149 v 34.986 l -36.64,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path104" />
             <path
             d="m 3405.24,583.707 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path105" />
             <path
             d="m 3441.87,604.856 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path106" />
             <path
             d="m 3478.5,626.005 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path107" />
             <path
             d="m 3515.13,647.154 36.64,21.149 v 34.987 l -36.64,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path108" />
             <path
             d="m 3405.24,618.693 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path109" />
             <path
             d="m 3441.87,639.842 36.63,21.149 v 34.987 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path110" />
             <path
             d="m 3478.5,660.991 36.63,21.15 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path111" />
             <path
             d="m 3515.13,682.141 36.64,21.149 v 34.986 l -36.64,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path112" />
             <path
             d="m 3405.24,653.679 36.63,21.149 v 34.987 l -36.63,-21.15 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path113" />
             <path
             d="m 3441.87,674.828 36.63,21.15 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path114" />
             <path
             d="m 3478.5,695.978 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path115" />
             <path
             d="m 3515.13,717.127 36.64,21.149 v 34.986 l -36.64,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path116" />
             <path
             d="m 3405.24,688.666 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path117" />
             <path
             d="m 3441.87,709.815 36.63,21.149 v 34.986 l -36.63,-21.149 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path118" />
             <path
             d="m 3478.5,730.964 36.63,21.149 v 34.986 L 3478.5,765.95 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path119" />
             <path
             d="m 3515.13,752.113 36.64,21.149 v 34.987 l -36.64,-21.15 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path120" />
             <path
             d="m 3544.74,296.691 c 0.19,-0.11 0.5,-0.11 0.69,0 l 8.42,4.857 c 0.04,0.012 0.07,0.027 0.11,0.047 l 161.54,93.265 c 0.07,0.042 0.12,0.094 0.13,0.149 l 55.62,32.112 c 0.19,0.11 0.19,0.289 0,0.399 l -262.01,151.272 c -0.19,0.11 -0.5,0.111 -0.69,10e-4 l -66.8,-38.564 c -0.19,-0.11 -0.19,-0.29 0,-0.4 l 64.43,-37.198 -116.93,-67.514 -67.15,38.771 c -0.19,0.11 -0.51,0.11 -0.7,0 l -41.44,-23.926 c -0.19,-0.111 -0.19,-0.29 0,-0.401 z"
@@ -1022,7 +1022,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,3389.52,642.238)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect122"
             x="0"
             y="0" />
@@ -1032,7 +1032,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4048.3,544.072)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect123"
             x="0"
             y="0" />
@@ -1042,7 +1042,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,3789.36,390.92)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect124"
             x="0"
             y="0" />
@@ -1052,7 +1052,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,3413.7,182.929)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect125"
             x="0"
             y="0" />
@@ -1062,7 +1062,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4303.48,765.756)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect126"
             x="0"
             y="0" />
@@ -1072,7 +1072,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4143.02,873.331)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect127"
             x="0"
             y="0" />
@@ -1080,13 +1080,13 @@ export default function ArtProjectAtMit() {
             d="m 4316.59,782.233 -172.84,99.745 -3.18,13.992 172.84,-99.745 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path127" />
             <path
             d="m 4317.04,782.274 -7.01,3.897 -3.93,16.043 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path128" />
             <path
             d="m 4304.2,801.432 1.28,0.868 c 0.26,0.177 0.61,0.039 0.69,-0.267 l 3.57,-14.941 c 0.04,-0.194 -0.17,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.18 0.03,0.367 0.19,0.471 z"
@@ -1097,7 +1097,7 @@ export default function ArtProjectAtMit() {
             d="m 4305.62,788.901 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path130" />
             <path
             d="m 4292.78,808.059 1.28,0.869 c 0.26,0.177 0.62,0.039 0.69,-0.268 l 3.57,-14.94 c 0.04,-0.194 -0.16,-0.348 -0.34,-0.246 l -2.41,1.442 c -0.11,0.064 -0.18,0.168 -0.21,0.288 l -2.77,12.385 c -0.04,0.18 0.04,0.366 0.19,0.47 z"
@@ -1108,7 +1108,7 @@ export default function ArtProjectAtMit() {
             d="m 4294.21,795.529 -7.02,3.897 -3.92,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path132" />
             <path
             d="m 4281.36,814.687 1.28,0.869 c 0.26,0.177 0.62,0.038 0.69,-0.268 l 3.57,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.246 l -2.42,1.442 c -0.1,0.064 -0.18,0.168 -0.2,0.288 l -2.77,12.385 c -0.04,0.18 0.03,0.366 0.18,0.47 z"
@@ -1119,7 +1119,7 @@ export default function ArtProjectAtMit() {
             d="m 4282.79,802.157 -7.01,3.897 -3.93,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path134" />
             <path
             d="m 4269.95,821.315 1.28,0.869 c 0.26,0.177 0.61,0.038 0.69,-0.268 l 3.57,-14.941 c 0.04,-0.193 -0.17,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.181 0.03,0.367 0.19,0.471 z"
@@ -1130,7 +1130,7 @@ export default function ArtProjectAtMit() {
             d="m 4271.37,808.785 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path136" />
             <path
             d="m 4258.53,827.943 1.28,0.869 c 0.26,0.176 0.62,0.038 0.69,-0.268 l 3.57,-14.941 c 0.04,-0.193 -0.16,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.18 0.04,0.367 0.19,0.471 z"
@@ -1141,7 +1141,7 @@ export default function ArtProjectAtMit() {
             d="m 4259.96,815.413 -7.02,3.897 -3.92,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path138" />
             <path
             d="m 4247.11,834.57 1.28,0.869 c 0.26,0.177 0.62,0.039 0.69,-0.267 l 3.57,-14.941 c 0.05,-0.194 -0.16,-0.347 -0.33,-0.245 l -2.42,1.441 c -0.1,0.064 -0.18,0.168 -0.2,0.289 l -2.77,12.384 c -0.04,0.18 0.03,0.367 0.18,0.47 z"
@@ -1152,7 +1152,7 @@ export default function ArtProjectAtMit() {
             d="m 4248.38,822.098 -7.01,3.897 -3.93,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path140" />
             <path
             d="m 4235.54,841.256 1.27,0.869 c 0.27,0.176 0.62,0.038 0.7,-0.268 l 3.56,-14.941 c 0.05,-0.193 -0.16,-0.347 -0.33,-0.245 l -2.41,1.442 c -0.11,0.063 -0.19,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.18 0.03,0.367 0.19,0.471 z"
@@ -1163,7 +1163,7 @@ export default function ArtProjectAtMit() {
             d="m 4236.8,828.783 -7.01,3.897 -3.93,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path142" />
             <path
             d="m 4223.96,847.941 1.28,0.869 c 0.26,0.177 0.61,0.038 0.69,-0.268 l 3.57,-14.941 c 0.04,-0.193 -0.17,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.181 0.03,0.367 0.19,0.471 z"
@@ -1174,7 +1174,7 @@ export default function ArtProjectAtMit() {
             d="m 4225.22,835.468 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path144" />
             <path
             d="m 4212.38,854.626 1.28,0.869 c 0.26,0.177 0.62,0.038 0.69,-0.268 l 3.57,-14.941 c 0.04,-0.193 -0.17,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.181 0.04,0.367 0.19,0.471 z"
@@ -1185,7 +1185,7 @@ export default function ArtProjectAtMit() {
             d="m 4213.64,842.153 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path146" />
             <path
             d="m 4200.8,861.311 1.28,0.869 c 0.26,0.176 0.62,0.038 0.69,-0.268 l 3.57,-14.941 c 0.05,-0.193 -0.16,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.18 0.04,0.367 0.19,0.471 z"
@@ -1196,7 +1196,7 @@ export default function ArtProjectAtMit() {
             d="m 4202.07,848.838 -7.02,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path148" />
             <path
             d="m 4189.22,867.996 1.28,0.869 c 0.26,0.177 0.62,0.038 0.69,-0.268 l 3.57,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.246 l -2.42,1.442 c -0.1,0.063 -0.18,0.168 -0.21,0.288 l -2.76,12.384 c -0.04,0.181 0.03,0.367 0.18,0.471 z"
@@ -1207,7 +1207,7 @@ export default function ArtProjectAtMit() {
             d="m 4190.49,855.523 -7.02,3.897 -3.92,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path150" />
             <path
             d="m 4177.64,874.681 1.28,0.869 c 0.26,0.177 0.62,0.038 0.69,-0.268 l 3.57,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.246 l -2.42,1.442 c -0.1,0.063 -0.18,0.168 -0.2,0.288 l -2.77,12.385 c -0.04,0.18 0.03,0.366 0.18,0.47 z"
@@ -1218,7 +1218,7 @@ export default function ArtProjectAtMit() {
             d="m 4178.91,862.208 -7.01,3.897 -3.93,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path152" />
             <path
             d="m 4166.07,881.366 1.28,0.869 c 0.26,0.177 0.61,0.038 0.69,-0.268 l 3.56,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.246 l -2.41,1.442 c -0.11,0.063 -0.19,0.168 -0.21,0.288 l -2.77,12.385 c -0.04,0.18 0.03,0.366 0.19,0.47 z"
@@ -1229,7 +1229,7 @@ export default function ArtProjectAtMit() {
             d="m 4167.33,868.894 -7.01,3.897 -3.93,16.043 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path154" />
             <path
             d="m 4154.49,888.051 1.28,0.869 c 0.26,0.177 0.61,0.039 0.69,-0.268 l 3.57,-14.94 c 0.04,-0.194 -0.17,-0.348 -0.34,-0.246 l -2.41,1.442 c -0.11,0.064 -0.18,0.168 -0.21,0.288 l -2.77,12.385 c -0.04,0.18 0.03,0.366 0.19,0.47 z"
@@ -1240,7 +1240,7 @@ export default function ArtProjectAtMit() {
             d="m 4155.75,875.579 -7.01,3.897 -3.92,16.043 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path156" />
             <path
             d="m 4142.91,894.736 1.28,0.869 c 0.26,0.177 0.62,0.039 0.69,-0.268 l 3.57,-14.94 c 0.04,-0.194 -0.17,-0.348 -0.34,-0.246 l -2.41,1.442 c -0.11,0.064 -0.18,0.168 -0.21,0.288 l -2.77,12.385 c -0.04,0.18 0.04,0.366 0.19,0.47 z"
@@ -1254,7 +1254,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4305.25,758.216)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect157"
             x="0"
             y="0" />
@@ -1262,13 +1262,13 @@ export default function ArtProjectAtMit() {
             d="m 4314.29,763.555 -11.34,6.551 0.93,8.333 13.89,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path158" />
             <path
             d="m 4293.79,764.946 9.22,5.209 0.79,8.26 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path159" />
             <rect
             width="14.7252"
@@ -1276,7 +1276,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4303.86,778.491)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect159"
             x="0"
             y="0" />
@@ -1287,7 +1287,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4284.46,770.236)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect160"
             x="0"
             y="0" />
@@ -1295,13 +1295,13 @@ export default function ArtProjectAtMit() {
             d="m 4293.51,775.576 -11.34,6.55 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path160" />
             <path
             d="m 4273.01,776.966 9.21,5.21 0.8,8.259 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path161" />
             <rect
             width="14.7252"
@@ -1309,7 +1309,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4283.08,790.511)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect161"
             x="0"
             y="0" />
@@ -1320,7 +1320,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4263.18,782.301)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect162"
             x="0"
             y="0" />
@@ -1328,13 +1328,13 @@ export default function ArtProjectAtMit() {
             d="m 4272.23,787.64 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path162" />
             <path
             d="m 4251.73,789.031 9.22,5.209 0.79,8.26 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path163" />
             <rect
             width="14.7252"
@@ -1342,7 +1342,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4261.8,802.576)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect163"
             x="0"
             y="0" />
@@ -1353,7 +1353,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4242.89,794.206)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect164"
             x="0"
             y="0" />
@@ -1361,13 +1361,13 @@ export default function ArtProjectAtMit() {
             d="m 4251.93,799.545 -11.33,6.551 0.92,8.333 13.9,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path164" />
             <path
             d="m 4231.44,800.935 9.21,5.21 0.8,8.259 -12.72,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path165" />
             <rect
             width="14.7252"
@@ -1375,7 +1375,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4241.5,814.48)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect165"
             x="0"
             y="0" />
@@ -1386,7 +1386,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4222.59,806.11)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect166"
             x="0"
             y="0" />
@@ -1394,13 +1394,13 @@ export default function ArtProjectAtMit() {
             d="m 4231.64,811.449 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path166" />
             <path
             d="m 4211.14,812.84 9.22,5.209 0.79,8.26 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path167" />
             <rect
             width="14.7252"
@@ -1408,7 +1408,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4221.21,826.385)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect167"
             x="0"
             y="0" />
@@ -1419,7 +1419,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4202.3,817.867)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect168"
             x="0"
             y="0" />
@@ -1427,13 +1427,13 @@ export default function ArtProjectAtMit() {
             d="m 4211.34,823.206 -11.33,6.551 0.92,8.334 13.9,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path168" />
             <path
             d="m 4190.85,824.597 9.21,5.209 0.8,8.26 -12.72,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path169" />
             <rect
             width="14.7252"
@@ -1441,7 +1441,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4200.91,838.142)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect169"
             x="0"
             y="0" />
@@ -1452,7 +1452,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4182,829.771)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect170"
             x="0"
             y="0" />
@@ -1460,13 +1460,13 @@ export default function ArtProjectAtMit() {
             d="m 4191.05,835.111 -11.34,6.551 0.93,8.333 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path170" />
             <path
             d="m 4170.55,836.501 9.22,5.21 0.79,8.259 -12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path171" />
             <rect
             width="14.7252"
@@ -1474,7 +1474,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4180.62,850.046)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect171"
             x="0"
             y="0" />
@@ -1485,7 +1485,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4161.71,841.489)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect172"
             x="0"
             y="0" />
@@ -1493,13 +1493,13 @@ export default function ArtProjectAtMit() {
             d="m 4170.76,846.828 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path172" />
             <path
             d="m 4150.26,848.219 9.21,5.21 0.8,8.259 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path173" />
             <rect
             width="14.7252"
@@ -1507,7 +1507,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4160.33,861.764)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect173"
             x="0"
             y="0" />
@@ -1518,7 +1518,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4141.42,853.394)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect174"
             x="0"
             y="0" />
@@ -1526,13 +1526,13 @@ export default function ArtProjectAtMit() {
             d="m 4150.46,858.733 -11.34,6.551 0.93,8.333 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path174" />
             <path
             d="m 4129.96,860.123 9.22,5.21 0.79,8.259 -12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path175" />
             <rect
             width="14.7252"
@@ -1540,7 +1540,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4140.03,873.668)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect175"
             x="0"
             y="0" />
@@ -1558,7 +1558,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3913.46,808.61)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect177"
             x="0"
             y="0" />
@@ -1568,7 +1568,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3653.17,655.946)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect178"
             x="0"
             y="0" />
@@ -1586,7 +1586,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3977.19,845.403)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect179"
             x="0"
             y="0" />
@@ -1596,7 +1596,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3997.95,937.679)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect180"
             x="0"
             y="0" />
@@ -1606,7 +1606,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4016.55,948.635)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect181"
             x="0"
             y="0" />
@@ -1616,7 +1616,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4035.16,959.591)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect182"
             x="0"
             y="0" />
@@ -1626,7 +1626,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3997.95,983.455)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect183"
             x="0"
             y="0" />
@@ -1636,7 +1636,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4016.55,994.411)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect184"
             x="0"
             y="0" />
@@ -1646,7 +1646,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4035.16,1005.37)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect185"
             x="0"
             y="0" />
@@ -1656,7 +1656,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3997.95,1029.23)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect186"
             x="0"
             y="0" />
@@ -1666,7 +1666,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4016.55,1040.19)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect187"
             x="0"
             y="0" />
@@ -1676,7 +1676,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4035.16,1051.14)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect188"
             x="0"
             y="0" />
@@ -1686,7 +1686,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3997.95,1083.91)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect189"
             x="0"
             y="0" />
@@ -1696,7 +1696,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4016.55,1094.86)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect190"
             x="0"
             y="0" />
@@ -1706,7 +1706,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,4035.16,1105.82)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect191"
             x="0"
             y="0" />
@@ -1716,7 +1716,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4072.6,901.236)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect192"
             x="0"
             y="0" />
@@ -1726,7 +1726,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4093.19,964.743)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect193"
             x="0"
             y="0" />
@@ -1736,7 +1736,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4106.77,957.077)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect194"
             x="0"
             y="0" />
@@ -1746,7 +1746,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4120.36,949.412)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect195"
             x="0"
             y="0" />
@@ -1756,7 +1756,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4371.83,761.701)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect196"
             x="0"
             y="0" />
@@ -1766,7 +1766,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4399,746.37)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect197"
             x="0"
             y="0" />
@@ -1776,7 +1776,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4371.83,808.864)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect198"
             x="0"
             y="0" />
@@ -1786,7 +1786,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4399,793.533)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect199"
             x="0"
             y="0" />
@@ -1796,7 +1796,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4371.83,856.028)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect200"
             x="0"
             y="0" />
@@ -1806,7 +1806,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4399,840.697)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect201"
             x="0"
             y="0" />
@@ -1816,7 +1816,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4371.83,903.191)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect202"
             x="0"
             y="0" />
@@ -1826,7 +1826,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4399,887.86)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect203"
             x="0"
             y="0" />
@@ -1836,7 +1836,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4159.89,926.939)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect204"
             x="0"
             y="0" />
@@ -1846,7 +1846,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4171.61,920.136)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect205"
             x="0"
             y="0" />
@@ -1856,7 +1856,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4159.89,969.621)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect206"
             x="0"
             y="0" />
@@ -1866,7 +1866,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4171.61,962.818)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect207"
             x="0"
             y="0" />
@@ -1876,7 +1876,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4159.89,1012.3)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect208"
             x="0"
             y="0" />
@@ -1886,7 +1886,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4171.61,1005.5)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect209"
             x="0"
             y="0" />
@@ -1896,7 +1896,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4196.75,905.874)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect210"
             x="0"
             y="0" />
@@ -1906,7 +1906,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4208.47,899.071)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect211"
             x="0"
             y="0" />
@@ -1916,7 +1916,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4196.75,948.556)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect212"
             x="0"
             y="0" />
@@ -1926,7 +1926,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4208.47,941.753)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect213"
             x="0"
             y="0" />
@@ -1936,7 +1936,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4196.75,991.238)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect214"
             x="0"
             y="0" />
@@ -1946,7 +1946,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4208.47,984.435)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect215"
             x="0"
             y="0" />
@@ -1956,7 +1956,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4233.6,884.809)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect216"
             x="0"
             y="0" />
@@ -1966,7 +1966,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4245.33,878.006)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect217"
             x="0"
             y="0" />
@@ -1976,7 +1976,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4233.6,927.491)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect218"
             x="0"
             y="0" />
@@ -1986,7 +1986,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4245.33,920.688)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect219"
             x="0"
             y="0" />
@@ -1996,7 +1996,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4233.6,970.173)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect220"
             x="0"
             y="0" />
@@ -2006,7 +2006,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4245.33,963.37)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect221"
             x="0"
             y="0" />
@@ -2016,7 +2016,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4270.46,863.744)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect222"
             x="0"
             y="0" />
@@ -2026,7 +2026,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4282.19,856.941)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect223"
             x="0"
             y="0" />
@@ -2036,7 +2036,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4270.46,906.426)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect224"
             x="0"
             y="0" />
@@ -2046,7 +2046,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4282.19,899.623)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect225"
             x="0"
             y="0" />
@@ -2056,7 +2056,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4270.46,949.108)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect226"
             x="0"
             y="0" />
@@ -2066,7 +2066,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4282.19,942.305)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect227"
             x="0"
             y="0" />
@@ -2076,7 +2076,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4093.19,1006.86)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect228"
             x="0"
             y="0" />
@@ -2086,7 +2086,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4106.77,999.192)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect229"
             x="0"
             y="0" />
@@ -2096,7 +2096,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4120.36,991.526)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect230"
             x="0"
             y="0" />
@@ -2106,7 +2106,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4093.19,1048.97)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect231"
             x="0"
             y="0" />
@@ -2116,7 +2116,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4106.77,1041.31)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect232"
             x="0"
             y="0" />
@@ -2126,7 +2126,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4120.36,1033.64)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect233"
             x="0"
             y="0" />
@@ -2136,7 +2136,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4057.89,800.574)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect234"
             x="0"
             y="0" />
@@ -2146,7 +2146,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4128.27,849.931)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect235"
             x="0"
             y="0" />
@@ -2154,13 +2154,13 @@ export default function ArtProjectAtMit() {
             d="m 3975.57,850.79 93.44,53.927 3.18,13.991 -93.44,-53.926 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path235" />
             <path
             d="m 3975.12,850.83 7.01,3.897 3.93,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path236" />
             <path
             d="m 3987.96,869.988 -1.27,0.869 c -0.27,0.177 -0.62,0.038 -0.7,-0.268 l -3.56,-14.94 c -0.05,-0.194 0.16,-0.348 0.33,-0.246 l 2.41,1.442 c 0.11,0.063 0.19,0.167 0.21,0.288 l 2.77,12.384 c 0.04,0.181 -0.03,0.367 -0.19,0.471 z"
@@ -2171,7 +2171,7 @@ export default function ArtProjectAtMit() {
             d="m 3986.54,857.458 7.01,3.897 3.92,16.044 -7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path238" />
             <path
             d="m 3999.38,876.616 -1.28,0.868 c -0.26,0.177 -0.62,0.039 -0.69,-0.267 l -3.57,-14.941 c -0.04,-0.193 0.17,-0.347 0.34,-0.245 l 2.41,1.442 c 0.11,0.063 0.18,0.167 0.21,0.288 l 2.77,12.384 c 0.04,0.18 -0.04,0.367 -0.19,0.471 z"
@@ -2182,7 +2182,7 @@ export default function ArtProjectAtMit() {
             d="m 3997.95,864.086 7.02,3.897 3.92,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path240" />
             <path
             d="m 4010.8,883.244 -1.28,0.868 c -0.26,0.177 -0.62,0.039 -0.69,-0.267 l -3.57,-14.941 c -0.05,-0.194 0.16,-0.347 0.33,-0.245 l 2.42,1.442 c 0.1,0.063 0.18,0.167 0.21,0.288 l 2.76,12.384 c 0.04,0.18 -0.03,0.367 -0.18,0.471 z"
@@ -2193,7 +2193,7 @@ export default function ArtProjectAtMit() {
             d="m 4009.37,870.714 7.01,3.897 3.93,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path242" />
             <path
             d="m 4022.21,889.871 -1.27,0.869 c -0.27,0.177 -0.62,0.039 -0.7,-0.267 l -3.56,-14.941 c -0.05,-0.194 0.16,-0.347 0.33,-0.245 l 2.41,1.441 c 0.11,0.064 0.19,0.168 0.21,0.289 l 2.77,12.384 c 0.04,0.18 -0.03,0.367 -0.19,0.47 z"
@@ -2204,7 +2204,7 @@ export default function ArtProjectAtMit() {
             d="m 4020.79,877.342 7.01,3.897 3.92,16.043 -7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path244" />
             <path
             d="m 4033.63,896.499 -1.28,0.869 c -0.26,0.177 -0.62,0.039 -0.69,-0.267 l -3.57,-14.941 c -0.04,-0.194 0.17,-0.348 0.34,-0.245 l 2.41,1.441 c 0.11,0.064 0.18,0.168 0.21,0.289 l 2.77,12.384 c 0.04,0.18 -0.04,0.367 -0.19,0.47 z"
@@ -2215,7 +2215,7 @@ export default function ArtProjectAtMit() {
             d="m 4032.2,883.969 7.02,3.897 3.92,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path246" />
             <path
             d="m 4045.05,903.127 -1.28,0.869 c -0.26,0.177 -0.62,0.038 -0.69,-0.268 l -3.57,-14.94 c -0.05,-0.194 0.16,-0.348 0.33,-0.246 l 2.42,1.442 c 0.1,0.063 0.18,0.168 0.21,0.288 l 2.76,12.385 c 0.04,0.18 -0.03,0.366 -0.18,0.47 z"
@@ -2226,7 +2226,7 @@ export default function ArtProjectAtMit() {
             d="m 4043.62,890.597 7.01,3.897 3.93,16.044 -7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path248" />
             <path
             d="m 4056.46,909.755 -1.27,0.869 c -0.27,0.177 -0.62,0.039 -0.7,-0.268 l -3.56,-14.94 c -0.05,-0.194 0.16,-0.348 0.33,-0.246 l 2.41,1.442 c 0.11,0.064 0.19,0.168 0.21,0.288 l 2.77,12.385 c 0.04,0.18 -0.03,0.367 -0.19,0.47 z"
@@ -2237,7 +2237,7 @@ export default function ArtProjectAtMit() {
             d="m 4055.04,897.225 7.01,3.897 3.92,16.044 -7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path250" />
             <path
             d="m 4067.88,916.383 -1.28,0.869 c -0.26,0.177 -0.62,0.038 -0.69,-0.268 l -3.57,-14.94 c -0.04,-0.194 0.17,-0.348 0.34,-0.246 l 2.41,1.442 c 0.11,0.063 0.18,0.168 0.21,0.288 l 2.77,12.384 c 0.04,0.181 -0.04,0.367 -0.19,0.471 z"
@@ -2248,13 +2248,13 @@ export default function ArtProjectAtMit() {
             d="m 4146.85,863.62 -71.01,40.98 -3.18,13.992 71.01,-40.98 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path252" />
             <path
             d="m 4147.3,863.661 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path253" />
             <path
             d="m 4134.46,882.819 1.28,0.869 c 0.26,0.176 0.61,0.038 0.69,-0.268 l 3.57,-14.941 c 0.04,-0.193 -0.17,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.18 0.03,0.367 0.19,0.471 z"
@@ -2265,7 +2265,7 @@ export default function ArtProjectAtMit() {
             d="m 4135.88,870.289 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path255" />
             <path
             d="m 4123.04,889.447 1.28,0.869 c 0.26,0.176 0.62,0.038 0.69,-0.268 l 3.57,-14.941 c 0.05,-0.193 -0.16,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.18 0.04,0.367 0.19,0.471 z"
@@ -2276,7 +2276,7 @@ export default function ArtProjectAtMit() {
             d="m 4124.47,876.917 -7.02,3.897 -3.92,16.043 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path257" />
             <path
             d="m 4111.62,896.074 1.28,0.869 c 0.26,0.177 0.62,0.039 0.69,-0.268 l 3.57,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.245 l -2.42,1.441 c -0.1,0.064 -0.18,0.168 -0.2,0.288 l -2.77,12.385 c -0.04,0.18 0.03,0.367 0.18,0.47 z"
@@ -2287,7 +2287,7 @@ export default function ArtProjectAtMit() {
             d="m 4113.05,883.545 -7.01,3.897 -3.92,16.043 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path259" />
             <path
             d="m 4100.21,902.703 1.28,0.868 c 0.26,0.177 0.61,0.039 0.69,-0.267 l 3.57,-14.941 c 0.04,-0.194 -0.17,-0.347 -0.34,-0.245 l -2.41,1.442 c -0.11,0.063 -0.18,0.167 -0.21,0.288 l -2.77,12.384 c -0.04,0.18 0.03,0.367 0.19,0.471 z"
@@ -2298,7 +2298,7 @@ export default function ArtProjectAtMit() {
             d="m 4101.63,890.172 -7.01,3.897 -3.92,16.044 7.01,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path261" />
             <path
             d="m 4088.79,909.33 1.28,0.869 c 0.26,0.177 0.62,0.039 0.69,-0.268 l 3.57,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.34,-0.246 l -2.41,1.442 c -0.11,0.064 -0.18,0.168 -0.21,0.288 l -2.77,12.385 c -0.04,0.18 0.04,0.366 0.19,0.47 z"
@@ -2309,7 +2309,7 @@ export default function ArtProjectAtMit() {
             d="m 4090.22,896.8 -7.02,3.897 -3.92,16.044 7.02,-3.897 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path263" />
             <path
             d="m 4077.37,915.958 1.28,0.869 c 0.26,0.177 0.62,0.038 0.69,-0.268 l 3.57,-14.94 c 0.05,-0.194 -0.16,-0.348 -0.33,-0.246 l -2.42,1.442 c -0.1,0.063 -0.18,0.167 -0.2,0.288 l -2.77,12.384 c -0.04,0.181 0.03,0.367 0.18,0.471 z"
@@ -2338,7 +2338,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4002.11,841.1)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect268"
             x="0"
             y="0" />
@@ -2357,7 +2357,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,3988.05,826.613)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect270"
             x="0"
             y="0" />
@@ -2365,13 +2365,13 @@ export default function ArtProjectAtMit() {
             d="m 3979,831.952 11.34,6.551 -0.93,8.333 -13.89,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path271" />
             <path
             d="m 3999.5,833.343 -9.22,5.209 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path272" />
             <rect
             width="14.7252"
@@ -2379,7 +2379,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,3989.43,846.888)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect272"
             x="0"
             y="0" />
@@ -2390,7 +2390,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4051.36,790.558)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect273"
             x="0"
             y="0" />
@@ -2398,13 +2398,13 @@ export default function ArtProjectAtMit() {
             d="m 4042.31,795.897 11.34,6.551 -0.93,8.334 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path273" />
             <path
             d="m 4062.81,797.288 -9.22,5.209 -0.79,8.26 12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path274" />
             <rect
             width="14.7252"
@@ -2412,7 +2412,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4052.74,810.833)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect274"
             x="0"
             y="0" />
@@ -2423,7 +2423,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4008.95,838.763)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect275"
             x="0"
             y="0" />
@@ -2431,13 +2431,13 @@ export default function ArtProjectAtMit() {
             d="m 3999.91,844.102 11.33,6.551 -0.92,8.334 -13.9,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path275" />
             <path
             d="m 4020.4,845.493 -9.21,5.21 -0.8,8.259 12.72,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path276" />
             <rect
             width="14.7252"
@@ -2445,7 +2445,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4010.34,859.038)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect276"
             x="0"
             y="0" />
@@ -2456,7 +2456,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4072.26,802.709)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect277"
             x="0"
             y="0" />
@@ -2464,13 +2464,13 @@ export default function ArtProjectAtMit() {
             d="m 4063.22,808.048 11.33,6.551 -0.92,8.333 -13.9,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path277" />
             <path
             d="m 4083.71,809.439 -9.21,5.209 -0.8,8.259 12.72,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path278" />
             <rect
             width="14.7252"
@@ -2478,7 +2478,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4073.65,822.984)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect278"
             x="0"
             y="0" />
@@ -2489,7 +2489,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4135.5,839.603)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect279"
             x="0"
             y="0" />
@@ -2497,13 +2497,13 @@ export default function ArtProjectAtMit() {
             d="m 4144.55,844.942 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path279" />
             <path
             d="m 4124.05,846.333 9.22,5.21 0.79,8.259 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path280" />
             <rect
             width="14.7252"
@@ -2511,7 +2511,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4134.12,859.878)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect280"
             x="0"
             y="0" />
@@ -2522,7 +2522,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4029.74,850.784)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect281"
             x="0"
             y="0" />
@@ -2530,13 +2530,13 @@ export default function ArtProjectAtMit() {
             d="m 4020.69,856.123 11.34,6.551 -0.93,8.333 -13.89,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path281" />
             <path
             d="m 4041.19,857.513 -9.22,5.21 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path282" />
             <rect
             width="14.7252"
@@ -2544,7 +2544,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4031.12,871.059)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect282"
             x="0"
             y="0" />
@@ -2555,7 +2555,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4093.05,814.729)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect283"
             x="0"
             y="0" />
@@ -2563,13 +2563,13 @@ export default function ArtProjectAtMit() {
             d="m 4084,820.068 11.34,6.551 -0.93,8.334 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path283" />
             <path
             d="m 4104.5,821.459 -9.22,5.209 -0.79,8.26 12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path284" />
             <rect
             width="14.7252"
@@ -2577,7 +2577,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4094.43,835.004)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect284"
             x="0"
             y="0" />
@@ -2588,7 +2588,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4114.72,851.624)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect285"
             x="0"
             y="0" />
@@ -2596,13 +2596,13 @@ export default function ArtProjectAtMit() {
             d="m 4123.77,856.963 -11.34,6.551 0.93,8.333 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path285" />
             <path
             d="m 4103.27,858.353 9.22,5.21 0.79,8.259 -12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path286" />
             <rect
             width="14.7252"
@@ -2610,7 +2610,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4113.34,871.899)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect286"
             x="0"
             y="0" />
@@ -2621,7 +2621,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4032.06,800.988)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect287"
             x="0"
             y="0" />
@@ -2629,13 +2629,13 @@ export default function ArtProjectAtMit() {
             d="m 4041.11,806.327 -11.34,6.551 0.93,8.333 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path287" />
             <path
             d="m 4020.61,807.717 9.22,5.21 0.79,8.259 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path288" />
             <rect
             width="14.7252"
@@ -2643,7 +2643,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4030.68,821.262)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect288"
             x="0"
             y="0" />
@@ -2654,7 +2654,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4051.02,862.849)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect289"
             x="0"
             y="0" />
@@ -2662,13 +2662,13 @@ export default function ArtProjectAtMit() {
             d="m 4041.97,868.188 11.34,6.551 -0.93,8.333 -13.89,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path289" />
             <path
             d="m 4062.47,869.578 -9.22,5.21 -0.79,8.259 12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path290" />
             <rect
             width="14.7252"
@@ -2676,7 +2676,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4052.4,883.124)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect290"
             x="0"
             y="0" />
@@ -2687,7 +2687,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4114.33,826.794)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect291"
             x="0"
             y="0" />
@@ -2695,13 +2695,13 @@ export default function ArtProjectAtMit() {
             d="m 4105.28,832.133 11.34,6.551 -0.93,8.334 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path291" />
             <path
             d="m 4125.78,833.524 -9.22,5.21 -0.79,8.259 12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path292" />
             <rect
             width="14.7252"
@@ -2709,7 +2709,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4115.71,847.069)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect292"
             x="0"
             y="0" />
@@ -2720,7 +2720,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4093.44,863.689)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect293"
             x="0"
             y="0" />
@@ -2728,13 +2728,13 @@ export default function ArtProjectAtMit() {
             d="m 4102.49,869.028 -11.34,6.551 0.93,8.333 13.89,-8.042 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path293" />
             <path
             d="m 4081.99,870.418 9.22,5.21 0.79,8.259 -12.71,-7.362 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path294" />
             <rect
             width="14.7252"
@@ -2742,7 +2742,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4092.06,883.963)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect294"
             x="0"
             y="0" />
@@ -2753,7 +2753,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,0.5,0.866025,0.5,4010.78,813.052)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect295"
             x="0"
             y="0" />
@@ -2761,13 +2761,13 @@ export default function ArtProjectAtMit() {
             d="m 4019.83,818.391 -11.34,6.551 0.93,8.334 13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path295" />
             <path
             d="m 3999.33,819.782 9.22,5.21 0.79,8.259 -12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path296" />
             <rect
             width="14.7252"
@@ -2775,7 +2775,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(-0.866025,-0.5,-2.20305e-8,1,4009.4,833.327)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect296"
             x="0"
             y="0" />
@@ -2786,7 +2786,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4071.51,875.256)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect297"
             x="0"
             y="0" />
@@ -2794,13 +2794,13 @@ export default function ArtProjectAtMit() {
             d="m 4062.46,880.596 11.34,6.55 -0.93,8.334 -13.89,-8.043 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path297" />
             <path
             d="m 4082.96,881.986 -9.22,5.21 -0.79,8.259 12.71,-7.363 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path298" />
             <rect
             width="14.7252"
@@ -2808,7 +2808,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4072.89,895.531)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect298"
             x="0"
             y="0" />
@@ -2824,721 +2824,721 @@ export default function ArtProjectAtMit() {
             d="m 3767.87,706.331 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path301" />
             <path
             d="m 3802.44,726.291 34.58,19.96 v 32.056 l -34.58,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path302" />
             <path
             d="m 3837.02,746.251 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path303" />
             <path
             d="m 3871.59,766.212 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path304" />
             <path
             d="m 3767.87,738.386 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path305" />
             <path
             d="m 3802.44,758.346 34.58,19.961 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path306" />
             <path
             d="m 3837.02,778.307 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path307" />
             <path
             d="m 3871.59,798.267 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path308" />
             <path
             d="m 3767.87,770.441 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path309" />
             <path
             d="m 3802.44,790.402 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path310" />
             <path
             d="m 3837.02,810.362 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path311" />
             <path
             d="m 3871.59,830.322 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path312" />
             <path
             d="m 3767.87,802.496 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path313" />
             <path
             d="m 3802.44,822.457 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path314" />
             <path
             d="m 3837.02,842.417 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path315" />
             <path
             d="m 3871.59,862.377 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path316" />
             <path
             d="m 3767.87,834.552 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path317" />
             <path
             d="m 3802.44,854.512 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path318" />
             <path
             d="m 3837.02,874.472 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path319" />
             <path
             d="m 3871.59,894.432 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path320" />
             <path
             d="m 3767.87,866.607 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path321" />
             <path
             d="m 3802.44,886.567 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path322" />
             <path
             d="m 3837.02,906.527 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path323" />
             <path
             d="m 3871.59,926.487 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path324" />
             <path
             d="m 3767.87,898.662 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path325" />
             <path
             d="m 3802.44,918.622 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path326" />
             <path
             d="m 3837.02,938.582 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path327" />
             <path
             d="m 3871.59,958.542 34.57,19.961 v 32.057 l -34.57,-19.962 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path328" />
             <path
             d="m 3767.87,930.717 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path329" />
             <path
             d="m 3802.44,950.677 34.58,19.96 v 32.053 l -34.58,-19.958 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path330" />
             <path
             d="m 3837.02,970.637 34.57,19.96 v 32.053 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path331" />
             <path
             d="m 3871.59,990.597 34.57,19.963 v 32.05 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path332" />
             <path
             d="m 3767.87,962.772 34.57,19.96 v 32.058 l -34.57,-19.963 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path333" />
             <path
             d="m 3802.44,982.732 34.58,19.958 v 32.06 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path334" />
             <path
             d="m 3837.02,1002.69 34.57,19.96 v 32.06 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path335" />
             <path
             d="m 3871.59,1022.65 34.57,19.96 v 32.06 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path336" />
             <path
             d="m 3767.87,994.827 34.57,19.963 v 32.05 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path337" />
             <path
             d="m 3802.44,1014.79 34.58,19.96 v 32.05 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path338" />
             <path
             d="m 3837.02,1034.75 34.57,19.96 v 32.05 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path339" />
             <path
             d="m 3871.59,1054.71 34.57,19.96 v 32.05 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path340" />
             <path
             d="m 3509.02,552.844 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path341" />
             <path
             d="m 3543.59,572.805 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path342" />
             <path
             d="m 3578.17,592.765 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path343" />
             <path
             d="m 3612.74,612.725 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path344" />
             <path
             d="m 3509.02,584.9 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path345" />
             <path
             d="m 3543.59,604.86 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path346" />
             <path
             d="m 3578.17,624.82 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path347" />
             <path
             d="m 3612.74,644.78 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path348" />
             <path
             d="m 3509.02,616.955 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path349" />
             <path
             d="m 3543.59,636.915 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path350" />
             <path
             d="m 3578.17,656.875 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path351" />
             <path
             d="m 3612.74,676.835 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path352" />
             <path
             d="m 3509.02,649.01 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path353" />
             <path
             d="m 3543.59,668.97 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path354" />
             <path
             d="m 3578.17,688.93 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path355" />
             <path
             d="m 3612.74,708.89 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path356" />
             <path
             d="m 3509.02,681.065 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path357" />
             <path
             d="m 3543.59,701.025 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path358" />
             <path
             d="m 3578.17,720.985 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path359" />
             <path
             d="m 3612.74,740.946 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path360" />
             <path
             d="m 3509.02,713.12 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path361" />
             <path
             d="m 3543.59,733.08 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path362" />
             <path
             d="m 3578.17,753.041 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path363" />
             <path
             d="m 3612.74,773.001 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path364" />
             <path
             d="m 3509.02,745.175 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path365" />
             <path
             d="m 3543.59,765.135 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path366" />
             <path
             d="m 3578.17,785.096 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path367" />
             <path
             d="m 3612.74,805.056 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path368" />
             <path
             d="m 3509.02,777.23 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path369" />
             <path
             d="m 3543.59,797.19 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path370" />
             <path
             d="m 3578.17,817.151 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path371" />
             <path
             d="m 3612.74,837.111 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path372" />
             <path
             d="m 3509.02,809.285 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path373" />
             <path
             d="m 3543.59,829.246 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path374" />
             <path
             d="m 3578.17,849.206 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path375" />
             <path
             d="m 3612.74,869.166 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path376" />
             <path
             d="m 3509.02,841.341 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path377" />
             <path
             d="m 3543.59,861.301 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path378" />
             <path
             d="m 3578.17,881.261 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path379" />
             <path
             d="m 3612.74,901.221 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path380" />
             <path
             d="m 3133,344.929 34.57,19.96 v 32.055 L 3133,376.984 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path381" />
             <path
             d="m 3167.57,364.889 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path382" />
             <path
             d="m 3202.14,384.849 34.58,19.961 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path383" />
             <path
             d="m 3236.72,404.81 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path384" />
             <path
             d="m 3133,376.984 34.57,19.96 v 32.055 L 3133,409.039 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path385" />
             <path
             d="m 3167.57,396.944 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path386" />
             <path
             d="m 3202.14,416.905 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path387" />
             <path
             d="m 3236.72,436.865 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path388" />
             <path
             d="m 3133,409.039 34.57,19.96 v 32.056 L 3133,441.094 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path389" />
             <path
             d="m 3167.57,428.999 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path390" />
             <path
             d="m 3202.14,448.96 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path391" />
             <path
             d="m 3236.72,468.92 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path392" />
             <path
             d="m 3133,441.094 34.57,19.961 V 493.11 L 3133,473.149 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path393" />
             <path
             d="m 3167.57,461.055 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path394" />
             <path
             d="m 3202.14,481.015 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path395" />
             <path
             d="m 3236.72,500.975 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path396" />
             <path
             d="m 3133,473.149 34.57,19.961 v 32.055 L 3133,505.205 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path397" />
             <path
             d="m 3167.57,493.11 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path398" />
             <path
             d="m 3202.14,513.07 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path399" />
             <path
             d="m 3236.72,533.03 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path400" />
             <path
             d="m 3133,505.205 34.57,19.96 V 557.22 L 3133,537.26 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path401" />
             <path
             d="m 3167.57,525.165 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path402" />
             <path
             d="m 3202.14,545.125 34.58,19.96 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path403" />
             <path
             d="m 3236.72,565.085 34.57,19.961 v 32.055 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path404" />
             <path
             d="m 3133,537.26 34.57,19.96 v 32.055 L 3133,569.315 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path405" />
             <path
             d="m 3167.57,557.22 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path406" />
             <path
             d="m 3202.14,577.18 34.58,19.96 v 32.056 l -34.58,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path407" />
             <path
             d="m 3236.72,597.14 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path408" />
             <path
             d="m 3133,569.315 34.57,19.96 V 621.33 L 3133,601.37 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path409" />
             <path
             d="m 3167.57,589.275 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path410" />
             <path
             d="m 3202.14,609.235 34.58,19.961 v 32.055 l -34.58,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path411" />
             <path
             d="m 3236.72,629.196 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path412" />
             <path
             d="m 3133,601.37 34.57,19.96 v 32.055 L 3133,633.425 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path413" />
             <path
             d="m 3167.57,621.33 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path414" />
             <path
             d="m 3202.14,641.29 34.58,19.961 v 32.055 l -34.58,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path415" />
             <path
             d="m 3236.72,661.25 34.57,19.961 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path416" />
             <path
             d="m 3133,633.425 34.57,19.96 V 685.44 L 3133,665.48 Z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path417" />
             <path
             d="m 3167.57,653.385 34.57,19.96 v 32.056 l -34.57,-19.961 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path418" />
             <path
             d="m 3202.14,673.345 34.58,19.961 v 32.055 l -34.58,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path419" />
             <path
             d="m 3236.72,693.306 34.57,19.96 v 32.055 l -34.57,-19.96 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path420" />
             <path
             d="m 4147.63,1054.11 -75.19,42.94 449.26,-109.543 -102.13,-58.962 -68.23,39.393 -35.4,-20.438 -168.31,95.57 z"
@@ -3551,7 +3551,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4418.36,921.75)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect421"
             x="0"
             y="0" />
@@ -3561,7 +3561,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4414.1,916.272)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect422"
             x="0"
             y="0" />
@@ -3571,7 +3571,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4428.8,924.684)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect423"
             x="0"
             y="0" />
@@ -3581,7 +3581,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4443.59,933.23)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect424"
             x="0"
             y="0" />
@@ -3591,7 +3591,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4458.06,941.635)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect425"
             x="0"
             y="0" />
@@ -3601,7 +3601,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4472.76,949.999)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect426"
             x="0"
             y="0" />
@@ -3611,7 +3611,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4487.57,958.334)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect427"
             x="0"
             y="0" />
@@ -3621,7 +3621,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,-0.5,2.20305e-8,1,4502.05,966.295)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect428"
             x="0"
             y="0" />
@@ -3631,7 +3631,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4412.94,907.455)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect429"
             x="0"
             y="0" />
@@ -3641,7 +3641,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4427.64,915.867)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect430"
             x="0"
             y="0" />
@@ -3651,7 +3651,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4442.43,924.413)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect431"
             x="0"
             y="0" />
@@ -3661,7 +3661,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4456.9,932.818)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect432"
             x="0"
             y="0" />
@@ -3671,7 +3671,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4471.6,941.181)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect433"
             x="0"
             y="0" />
@@ -3681,7 +3681,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4486.41,949.516)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect434"
             x="0"
             y="0" />
@@ -3691,7 +3691,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-0.866025,0.5,4500.89,957.478)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect435"
             x="0"
             y="0" />
@@ -3709,7 +3709,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4078.11,1089.71)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect436"
             x="0"
             y="0" />
@@ -3717,7 +3717,7 @@ export default function ArtProjectAtMit() {
             d="m 4072.92,1080.08 9.44,-5.44 6.52,6.2 -11.95,2.92 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path437" />
             <rect
             width="12.2965"
@@ -3725,7 +3725,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4092.33,1071.49)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect437"
             x="0"
             y="0" />
@@ -3735,7 +3735,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4114.98,1065.85)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect438"
             x="0"
             y="0" />
@@ -3745,7 +3745,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4137.92,1060.33)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect439"
             x="0"
             y="0" />
@@ -3755,7 +3755,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4160.58,1054.74)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect440"
             x="0"
             y="0" />
@@ -3765,7 +3765,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4183.57,1049.35)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect441"
             x="0"
             y="0" />
@@ -3775,7 +3775,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4206.36,1043.52)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect442"
             x="0"
             y="0" />
@@ -3785,7 +3785,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4229.08,1037.88)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect443"
             x="0"
             y="0" />
@@ -3795,7 +3795,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4251.71,1032.52)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect444"
             x="0"
             y="0" />
@@ -3805,7 +3805,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4274.48,1026.85)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect445"
             x="0"
             y="0" />
@@ -3815,7 +3815,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4297.52,1021.2)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect446"
             x="0"
             y="0" />
@@ -3825,7 +3825,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4320.44,1015.65)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect447"
             x="0"
             y="0" />
@@ -3835,7 +3835,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4342.92,1010.27)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect448"
             x="0"
             y="0" />
@@ -3845,7 +3845,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4366.04,1004.56)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect449"
             x="0"
             y="0" />
@@ -3855,7 +3855,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4388.85,999.11)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect450"
             x="0"
             y="0" />
@@ -3865,7 +3865,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4411.54,993.181)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect451"
             x="0"
             y="0" />
@@ -3875,7 +3875,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4434.22,987.712)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect452"
             x="0"
             y="0" />
@@ -3885,7 +3885,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4457.19,982.187)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect453"
             x="0"
             y="0" />
@@ -3895,7 +3895,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4479.75,976.63)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect454"
             x="0"
             y="0" />
@@ -3905,7 +3905,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0.73653,0.676405,4501.75,970.384)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect455"
             x="0"
             y="0" />
@@ -3913,121 +3913,121 @@ export default function ArtProjectAtMit() {
             d="m 4072.53,1079.9 7.28,6.98 v 12.54 l -7.28,-4.39 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path455" />
             <path
             d="m 4092.28,1071.5 7.57,6.64 v 12.54 l -7.57,-4.57 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path456" />
             <path
             d="m 4114.95,1066.03 7.57,6.64 v 12.54 l -7.57,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path457" />
             <path
             d="m 4137.62,1060.57 7.57,6.63 v 12.55 l -7.57,-4.57 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path458" />
             <path
             d="m 4160.45,1054.95 7.57,6.63 v 12.54 l -7.57,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path459" />
             <path
             d="m 4183.43,1049.6 7.57,6.64 v 12.54 l -7.57,-4.57 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path460" />
             <path
             d="m 4206.17,1043.75 7.56,6.63 v 12.54 l -7.56,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path461" />
             <path
             d="m 4228.98,1038.06 7.57,6.64 v 12.54 l -7.57,-4.57 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path462" />
             <path
             d="m 4251.61,1032.69 7.57,6.64 v 12.54 l -7.57,-4.57 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path463" />
             <path
             d="m 4274.49,1026.85 7.56,6.64 v 12.54 l -7.57,-4.57 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path464" />
             <path
             d="m 4297.23,1021.43 7.57,6.63 v 12.54 l -7.57,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path465" />
             <path
             d="m 4320.15,1015.88 7.56,6.63 v 12.54 l -7.57,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path466" />
             <path
             d="m 4342.92,1010.27 7.57,6.64 v 12.54 l -7.57,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path467" />
             <path
             d="m 4365.75,1004.86 7.57,6.64 v 12.54 l -7.57,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path468" />
             <path
             d="m 4388.56,999.11 7.57,6.64 v 12.54 l -7.57,-4.57 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path469" />
             <path
             d="m 4411.33,993.444 7.56,6.636 v 12.54 l -7.56,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path470" />
             <path
             d="m 4434.12,987.887 7.56,6.636 v 12.537 l -7.56,-4.56 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path471" />
             <path
             d="m 4456.89,982.441 7.57,6.636 v 12.543 l -7.57,-4.567 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path472" />
             <path
             d="m 4479.68,976.833 7.57,6.636 v 12.541 l -7.57,-4.566 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path473" />
             <path
             d="m 4501.67,970.587 7.57,6.635 v 12.542 l -7.57,-4.566 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path474" />
             <rect
             width="467.647"
@@ -4035,7 +4035,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0,1,4072.84,1108.94)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect474"
             x="0"
             y="0" />
@@ -4043,61 +4043,61 @@ export default function ArtProjectAtMit() {
             d="m 4099.04,1148.77 c 0,-17.19 13.54,-34.44 30.24,-38.53 v 0 c 16.7,-4.08 30.25,6.55 30.25,23.74 v 39.16 l -60.49,14.79 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path475" />
             <path
             d="m 4099.04,1145.72 c 0,-15.51 12.21,-31.07 27.28,-34.75 v 0 c 15.07,-3.69 27.28,5.9 27.28,21.41 v 37.2 l -54.56,13.34 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path476" />
             <path
             d="m 4181.03,1128.58 c 0,-17.2 13.54,-34.45 30.24,-38.53 v 0 c 16.71,-4.09 30.25,6.54 30.25,23.74 v 39.16 l -60.49,14.78 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path477" />
             <path
             d="m 4181.03,1125.53 c 0,-15.51 12.21,-31.08 27.28,-34.76 v 0 c 15.07,-3.68 27.28,5.91 27.28,21.42 v 37.2 l -54.56,13.34 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path478" />
             <path
             d="m 4263.02,1108.38 c 0,-17.19 13.54,-34.44 30.24,-38.53 v 0 c 16.71,-4.08 30.25,6.55 30.25,23.75 v 39.15 l -60.49,14.79 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path479" />
             <path
             d="m 4263.02,1105.33 c 0,-15.51 12.21,-31.07 27.28,-34.75 v 0 c 15.07,-3.69 27.28,5.9 27.28,21.41 v 37.2 l -54.56,13.34 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path480" />
             <path
             d="m 4345.01,1088.2 c 0,-17.19 13.54,-34.44 30.25,-38.53 v 0 c 16.7,-4.08 30.24,6.55 30.24,23.74 v 39.16 l -60.49,14.79 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path481" />
             <path
             d="m 4345.01,1085.15 c 0,-15.51 12.21,-31.07 27.28,-34.75 v 0 c 15.07,-3.69 27.29,5.9 27.29,21.41 v 37.2 l -54.57,13.34 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path482" />
             <path
             d="m 4427,1068.26 c 0,-17.2 13.54,-34.45 30.25,-38.53 v 0 c 16.7,-4.09 30.24,6.54 30.24,23.74 v 39.16 l -60.49,14.78 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path483" />
             <path
             d="m 4427,1065.21 c 0,-15.51 12.22,-31.07 27.28,-34.76 v 0 c 15.07,-3.68 27.29,5.91 27.29,21.42 v 37.2 l -54.57,13.34 z"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="path484" />
             <rect
             width="467.647"
@@ -4105,7 +4105,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.971399,-0.237453,0,1,4072.84,1107.39)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect484"
             x="0"
             y="0" />
@@ -4207,7 +4207,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3950.54,869.809)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect497"
             x="0"
             y="0" />
@@ -4217,7 +4217,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3950.54,916.717)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect498"
             x="0"
             y="0" />
@@ -4227,7 +4227,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3950.54,963.625)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect499"
             x="0"
             y="0" />
@@ -4237,7 +4237,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3950.54,1010.53)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect500"
             x="0"
             y="0" />
@@ -4247,7 +4247,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3950.54,1057.44)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect501"
             x="0"
             y="0" />
@@ -4257,7 +4257,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3741.23,756.369)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect502"
             x="0"
             y="0" />
@@ -4267,7 +4267,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3741.23,803.276)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect503"
             x="0"
             y="0" />
@@ -4277,7 +4277,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3741.23,850.184)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect504"
             x="0"
             y="0" />
@@ -4287,7 +4287,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3741.23,897.092)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect505"
             x="0"
             y="0" />
@@ -4297,7 +4297,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3741.23,944)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect506"
             x="0"
             y="0" />
@@ -4307,7 +4307,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3669.95,719.297)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect507"
             x="0"
             y="0" />
@@ -4317,7 +4317,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3669.95,766.205)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect508"
             x="0"
             y="0" />
@@ -4327,7 +4327,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3669.95,813.113)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect509"
             x="0"
             y="0" />
@@ -4337,7 +4337,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3669.95,860.02)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect510"
             x="0"
             y="0" />
@@ -4347,7 +4347,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3669.95,906.928)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect511"
             x="0"
             y="0" />
@@ -4357,7 +4357,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3302.39,477.766)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect512"
             x="0"
             y="0" />
@@ -4367,7 +4367,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3302.39,524.673)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect513"
             x="0"
             y="0" />
@@ -4377,7 +4377,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3302.39,571.581)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect514"
             x="0"
             y="0" />
@@ -4387,7 +4387,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3302.39,618.489)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect515"
             x="0"
             y="0" />
@@ -4397,7 +4397,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3302.39,665.397)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect516"
             x="0"
             y="0" />
@@ -4407,7 +4407,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3413.14,753.101)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect517"
             x="0"
             y="0" />
@@ -4417,7 +4417,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3391.9,740.371)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect518"
             x="0"
             y="0" />
@@ -4427,7 +4427,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3353.71,718.761)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect519"
             x="0"
             y="0" />
@@ -4437,7 +4437,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3320.32,725.171)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect520"
             x="0"
             y="0" />
@@ -4447,7 +4447,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3301.68,704.435)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect521"
             x="0"
             y="0" />
@@ -4457,7 +4457,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3448.2,765.358)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect522"
             x="0"
             y="0" />
@@ -4471,7 +4471,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3697.89,733.84)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect523"
             x="0"
             y="0" />
@@ -4481,7 +4481,7 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3697.89,780.748)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect524"
             x="0"
             y="0" />
@@ -4491,15 +4491,15 @@ export default function ArtProjectAtMit() {
             transform="matrix(0.866025,0.5,-2.20305e-8,1,3697.89,921.471)"
             fill="#ffffff"
             stroke="#000000"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             id="rect525"
             x="0"
             y="0" />
             <path
             d="m 3413.27,182.679 c 0.24,-0.138 0.62,-0.138 0.86,0 l 138.78,80.123 0.02,-0.008 c 0.24,-0.137 0.43,-0.026 0.43,0.25 v 37.646 l 0.7,0.402 c 0.04,0.017 0.09,0.039 0.15,0.07 l 161.54,93.266 0.11,0.073 c 0.05,0.038 0.09,0.085 0.13,0.136 l 33.03,19.071 39.9,-23.038 c 0.24,-0.138 0.63,-0.138 0.87,0 l 138.22,79.8 c 0.22,-0.118 0.4,-0.015 0.41,0.238 l 0.02,0.011 c 0.24,0.138 0.24,0.362 0,0.5 l -0.02,0.009 v 40.564 l 87.47,50.497 31.98,-18.466 c 0.24,-0.139 0.63,-0.139 0.87,0 l 138.12,79.744 c 0.22,-0.119 0.4,-0.015 0.41,0.238 l 0.02,0.013 c 0.24,0.138 0.24,0.362 0,0.5 l -0.02,0.01 v 36.292 l 70.15,40.587 V 696.5 l -3.55,-14.519 -0.11,-0.066 c -0.16,-0.089 -0.25,-0.254 -0.25,-0.432 v -12.409 c 0,-0.178 0.09,-0.343 0.25,-0.432 0.15,-0.089 0.34,-0.089 0.5,0 l 0.09,0.051 3.05,-5.988 c -0.13,-0.134 -0.1,-0.305 0.1,-0.42 l 0.24,-0.142 c 0.02,-0.01 0.03,-0.017 0.05,-0.025 l 8.84,-5.102 c 0.23,-0.138 0.62,-0.138 0.86,0 l 4.56,2.633 3.17,-1.832 v -1.089 c 0,-0.016 -0.01,-0.032 -0.02,-0.048 -0.04,-0.141 -0.04,-0.291 0.02,-0.415 l 2.54,-5.758 c -0.12,-0.134 -0.09,-0.303 0.11,-0.417 l 0.22,-0.129 c 0,-0.002 0,-0.003 0.01,-0.005 l 11.26,-6.501 c 0.24,-0.138 0.63,-0.138 0.87,0 l 4.93,2.849 1.34,-0.773 v -0.868 c -0.01,-0.016 -0.01,-0.031 -0.02,-0.048 -0.05,-0.14 -0.04,-0.29 0.01,-0.415 l 2.55,-5.758 c -0.12,-0.134 -0.09,-0.304 0.11,-0.417 l 0.21,-0.126 c 0.01,-0.004 0.01,-0.007 0.02,-0.01 l 11.26,-6.499 c 0.24,-0.138 0.63,-0.138 0.86,0 l 4.75,2.74 1.1,-0.634 v -0.236 -0.066 c 0.02,-0.128 0.09,-0.243 0.19,-0.324 l 3.17,-6.219 c -0.13,-0.135 -0.1,-0.306 0.1,-0.42 l 0.24,-0.142 c 0.02,-0.011 0.03,-0.022 0.05,-0.03 l 8.83,-5.098 c 0.24,-0.138 0.63,-0.138 0.87,0 l 11.26,6.499 c 0,0.003 0.01,0.007 0.01,0.01 l 0.22,0.126 c 0.2,0.113 0.23,0.283 0.1,0.417 l 2.55,5.758 c 0.06,0.124 0.06,0.274 0.02,0.415 -0.01,0.016 -0.02,0.032 -0.02,0.048 v 1.131 l 1,0.577 4.9,-2.83 c 0.24,-0.138 0.62,-0.138 0.86,0 l 11.26,6.499 c 0.01,0.003 0.01,0.006 0.02,0.009 l 0.22,0.126 c 0.19,0.114 0.22,0.283 0.1,0.417 l 2.55,5.759 c 0.05,0.124 0.06,0.275 0.01,0.415 0,0.017 -0.01,0.033 -0.02,0.05 v 1.047 l 0.9,0.517 4.88,-2.819 c 0.24,-0.138 0.63,-0.138 0.87,0 l 11.26,6.499 c 0,0.003 0.01,0.006 0.01,0.01 l 0.22,0.126 c 0.2,0.113 0.23,0.283 0.1,0.417 l 2.55,5.759 c 0.06,0.124 0.06,0.274 0.02,0.415 -0.01,0.017 -0.02,0.033 -0.03,0.049 v 1.026 l 1.21,0.693 5.07,-2.929 c 0.24,-0.138 0.63,-0.139 0.87,0 l 11.26,6.499 c 0,0.003 0.01,0.006 0.01,0.009 l 0.22,0.126 c 0.2,0.114 0.23,0.283 0.1,0.417 l 2.55,5.759 c 0.06,0.124 0.06,0.275 0.02,0.415 -0.01,0.017 -0.02,0.032 -0.03,0.048 v 1.249 l 1.61,0.927 4.57,-2.64 c 0.24,-0.138 0.63,-0.138 0.87,0 l 8.82,5.093 c 0.02,0.01 0.04,0.024 0.07,0.039 l 0.24,0.139 c 0.19,0.114 0.23,0.284 0.1,0.419 l 3.28,6.442 c 0,0.009 0,0.02 0.01,0.03 0.05,0.081 0.08,0.175 0.08,0.275 v 4.729 c 0,0.051 -0.01,0.1 -0.02,0.148 v 6.757 c 0,0.179 -0.1,0.344 -0.25,0.433 l -0.75,0.428 -2.27,9.3 v 213.078 l 2.94,-1.699 c 0.24,-0.138 0.63,-0.138 0.87,0 l 7.78,4.494 0.01,-0.005 c 0.24,-0.138 0.44,-0.026 0.44,0.25 v 0.016 c 0.16,0.127 0.16,0.301 0,0.427 v 6.656 l 5.7,-3.292 c 0.24,-0.138 0.62,-0.138 0.86,0 l 7.79,4.493 0.01,-0.004 c 0.23,-0.138 0.43,-0.026 0.43,0.25 v 0.016 c 0.17,0.127 0.17,0.3 0,0.427 v 6.326 l 5.38,-3.103 c 0.23,-0.138 0.62,-0.138 0.86,0 l 7.78,4.493 0.01,-0.004 c 0.24,-0.138 0.44,-0.026 0.44,0.25 v 0.016 c 0.16,0.126 0.16,0.3 0,0.426 v 6.423 l 5.61,-3.24 c 0.24,-0.138 0.63,-0.138 0.86,0 l 7.79,4.493 0.01,-0.005 c 0.24,-0.138 0.43,-0.026 0.43,0.25 v 0.017 c 0.17,0.126 0.17,0.3 0,0.427 v 6.454 l 5.72,-3.301 c 0.24,-0.138 0.63,-0.138 0.86,0 l 7.79,4.493 0.01,-0.005 c 0.24,-0.138 0.43,-0.026 0.43,0.25 v 0.017 c 0.17,0.126 0.17,0.3 0,0.426 v 5.889 l 5.39,-3.109 c 0.24,-0.138 0.62,-0.138 0.86,0 l 7.79,4.493 v -0.005 c 0.24,-0.138 0.44,-0.026 0.44,0.25 v 0.017 c 0.17,0.126 0.17,0.3 0,0.426 v 5.639 l 3.77,-0.923 0.11,-0.016 c 0.25,-0.023 0.57,0.073 0.75,0.236 l 7.49,6.884 c 0.14,0.126 0.16,0.258 0.07,0.352 v 6.661 c 0.01,0.005 0.02,0.01 0.02,0.015 l 5.37,4.933 c 0.25,-0.039 0.45,0.126 0.45,0.387 v 0.02 l 0.09,0.085 c 0.2,0.18 0.15,0.375 -0.09,0.447 v 8.97 c 0.01,0.039 0.02,0.081 0.02,0.126 v 87.085 c 0,0.28 -0.22,0.55 -0.49,0.62 l -454.27,111.04 c -0.2,0.05 -0.37,-0.03 -0.45,-0.19 l -95.2,-54.97 c -0.04,-0.02 -0.08,-0.05 -0.12,-0.08 l -63.59,-36.72 -6.89,3.98 c 0,0.26 -0.19,0.36 -0.42,0.24 l -0.01,0.01 c -0.24,0.13 -0.43,0.02 -0.43,-0.25 v -0.02 l -34.13,-19.7 c -0.01,-0.01 -0.01,-0.01 -0.01,-0.01 l -69.15,-39.92 c 0,0 0,0 0,0 l -34.57,-19.96 c -0.24,-0.14 -0.43,-0.47 -0.43,-0.75 v -10.45 l -113.94,-65.779 -6.19,3.577 c -0.24,0.138 -0.43,0.026 -0.43,-0.25 v -0.242 l -34.14,-19.706 c 0,-0.002 0,-0.002 0,-0.003 l -103.72,-59.882 c -0.18,-0.106 -0.34,-0.327 -0.4,-0.549 L 3279.81,741.244 c -0.08,-0.044 -0.15,-0.1 -0.21,-0.16 l -7.87,4.546 c 0,0.003 -0.01,0.004 -0.02,0.007 -0.02,0.226 -0.2,0.31 -0.42,0.184 L 3167.57,685.94 c 0,-0.001 0,-0.003 0,-0.004 L 3133,665.98 c -0.24,-0.138 -0.43,-0.474 -0.43,-0.75 V 345.242 c -0.24,-0.137 -0.24,-0.361 0,-0.5 v -0.001 -0.062 c 0,-0.276 0.19,-0.388 0.43,-0.25 l 0.05,0.031 z"
             stroke="#000000"
-            stroke-width="4"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinejoin="round"
             mask="url(#path-627-outside-1_78_224)"
             id="path527" />
         </g>

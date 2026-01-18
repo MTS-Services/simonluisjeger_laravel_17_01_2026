@@ -9,12 +9,12 @@ export default function WaterWave() {
             <path
             d="m 4379.51,4613.91 c 0,38.44 52.98,69.61 118.33,69.61 65.35,0 118.33,-31.17 118.33,-69.61 0,-38.44 -52.98,-69.6 -118.33,-69.6"
             stroke="#000000"
-            stroke-width="3"
+            strokeWidth="3"
             id="path543" />
             <path
             d="m 4550.93,4613.91 c 0,17.25 -23.77,31.23 -53.09,31.23 m -53.09,-31.23 c 0,-17.25 23.77,-31.23 53.09,-31.23"
             stroke="#000000"
-            stroke-width="3"
+            strokeWidth="3"
             id="path544" />
             <ellipse
             cx="4497.8398"
@@ -22,12 +22,12 @@ export default function WaterWave() {
             rx="31.015301"
             ry="18.2442"
             stroke="#000000"
-            stroke-width="3"
+            strokeWidth="3"
             id="ellipse544" />
             <path
             d="m 4497.84,4658.57 c 41.93,0 75.92,-19.99 75.92,-44.66 0,-24.66 -33.99,-44.65 -75.92,-44.65 -41.93,0 -75.91,19.99 -75.91,44.65"
             stroke="#000000"
-            stroke-width="3"
+            strokeWidth="3"
             id="path545" />
         </g>
 

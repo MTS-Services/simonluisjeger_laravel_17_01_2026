@@ -13,7 +13,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.866025,-0.5,2.20305e-8,1,2354.25,1148.24)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect733"
                     x="0"
                     y="0" />
@@ -29,14 +29,14 @@ export default function ArtProjectInStudioCalder() {
                     d="m 2201.06,1057.29 67.4993,-55.708 85.5807,144.088 v 156.96 l -153.08,-88.38 z"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="path875" />
                 <path
                     d="m 2265.24,1005.37 148.02,-85.158 -21.98,30.429 z"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path733" />
                 <rect
                     width="369.76187"
@@ -44,7 +44,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect734"
                     x="2851.0366"
                     y="2507.4688" />
@@ -54,267 +54,267 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect735"
                     x="2851.0366"
                     y="2507.4688" />
                 <path
                     d="m 2471.96,1152.78 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path735" />
                 <path
                     d="m 2477.76,1149.15 v -62.34"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path736" />
                 <path
                     d="m 2483.57,1145.53 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path737" />
                 <path
                     d="m 2489.37,1142.45 v -62.34"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path738" />
                 <path
                     d="m 2495.43,1138.7 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path739" />
                 <path
                     d="M 2501.49,1135.65 V 1073.3"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path740" />
                 <path
                     d="m 2507.55,1131.87 v -62.34"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path741" />
                 <path
                     d="m 2512.91,1098.14 -43.78,25.28"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path742" />
                 <path
                     d="m 2531.96,1117.5 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path743" />
                 <path
                     d="m 2537.76,1113.87 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path744" />
                 <path
                     d="m 2543.57,1110.8 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path745" />
                 <path
                     d="m 2549.63,1107.04 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path746" />
                 <path
                     d="m 2555.69,1103.99 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path747" />
                 <path
                     d="m 2561.75,1100.22 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path748" />
                 <path
                     d="m 2567.11,1066.48 -43.78,25.28"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path749" />
                 <path
                     d="m 2585.51,1086.77 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path750" />
                 <path
                     d="M 2591.32,1083.15 V 1020.8"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path751" />
                 <path
                     d="m 2597.12,1080.07 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path752" />
                 <path
                     d="m 2603.18,1076.32 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path753" />
                 <path
                     d="m 2609.24,1073.26 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path754" />
                 <path
                     d="m 2615.3,1069.49 v -62.35"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path755" />
                 <path
                     d="m 2620.67,1035.75 -43.79,25.28"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path756" />
                 <path
                     d="M 2639.9,1055.79 V 993.441"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path757" />
                 <path
                     d="M 2645.7,1052.16 V 989.816"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path758" />
                 <path
                     d="M 2651.5,1049.09 V 986.741"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path759" />
                 <path
                     d="M 2657.56,1045.34 V 982.987"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path760" />
                 <path
                     d="M 2663.62,1042.28 V 979.931"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path761" />
                 <path
                     d="M 2669.68,1038.51 V 976.161"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path762" />
                 <path
                     d="m 2675.05,1004.77 -43.78,25.28"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path763" />
                 <path
                     d="M 2693.86,1024.21 V 961.862"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path764" />
                 <path
                     d="M 2699.67,1020.59 V 958.237"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path765" />
                 <path
                     d="M 2705.47,1017.51 V 955.161"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path766" />
                 <path
                     d="M 2711.53,1013.76 V 951.408"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path767" />
                 <path
                     d="M 2717.59,1010.7 V 948.353"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path768" />
                 <path
                     d="M 2723.65,1006.93 V 944.582"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path769" />
                 <path
                     d="m 2729.01,973.194 -43.78,25.279"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path770" />
                 <path
                     d="M 2747.39,993.28 V 930.931"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path771" />
                 <path
                     d="M 2753.2,989.656 V 927.307"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path772" />
                 <path
                     d="M 2759,986.58 V 924.231"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path773" />
                 <path
                     d="M 2765.06,982.827 V 920.478"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path774" />
                 <path
                     d="M 2771.12,979.771 V 917.422"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path775" />
                 <path
                     d="M 2777.18,976 V 913.651"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path776" />
                 <path
                     d="m 2782.55,942.263 -43.79,25.279"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path777" />
                 <rect
                     width="9.7591362"
@@ -322,7 +322,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect777"
                     x="2906.3584"
                     y="2507.4597" />
@@ -332,7 +332,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,0.50000017,0,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect778"
                     x="2901.7627"
                     y="-398.80191" />
@@ -342,7 +342,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,0.50000017,0,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect779"
                     x="2964.2437"
                     y="-461.66235" />
@@ -352,7 +352,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,0.50000017,0,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect780"
                     x="3026.7361"
                     y="-523.83057" />
@@ -362,7 +362,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,0.50000017,0,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect781"
                     x="3089.2168"
                     y="-586.06" />
@@ -372,7 +372,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,0.50000017,0,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect782"
                     x="3151.7092"
                     y="-648.83319" />
@@ -382,7 +382,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect783"
                     x="2968.6431"
                     y="2507.4619" />
@@ -392,7 +392,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect784"
                     x="3030.9275"
                     y="2507.4612" />
@@ -402,7 +402,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect785"
                     x="3093.2236"
                     y="2507.4663" />
@@ -412,7 +412,7 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect786"
                     x="3155.5083"
                     y="2507.4646" />
@@ -424,61 +424,61 @@ export default function ArtProjectInStudioCalder() {
                     transform="matrix(0.8660253,-0.50000017,2.20305e-8,1,0,0)"
                     fill="#ffffff"
                     stroke="#000000"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                     id="rect787" />
                 <path
                     d="m 2374.59,1274.18 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path789" />
                 <path
                     d="m 2374.59,1265.47 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path790" />
                 <path
                     d="m 2375.77,1256.08 37.46,-21.63"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path791" />
                 <path
                     d="m 2379.79,1245.05 29.43,-16.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path792" />
                 <path
                     d="m 2394.42,1228.77 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path793" />
                 <path
                     d="m 2387.63,1266.53 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path794" />
                 <path
                     d="m 2401.15,1258.73 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path795" />
                 <path
                     d="m 2381.29,1270.19 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path796" />
                 <path
                     d="m 2407.68,1254.95 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path797" />
                 <path
                     d="m 2465.78,1238.23 -40.13,23.17 v -26.55 c 0,-3.18 0.52,-6.64 1.53,-10.17 1.01,-3.52 2.49,-7.05 4.35,-10.38 1.86,-3.33 4.08,-6.4 6.51,-9.02 2.44,-2.63 5.04,-4.76 7.68,-6.28 2.63,-1.52 5.24,-2.4 7.68,-2.59 2.43,-0.18 4.64,0.33 6.51,1.5 1.86,1.18 3.34,3 4.35,5.37 1.01,2.36 1.52,5.22 1.52,8.4 z"
@@ -491,56 +491,56 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2425.79,1244.62 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path800" />
                 <path
                     d="m 2425.79,1235.91 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path801" />
                 <path
                     d="m 2426.97,1226.52 37.46,-21.63"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path802" />
                 <path
                     d="m 2430.98,1215.49 29.43,-16.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path803" />
                 <path
                     d="m 2445.61,1199.21 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path804" />
                 <path
                     d="m 2438.83,1236.97 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path805" />
                 <path
                     d="m 2452.34,1229.17 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path806" />
                 <path
                     d="m 2432.49,1240.63 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path807" />
                 <path
                     d="m 2458.88,1225.4 v -27.65"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path808" />
                 <path
                     d="m 2516.98,1208.67 -40.13,23.17 v -26.55 c 0,-3.18 0.52,-6.64 1.53,-10.17 1,-3.52 2.48,-7.05 4.35,-10.38 1.86,-3.33 4.07,-6.4 6.51,-9.02 2.43,-2.63 5.04,-4.76 7.67,-6.28 2.64,-1.52 5.25,-2.4 7.68,-2.59 2.44,-0.18 4.65,0.33 6.51,1.51 1.87,1.17 3.34,3 4.35,5.36 1.01,2.36 1.53,5.22 1.53,8.4 z"
@@ -553,56 +553,56 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2476.98,1215.07 39.83,-23"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path811" />
                 <path
                     d="m 2476.98,1206.36 39.83,-23"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path812" />
                 <path
                     d="m 2478.16,1196.96 37.46,-21.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path813" />
                 <path
                     d="m 2482.18,1185.93 29.43,-16.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path814" />
                 <path
                     d="m 2496.81,1169.65 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path815" />
                 <path
                     d="m 2490.02,1207.42 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path816" />
                 <path
                     d="m 2503.54,1199.61 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path817" />
                 <path
                     d="m 2483.68,1211.08 v -27.65"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path818" />
                 <path
                     d="m 2510.08,1195.84 v -27.65"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path819" />
                 <path
                     d="m 2568.18,1179.11 -40.14,23.17 v -26.54 c 0,-3.19 0.52,-6.65 1.53,-10.17 1.01,-3.53 2.49,-7.06 4.35,-10.39 1.87,-3.33 4.08,-6.39 6.51,-9.02 2.44,-2.62 5.05,-4.76 7.68,-6.28 2.64,-1.52 5.24,-2.4 7.68,-2.58 2.43,-0.19 4.65,0.32 6.51,1.5 1.86,1.18 3.34,3 4.35,5.36 1.01,2.36 1.53,5.22 1.53,8.41 z"
@@ -615,56 +615,56 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2528.18,1185.51 39.82,-23"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path822" />
                 <path
                     d="m 2528.18,1176.8 39.82,-23"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path823" />
                 <path
                     d="m 2529.36,1167.4 37.46,-21.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path824" />
                 <path
                     d="m 2533.38,1156.38 29.42,-16.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path825" />
                 <path
                     d="m 2548,1140.09 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path826" />
                 <path
                     d="m 2541.22,1177.86 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path827" />
                 <path
                     d="m 2554.74,1170.05 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path828" />
                 <path
                     d="m 2534.88,1181.52 v -27.65"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path829" />
                 <path
                     d="m 2561.27,1166.28 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path830" />
                 <path
                     d="m 2619.37,1149.55 -40.13,23.17 v -26.54 l 40.13,-23.17 z m -20.06,-39.23 c 2.63,-1.52 5.24,-2.4 7.68,-2.58 2.43,-0.19 4.64,0.32 6.51,1.5 1.86,1.18 3.34,3 4.35,5.36 1,2.37 1.52,5.22 1.52,8.41 l -40.13,23.17 c 0,-3.19 0.52,-6.64 1.53,-10.17 1.01,-3.53 2.48,-7.06 4.35,-10.39 1.86,-3.33 4.07,-6.39 6.51,-9.02 2.43,-2.62 5.04,-4.76 7.68,-6.28 z"
@@ -677,56 +677,56 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2579.37,1155.95 39.83,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path833" />
                 <path
                     d="m 2579.37,1147.24 39.83,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path834" />
                 <path
                     d="m 2580.56,1137.85 37.46,-21.63"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path835" />
                 <path
                     d="M 2584.57,1126.82 2614,1109.83"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path836" />
                 <path
                     d="m 2599.2,1110.54 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path837" />
                 <path
                     d="m 2592.42,1148.3 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path838" />
                 <path
                     d="m 2605.93,1140.5 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path839" />
                 <path
                     d="m 2586.08,1151.96 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path840" />
                 <path
                     d="m 2612.47,1136.72 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path841" />
                 <path
                     d="m 2670.57,1120 -40.13,23.17 v -26.55 c 0,-3.19 0.52,-6.64 1.52,-10.17 1.01,-3.53 2.49,-7.06 4.35,-10.38 1.87,-3.33 4.08,-6.4 6.51,-9.02 2.44,-2.63 5.05,-4.76 7.68,-6.29 2.64,-1.52 5.25,-2.4 7.68,-2.58 2.44,-0.19 4.65,0.32 6.51,1.5 1.87,1.18 3.34,3 4.35,5.36 1.01,2.37 1.53,5.22 1.53,8.41 z"
@@ -739,56 +739,56 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2630.57,1126.39 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path844" />
                 <path
                     d="m 2630.57,1117.68 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path845" />
                 <path
                     d="m 2631.75,1108.29 37.46,-21.63"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path846" />
                 <path
                     d="m 2635.77,1097.26 29.43,-16.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path847" />
                 <path
                     d="m 2650.4,1080.98 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path848" />
                 <path
                     d="M 2643.61,1118.74 V 1086.3"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path849" />
                 <path
                     d="M 2657.13,1110.94 V 1078.5"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path850" />
                 <path
                     d="m 2637.27,1122.4 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path851" />
                 <path
                     d="m 2663.67,1107.16 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path852" />
                 <path
                     d="m 2721.77,1090.44 -40.14,23.17 v -26.55 c 0,-3.18 0.52,-6.64 1.53,-10.17 1.01,-3.52 2.49,-7.05 4.35,-10.38 1.86,-3.33 4.08,-6.4 6.51,-9.02 2.43,-2.63 5.04,-4.76 7.68,-6.28 2.63,-1.52 5.24,-2.4 7.68,-2.59 2.43,-0.18 4.65,0.33 6.51,1.5 1.86,1.18 3.34,3 4.35,5.37 1.01,2.36 1.53,5.22 1.53,8.4 z"
@@ -801,56 +801,56 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2681.77,1096.83 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path855" />
                 <path
                     d="m 2681.77,1088.12 39.82,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path856" />
                 <path
                     d="m 2682.95,1078.73 37.46,-21.63"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path857" />
                 <path
                     d="m 2686.97,1067.7 29.42,-16.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path858" />
                 <path
                     d="m 2701.59,1051.42 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path859" />
                 <path
                     d="m 2694.81,1089.18 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path860" />
                 <path
                     d="m 2708.32,1081.38 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path861" />
                 <path
                     d="M 2688.47,1092.84 V 1065.2"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path862" />
                 <path
                     d="m 2714.86,1077.6 v -27.64"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path863" />
                 <path
                     d="m 2772.96,1060.88 -40.13,23.17 v -26.54 l 40.13,-23.17 z m -20.06,-39.23 c 2.63,-1.52 5.24,-2.4 7.67,-2.59 2.44,-0.18 4.65,0.33 6.51,1.51 1.87,1.17 3.35,3 4.35,5.36 1.01,2.36 1.53,5.22 1.53,8.4 l -40.13,23.17 c 0,-3.18 0.52,-6.64 1.53,-10.17 1.01,-3.52 2.48,-7.05 4.35,-10.38 1.86,-3.33 4.07,-6.39 6.51,-9.02 2.43,-2.63 5.04,-4.76 7.68,-6.28 z"
@@ -863,56 +863,56 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2732.96,1067.27 39.83,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path866" />
                 <path
                     d="m 2732.96,1058.56 39.83,-22.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path867" />
                 <path
                     d="m 2734.15,1049.17 37.45,-21.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path868" />
                 <path
                     d="m 2738.16,1038.14 29.43,-16.99"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path869" />
                 <path
                     d="m 2752.79,1021.86 v 50.62"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path870" />
                 <path
                     d="m 2746,1059.63 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path871" />
                 <path
                     d="m 2759.52,1051.82 v -32.44"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path872" />
                 <path
                     d="m 2739.67,1063.29 v -27.65"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path873" />
                 <path
                     d="M 2766.06,1048.05 V 1020.4"
                     stroke="#000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     id="path874" />
                 <path
                     d="m 2432.85,952.603 299.13,-172.829 69.41,120.134 -299.13,172.832 v 0 l -148.21,85.64 -88.56,-153.28 148.21,-85.638 z"
@@ -925,7 +925,7 @@ export default function ArtProjectInStudioCalder() {
                 <path
                     d="m 2733.03,778.592 69.91,120.999 0.5,0.865 -0.87,0.501 -11.85,6.846 v 143.397 0.13 c -0.03,0.31 -0.13,0.58 -0.26,0.8 -0.14,0.25 -0.37,0.51 -0.67,0.69 l -16.3,9.41 c -0.01,0 -0.02,0.01 -0.03,0.02 l -40.13,23.17 c -0.01,0 -0.03,0.01 -0.04,0.01 l -11,6.35 c 0,0.01 -0.01,0.02 -0.02,0.02 v 0 l -40.14,23.17 c -0.01,0.01 -0.02,0.02 -0.03,0.02 l -10.99,6.35 c -0.01,0 -0.03,0.01 -0.04,0.02 l -40.13,23.17 c -0.02,0.01 -0.03,0.02 -0.05,0.02 l -10.97,6.34 c -0.01,0.01 -0.03,0.02 -0.05,0.03 l -40.13,23.17 c -0.01,0.01 -0.03,0.01 -0.04,0.02 l -11.01,6.36 c 0,0 -0.01,0 -0.01,0.01 l -40.13,23.17 c -0.01,0 -0.02,0 -0.02,0.01 l -62.23,35.92 c 0,0.01 -0.01,0.01 -0.02,0.01 l -40.13,23.17 c -0.01,0.01 -0.02,0.01 -0.03,0.02 l -70.77,40.86 c -0.1,0.15 -0.23,0.29 -0.41,0.39 -0.27,0.15 -0.53,0.17 -0.77,0.14 -0.22,0.03 -0.47,0 -0.72,-0.14 -0.18,-0.1 -0.31,-0.24 -0.41,-0.38 l -152.48,-88.04 c -0.3,-0.17 -0.52,-0.44 -0.67,-0.68 -0.14,-0.25 -0.26,-0.58 -0.26,-0.93 v -152.21 l -6.2,3.55 c -0.64,0.36 -1.44,0.21 -1.9,-0.34 l -0.09,-0.12 c -0.44,-0.64 -0.31,-1.52 0.3,-2.01 l 8.07,-6.53 c 0.07,-0.12 0.16,-0.24 0.29,-0.34 v 0 l 64.28,-52.13 0.08,-0.06 c 0.2,-0.14 0.41,-0.2 0.61,-0.21 l 148.32,-85.687 0.86,-0.5 0.5,0.866 18.65,32.273 298.26,-172.327 0.87,-0.5 z m -204.58,425.098 c 0.01,0 0.01,0 0.02,0 0.01,-0.01 0.03,-0.02 0.05,-0.03 -0.03,0.01 -0.05,0.03 -0.07,0.03 z m 40.31,-23.27 c 0.01,0 0.01,0 0.01,0 0.01,-0.01 0.02,-0.02 0.03,-0.02 -0.01,0 -0.02,0.01 -0.04,0.02 z m 0.09,-0.07 c 0,0 0,0 0,0 0,0 0.01,0 0.01,0 0,-0.01 0,-0.01 0,-0.01 z m 10.72,-6.18 c 0.01,0 0.01,0 0.01,0 v -0.01 c 0,0 0,0.01 -0.01,0.01 z m 102.39,-59.12 c 0,0 0,0 0.01,0 v 0 z m 51.21,-29.56 v 0 c 0,0 0.01,0 0.02,-0.01 0,0 0,0 0.01,0 -0.02,0.01 -0.03,0.01 -0.03,0.01 z m 40.44,-23.35 c 0,0 -0.01,0.01 -0.01,0.01 0.01,-0.01 0.01,-0.01 0.02,-0.02 0,0 0,0 0,0 0,0 0,0.01 -0.01,0.01 z m -347.62,200.7 c 0,0 0.01,0 0.01,0 0,0 0,-0.01 0.01,-0.01 -0.01,0 -0.01,0.01 -0.02,0.01 z m 102.42,-59.13 h 0.01 z"
                     stroke="#000000"
-                    stroke-width="2"
+                    strokeWidth="2"
                     id="path878" />
             </g>
         </g>
