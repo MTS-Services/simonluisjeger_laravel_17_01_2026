@@ -66,10 +66,9 @@ export default function Home({ projectData }: Props) {
                   src={`storage/${activeProject.video}`}
                   autoPlay
                   loop
-                  muted
-                  playsInline
                   controls={true}
-                  className="w-full h-full aspect-video object-cover"
+                  
+                  className="w-full h-full aspect-video bg-zinc-900"
                 />
               </div>
 

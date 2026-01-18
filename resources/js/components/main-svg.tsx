@@ -18,6 +18,7 @@ import TreeTwo from "./svg-paths/tree-two";
 import WaterWave from "./svg-paths/water-wave";
 import SnowborderOutline from "./svg-paths/snowborder-outline";
 import WaterMask from "./svg-paths/water-mask";
+import SimonJeger from './svg-paths/simon-jeger';
 
 // The 11 IDs you requested
 export type ProjectID =
@@ -63,10 +64,10 @@ export default function MainSvg({ onSelect, activeId }: MainSvgProps) {
       <TreeOne />
       <TreeTwo />
 
+
       {/* 11 INTERACTIVE ELEMENTS */}
       <InteractiveGroup id="simon_jeger">
-        {/* Using an invisible rect as a placeholder for the top-left area if text is gone */}
-        <rect x="50" y="50" width="1000" height="400" fill="transparent" />
+        <SimonJeger />
       </InteractiveGroup>
 
       <InteractiveGroup id="snowboarder"><Snowboarder /></InteractiveGroup>

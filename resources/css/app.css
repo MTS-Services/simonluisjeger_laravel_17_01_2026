@@ -195,7 +195,7 @@
 
 /* HOVER EFFECT: Scale + Thick Black Outline */
 .map-element:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
     /* Increased scale from 1.1 to 1.2 */
     z-index: 50;
 }
@@ -214,4 +214,10 @@
     stroke-width: 2px !important;
     stroke: #FF0000 !important;
     /* Even bolder red */
+}
+
+.map-element.is-active text,
+.map-element.is-active tspan {
+    fill: #FF0000 !important;
+
 }
