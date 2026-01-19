@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('key')->unique();
             $table->string('title');
             $table->text('description');
-            $table->string('video');
-            $table->json('urls');
+            $table->string('video')->nullable(); // Changed to nullable
+            $table->json('urls')->nullable();    // Changed to nullable
             $table->string('date')->nullable();
             $table->timestamps();
         });

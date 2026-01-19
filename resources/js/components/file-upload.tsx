@@ -1,4 +1,4 @@
-import React, { useState, useRef, DragEvent, ChangeEvent } from 'react';
+import React, { useState, useRef, DragEvent, ChangeEvent, useEffect } from 'react';
 import { X, Upload, FileText, FileImage, FileVideo, File as FileIcon, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -212,6 +212,19 @@ export default function FileUpload({
 
     const showUploadArea = (!multiple && filePreviews.length === 0 && existingFiles.length === 0) ||
         (multiple && (!maxFiles || (filePreviews.length + existingFiles.length) < maxFiles));
+
+
+    useEffect(() => {
+        if (!value) {
+            setFilePreviews([]);
+        } else if (!multiple && value instanceof File) {
+            // If a single file exists but previews are empty (e.g. manual state set)
+            // This part is optional but helps keep things in sync
+            if (filePreviews.length === 0) {
+                createFilePreview(value).then(preview => setFilePreviews([preview]));
+            }
+        }
+    }, [value]);
 
     return (
         <div className={cn('w-full', className)}>
