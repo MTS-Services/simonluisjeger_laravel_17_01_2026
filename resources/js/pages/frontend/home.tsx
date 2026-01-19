@@ -67,14 +67,14 @@ export default function Home({ projectData }: Props) {
     <main className="min-h-screen bg-white w-full">
       {/* <Head title="Simon Jeger" /> */}
 
-      <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen ">
-        <div className="w-full flex-1 flex items-center justify-center overflow-hidden pt-8 lg:py-0 lg:h-full">
+      <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen">
+        <div className="w-full flex-1 flex items-center justify-center overflow-hidden pb-0 pt-6 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center">
             <MainSvg activeId={selectedId} onSelect={setSelectedId} />
           </div>
         </div>
 
-        <div className="w-full flex-1 flex items-start lg:items-center justify-center p-6 md:p-8 bg-white">
+        <div className="w-full flex-1 flex items-start lg:items-center justify-center pt-0 p-6 md:p-8">
           {activeProject ? (
             <div className="w-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="aspect-video bg-zinc-900 border-b border-zinc-800 relative">

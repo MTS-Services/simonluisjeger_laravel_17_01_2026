@@ -44,7 +44,7 @@ export default function Dashboard() {
             if (information.video) {
                 setExistingFiles([{
                     id: information.id,
-                    url: `/storage/${information.video}`,
+                    url: `${information.video_url}`,
                     name: information.video.split('/').pop(),
                     mime_type: 'video/mp4',
                     path: information.video,
