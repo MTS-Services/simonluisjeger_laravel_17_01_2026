@@ -1,83 +1,89 @@
 import { Head, useForm, Link } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState } from 'react';
+import FileUpload from '@/components/file-upload';
+import { ArrowLeft } from 'lucide-react';
+
+interface FormData {
+    files: File | File[] | null;
+}
 
 export default function Create() {
-    const { data, setData, post, processing, errors } = useForm({
-        file: null as File | null,
+    const { data, setData, post, processing, errors } = useForm<FormData>({
+        files: null,
     });
-    const [fileName, setFileName] = useState('');
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!data.file) {
-            alert('Please select a file');
+        if (!data.files) {
+            alert('Please select at least one file');
             return;
         }
 
         const formData = new FormData();
-        formData.append('file', data.file);
 
+        // Handle both single and multiple files
+        if (Array.isArray(data.files)) {
+            data.files.forEach((file) => {
+                formData.append('files[]', file);
+            });
+        } else {
+            formData.append('file', data.files);
+        }
+
+        // Use post with FormData directly - no need for 'data' key
         post('/fileupload', {
+            // @ts-ignore - Inertia will handle FormData correctly
             data: formData,
             forceFormData: true,
         });
-    };
-
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (file) {
-            setData('file', file);
-            setFileName(file.name);
-        }
     };
 
     return (
         <>
             <Head title="Upload File" />
             <AppLayout>
-                <div className="container mx-auto py-8 max-w-2xl">
+                <div className="container mx-auto py-8 max-w-4xl">
+                    <Link
+                        href="/fileupload"
+                        className="mb-6 inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                    >
+                        <ArrowLeft className="h-4 w-4" />
+                        Back to Files
+                    </Link>
+
                     <div className="mb-6">
-                        <h1 className="text-3xl font-bold mb-2">Upload New File</h1>
-                        <p className="text-gray-600">Select a file from your computer to upload</p>
+                        <h1 className="text-3xl font-bold mb-2 dark:text-white">Upload New Files</h1>
+                        <p className="text-gray-600 dark:text-gray-400">
+                            Select files from your computer to upload
+                        </p>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow p-6">
+                    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                         <form onSubmit={handleSubmit}>
                             <div className="mb-6">
-                                <label className="block text-sm font-medium mb-2">File</label>
-                                <div className="border-2 border-dashed rounded-lg p-8 text-center hover:border-gray-400 transition">
-                                    <input
-                                        type="file"
-                                        onChange={handleFileChange}
-                                        className="hidden"
-                                        id="file-input"
-                                    />
-                                    <label htmlFor="file-input" className="cursor-pointer">
-                                        {fileName ? (
-                                            <div>
-                                                <p className="text-sm font-medium">{fileName}</p>
-                                                <p className="text-xs text-gray-500 mt-1">Click to change</p>
-                                            </div>
-                                        ) : (
-                                            <div>
-                                                <p className="text-sm font-medium">Click to select a file</p>
-                                                <p className="text-xs text-gray-500 mt-1">or drag and drop</p>
-                                            </div>
-                                        )}
-                                    </label>
-                                </div>
-                                {errors.file && (
-                                    <p className="text-red-500 text-sm mt-2">{errors.file}</p>
-                                )}
+                                <label className="block text-sm font-medium mb-2 dark:text-gray-200">
+                                    Files
+                                </label>
+
+                                <FileUpload
+                                    value={data.files}
+                                    onChange={(files) => setData('files', files)}
+                                    multiple={true}
+                                    maxSize={10}
+                                    maxFiles={10}
+                                    accept="image/*,video/*,.pdf,.doc,.docx,.xls,.xlsx,.csv,.txt"
+                                    error={(errors as any).files || (errors as any).file}
+                                />
                             </div>
 
                             <div className="flex gap-4">
-                                <Button type="submit" disabled={processing || !data.file}>
-                                    {processing ? 'Uploading...' : 'Upload File'}
+                                <Button
+                                    type="submit"
+                                    disabled={processing || !data.files}
+                                >
+                                    {processing ? 'Uploading...' : 'Upload Files'}
                                 </Button>
                                 <Link href="/fileupload">
                                     <Button type="button" variant="outline">
