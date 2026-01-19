@@ -2,7 +2,7 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 import { type NavItemType, type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
-import { Users, User, BarChart, Shield, LayoutGrid, Settings } from 'lucide-react';
+import { LayoutGrid, } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import { NavItem } from '@/components/ui/nav-item';
 // Navigation configuration
@@ -13,73 +13,6 @@ const adminNavItems: NavItemType[] = [
         icon: LayoutGrid,
         slug: 'dashboard',
     },
-    {
-        title: 'User Management',
-        href: '#',
-        icon: Users,
-        badge: 42,
-        children: [
-            {
-                title: 'Admins',
-                href: '#',
-                icon: Shield,
-                permission: 'manage admins',
-                children: [
-                    { title: 'All Admins', href: '#' },
-                    { title: 'Active', href: '#' },
-                    {
-                        title: 'Inactive',
-                        href: '#',
-                        children: [
-                            { title: 'Recently Inactive', href: '#' },
-                            { title: 'Long Inactive', href: '#' },
-                            {
-                                title: 'Archive',
-                                href: '#',
-                                children: [
-                                    { title: 'Over 1 year', href: '#' },
-                                    { title: 'Over 2 years', href: '#' },
-                                ]
-                            }
-                        ]
-                    },
-                ],
-            },
-            {
-                title: 'Users',
-                href: '#',
-                icon: User,
-                children: [
-                    {
-                        title: 'All',
-                        href: route('admin.users.index'),
-                        icon: User,
-                        slug: 'admin-users'
-                    },
-                    { title: 'Active', href: '#' },
-                    { title: 'Premium', href: '#', badge: 15 },
-                ],
-            },
-        ],
-    },
-    {
-        title: 'Analytics',
-        href: '#',
-        icon: BarChart,
-        permission: 'view analytics',
-    },
-    {
-        title: 'Settings',
-        href: '#',
-        icon: Settings,
-        badge: 3,
-    },
-    {
-        title: 'Disabled Item',
-        href: '#',
-        icon: Shield,
-        disabled: true,
-    },
 ];
 
 interface AdminSidebarProps {
@@ -88,17 +21,8 @@ interface AdminSidebarProps {
 }
 
 export const AdminSidebar = React.memo<AdminSidebarProps>(({ isCollapsed, activeSlug }) => {
-    const { url, props } = usePage();
+    const { url } = usePage();
     const currentRoute = url;
-
-    // Extract permissions from auth props
-    const userPermissions = React.useMemo(() => {
-        const auth = props.auth as SharedData['auth'];
-        return auth?.user?.permissions ||
-               auth?.user?.all_permissions ||
-               auth?.permissions ||
-               [];
-    }, [props.auth]);
 
     return (
         <aside
@@ -136,7 +60,6 @@ export const AdminSidebar = React.memo<AdminSidebarProps>(({ isCollapsed, active
                             isCollapsed={isCollapsed}
                             currentRoute={currentRoute}
                             isActive={activeSlug === item.slug}
-                            permissions={userPermissions}
                         />
                     ))}
                 </nav>

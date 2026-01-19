@@ -21,17 +21,17 @@ createInertiaApp({
         const root = createRoot(el);
 
         root.render(
-            <StrictMode>
-                <ErrorBoundary
-                    FallbackComponent={ErrorFallback}
-                    onReset={() => {
-                        // This logic resets the state of your app so the error doesn't loop
-                        window.location.href = '/';
-                    }}
-                >
-                    <App {...props} />
-                </ErrorBoundary>
-            </StrictMode>,
+            // <StrictMode>
+            // <ErrorBoundary
+            //     FallbackComponent={ErrorFallback}
+            //     onReset={() => {
+            //         // This logic resets the state of your app so the error doesn't loop
+            //         window.location.href = '/';
+            //     }}
+            // >
+                <App {...props} />
+            // </ErrorBoundary>
+            // </StrictMode>,
         );
     },
     progress: {

@@ -1,88 +1,152 @@
-import FrontendLayout from "@/layouts/frontend-layout";
-import { Link, usePage } from "@inertiajs/react";
-import { SharedData } from "@/types";
-import { login, register } from "@/routes";
+import { useState, useMemo, useEffect, useRef } from "react";
+import MainSvg, { ProjectID } from "@/components/main-svg";
+import { Head } from "@inertiajs/react";
+import { useAppearance } from "@/hooks/use-appearance";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function Home({
-  canRegister = true,
-}: {
-  canRegister?: boolean;
-}) {
-  const { auth } = usePage<SharedData>().props;
-  const dashboardRoute = auth.user?.is_admin ? route('admin.dashboard') : route('user.dashboard');
+interface ProjectUrl {
+  label: string;
+  url: string;
+  type?: 'email';
+}
+
+interface ProjectRecord {
+  key: string;
+  title: string;
+  description: string;
+  video: string;
+  video_url: string;
+  urls: ProjectUrl[];
+  date: string | null;
+}
+
+interface Props {
+  projectData: ProjectRecord[];
+}
+
+export default function Home({ projectData }: Props) {
+  const [selectedId, setSelectedId] = useState<ProjectID | null>(null);
+  const { appearance, updateAppearance } = useAppearance();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoLoading, setIsVideoLoading] = useState(false);
+
+  useEffect(() => {
+    if (appearance !== 'light') {
+      updateAppearance('light');
+    }
+  }, [appearance, updateAppearance]);
+
+  const activeProject = useMemo(() => {
+    return projectData.find(p => p.key === selectedId);
+  }, [selectedId, projectData]);
+
+  // Reset video when project changes
+  useEffect(() => {
+    if (videoRef.current && activeProject) {
+      setIsVideoLoading(true);
+      videoRef.current.load();
+    }
+  }, [activeProject?.key]);
+
+  // Video event handlers
+  const handleVideoLoadStart = () => {
+    setIsVideoLoading(true);
+  };
+
+  const handleVideoCanPlay = () => {
+    setIsVideoLoading(false);
+  };
+
+  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    console.error('Video error:', e);
+    setIsVideoLoading(false);
+  };
 
   return (
-    <FrontendLayout>
-      <div className="relative isolate overflow-hidden">
-        {/* Background Glow Effect */}
-        <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-          <div className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-violet-500 to-emerald-500 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
+    <main className="min-h-screen bg-white w-full">
+      {/* <Head title="Simon Jeger" /> */}
+
+      <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen ">
+        <div className="w-full flex-1 flex items-center justify-center overflow-hidden pt-8 lg:py-0 lg:h-full">
+          <div className="w-full h-full flex items-center justify-center">
+            <MainSvg activeId={selectedId} onSelect={setSelectedId} />
+          </div>
         </div>
 
-        <section className="mx-auto max-w-7xl px-6 pt-10 pb-24 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            {/* Badge */}
-            <div className="mb-6 flex">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10">
-                Seamless collaboration for creators.{" "}
-                <span className="font-semibold text-violet-600">Read more &rarr;</span>
+        <div className="w-full flex-1 flex items-start lg:items-center justify-center p-6 md:p-8 bg-white">
+          {activeProject ? (
+            <div className="w-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
+              <div className="aspect-video bg-zinc-900 border-b border-zinc-800 relative">
+                {isVideoLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin" />
+                      <span className="text-sm text-white/70">Loading video...</span>
+                    </div>
+                  </div>
+                )}
+                <video
+                  ref={videoRef}
+                  key={activeProject.video_url}
+                  className="w-full h-full aspect-video bg-zinc-900"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  onLoadStart={handleVideoLoadStart}
+                  onCanPlay={handleVideoCanPlay}
+                  onError={handleVideoError}
+                >
+                  <source src={activeProject.video_url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div className="bg-[#FF0000] p-6 lg:p-8">
+                <div className="flex justify-between items-start mb-2">
+                  <h2 className="text-base lg:text-lg font-bold capitalize">
+                    {activeProject.title}
+                  </h2>
+                  {activeProject.date && (
+                    <span className="text-sm font-bold opacity-80 mt-1">{activeProject.date}</span>
+                  )}
+                </div>
+
+                <p className="text-sm lg:text-base mb-6 font-normal">
+                  {activeProject.description}
+                </p>
+
+                <div className="flex flex-wrap items-center border-t border-white/30 pt-6 gap-x-6 gap-y-2">
+                  {activeProject.urls && activeProject.urls.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.type === 'email' ? `mailto:${link.url}` : link.url}
+                      target={link.type === 'email' ? '_self' : '_blank'}
+                      rel="noopener noreferrer"
+                      className="text-sm lg:text-base font-bold capitalize hover:underline transition-all"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="text-black ml-auto"
+                    onClick={() => setSelectedId(null)}
+                  >
+                    <X />
+                  </Button>
+                </div>
               </div>
             </div>
-
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl dark:text-white">
-              Welcome to{" "}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-500 to-emerald-600">
-                Team Artisan
-              </span>
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              The ultimate workspace for modern teams to build, manage, and scale their projects.
-              Experience a workflow designed for speed and beautiful craftsmanship.
-            </p>
-
-            <div className="mt-10 flex items-center gap-x-6">
-              {auth.user ? (
-                <Link
-                  href={dashboardRoute}
-                  className="rounded-md bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 transition-all"
-                >
-                  Go to Dashboard
-                </Link>
-              ) : (
-                <>
-                  <Link
-                    href={login()}
-                    className="rounded-md bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 transition-all"
-                  >
-                    Get Started
-                  </Link>
-                  {canRegister && (
-                    <Link
-                      href={register()}
-                      className="text-sm font-semibold leading-6 text-gray-900 dark:text-white hover:opacity-80"
-                    >
-                      Create an account <span aria-hidden="true">→</span>
-                    </Link>
-                  )}
-                </>
-              )}
+          ) : (
+            <div className="text-gray-300 text-lg font-medium italic uppercase tracking-widest border-2 border-dashed border-gray-100 p-12 rounded-lg text-center w-full min-h-96 flex items-center justify-center">
+              Select an element <br className="hidden md:block" /> to see details
             </div>
-          </div>
-
-          {/* Feature Grid / Visual Placeholder */}
-          <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
-            <div className="grid grid-cols-2 gap-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="h-32 rounded-xl bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 dark:bg-white/5 dark:ring-white/10 p-4">
-                  <div className="h-2 w-10 rounded bg-violet-500/50 mb-2"></div>
-                  <div className="h-2 w-full rounded bg-gray-300 dark:bg-gray-700"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+          )}
+        </div>
       </div>
-    </FrontendLayout>
+    </main>
   );
 }
