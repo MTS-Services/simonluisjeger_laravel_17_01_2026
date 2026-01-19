@@ -2,6 +2,7 @@ import { UserSidebar } from '@/layouts/partials/user/sidebar';
 import { UserHeader } from '@/layouts/partials/user/header';
 import { UserFooter } from '@/layouts/partials/user/footer';
 import * as React from 'react';
+import { Link } from '@inertiajs/react';
 
 interface AppLayoutProps {
     children: React.ReactNode;
@@ -12,12 +13,13 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
     return (
         <div className="flex min-h-screen">
-            <UserSidebar isCollapsed={isCollapsed} />
-            <div className="flex flex-1 flex-col">
-                <UserHeader isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
-                <main className="flex-1 p-6">{children}</main>
-                <UserFooter />
-            </div>
+            <header className='flex items-center justify-between gap-5'>
+                <Link href={'/'}>Home</Link>
+            </header>
+            <main className="flex-1">{children}</main>
+            <footer>
+                <p>@2023 All rights reserved.</p>
+            </footer>
         </div>
     );
 }
