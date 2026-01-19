@@ -63,7 +63,7 @@ RUN mkdir -p storage/framework/{views,sessions,cache} \
     && chmod -R 775 storage/framework storage/logs bootstrap/cache
 
 # Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader && php artisan wayfinder:generate
 
 # Install npm dependencies and build assets
 # Combining npm install and build into one RUN command
