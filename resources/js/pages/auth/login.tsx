@@ -46,12 +46,12 @@ export default function Login({ status, canResetPassword, canRegister }: LoginPr
                                 </div>
 
                                 <div className="grid gap-2">
-                                    <div className="flex items-center justify-between">
+                                    {/* <div className="flex items-center justify-between">
                                         <Label htmlFor="password">Password</Label>
                                         {canResetPassword && (
                                             <TextLink href={request()} className="text-xs text-violet-600 hover:text-violet-500 transition-colors">Forgot?</TextLink>
                                         )}
-                                    </div>
+                                    </div> */}
                                     <Input id="password" type="password" name="password" required className="bg-background/50" />
                                     <InputError message={errors.password} />
                                 </div>
