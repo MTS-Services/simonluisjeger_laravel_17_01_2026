@@ -98,7 +98,7 @@ export default function Dashboard() {
             <section className="max-w-6xl mx-auto px-4 py-6">
                 {/* Project Tabs */}
                 <div className='flex flex-wrap gap-2 mb-8 border-b pb-4'>
-                    {['simon_jeger', 'liseagle_perching', 'art_calder', 'triamp', 'balloon', 'tensegrity', 'liseagle_morphing', 'dipper', 'art_parasit', 'airflow', 'art_mit', 'snowboarder'].map((key) => (
+                    {['snowboarder', 'liseagle_perching', 'art_calder', 'triamp', 'balloon', 'tensegrity', 'liseagle_morphing', 'dipper', 'art_parasit', 'airflow', 'art_mit'].map((key) => (
                         <Button
                             key={key}
                             variant={currentKey === key ? "default" : "outline"}
