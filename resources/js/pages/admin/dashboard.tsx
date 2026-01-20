@@ -102,6 +102,7 @@ export default function Dashboard() {
                             key={key}
                             variant={currentKey === key ? "default" : "outline"}
                             size="sm"
+                            className='cursor-pointer capitalize'
                             onClick={() => router.get(route('admin.dashboard'), { key })}
                         >
                             {key.replace('_', ' ')}
@@ -119,7 +120,7 @@ export default function Dashboard() {
                     <form onSubmit={submit} className="bg-white p-8 rounded-xl border shadow-sm space-y-8">
                         <div className="flex justify-between items-center border-b pb-4">
                             <h2 className="text-2xl font-bold capitalize">{currentKey.replace('_', ' ')}</h2>
-                            <Button type="submit" disabled={processing}>
+                            <Button type="submit" disabled={processing} className='cursor-pointer capitalize'>
                                 <Save className="w-4 h-4 mr-2" />
                                 {processing ? 'Saving...' : 'Save Project'}
                             </Button>
@@ -145,7 +146,7 @@ export default function Dashboard() {
                                         <Label className="flex items-center gap-2">
                                             <LinkIcon className="w-4 h-4" /> Links
                                         </Label>
-                                        <Button type="button" variant="outline" size="sm" onClick={addUrlRow}>
+                                        <Button type="button" variant="outline" size="sm" className='cursor-pointer' onClick={addUrlRow}>
                                             <Plus className="w-4 h-4" />
                                         </Button>
                                     </div>
@@ -164,6 +165,7 @@ export default function Dashboard() {
                                             <Button
                                                 type="button"
                                                 variant="ghost"
+                                                className='cursor-pointer'
                                                 onClick={() => removeUrlRow(i)}
                                             >
                                                 <Trash2 className="w-4 h-4 text-red-500" />
