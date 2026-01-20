@@ -76,6 +76,8 @@ export default function Home({ projectData }: Props) {
                     className="w-full h-full aspect-video bg-zinc-900"
                     controls
                     playsInline
+                    autoPlay
+                    loop
                     preload="metadata"
                   >
                     <source src={activeProject.file_url} type={activeProject.mime_type} />
