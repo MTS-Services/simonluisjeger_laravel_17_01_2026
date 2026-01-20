@@ -39,6 +39,11 @@ class Information extends Model
             return $this->file_path;
         }
 
+        // if video then return stream url else the url.
+        // if ($this->mime_type && str_starts_with($this->mime_type, 'video/')) {
+        //     return route('video.stream', ['filename' => $this->file_path]);
+        // }
+
         return Storage::disk('public')->url($this->file_path);
     }
 }
