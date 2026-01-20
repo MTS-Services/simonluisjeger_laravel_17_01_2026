@@ -21,12 +21,12 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('admin@dev.com'),
                 'is_admin' => true,
             ],
-            [
-                'name' => 'User',
-                'email' => 'user@dev.com',
-                'password' => Hash::make('user@dev.com'),
-                'is_admin' => false,
-            ]
+            // [
+            //     'name' => 'User',
+            //     'email' => 'user@dev.com',
+            //     'password' => Hash::make('user@dev.com'),
+            //     'is_admin' => false,
+            // ]
         );
 
         // User::factory(50)->create();

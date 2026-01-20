@@ -15,32 +15,32 @@ class InformationSeeder extends Seeder
     public function run(): void
     {
         $informations = [
-            [
-                'key' => 'simon_jeger',
-                'title' => 'Simon Jeger',
-                'description' => "Outside of research I snowboard, travel and pet all animals I come across.",
-                'video' => 'videos/simon_jeger.mp4',
-                'urls' => [
-                    [
-                        'label' => 'Google Scholar',
-                        'url' => 'https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=OGc_xMIAAAAJ',
-                    ],
-                    [
-                        'label' => 'Orcid',
-                        'url' => 'https://orcid.org/0000-0003-3824-5612',
-                    ],
-                    [
-                        'label' => 'LinkedIn',
-                        'url' => 'https://www.linkedin.com/in/simon-jeger-714a8a14b/',
-                    ],
-                    [
-                        'label' => 'Email',
-                        'url' => 'simon.jeger@epfl.ch',
-                        'type' => 'email',
-                    ]
-                ],
-                'date' => '12.1994',
-            ],
+            // [
+            //     'key' => 'simon_jeger',
+            //     'title' => 'Simon Jeger',
+            //     'description' => "Outside of research I snowboard, travel and pet all animals I come across.",
+            //     'video' => 'videos/simon_jeger.mp4',
+            //     'urls' => [
+            //         [
+            //             'label' => 'Google Scholar',
+            //             'url' => 'https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=OGc_xMIAAAAJ',
+            //         ],
+            //         [
+            //             'label' => 'Orcid',
+            //             'url' => 'https://orcid.org/0000-0003-3824-5612',
+            //         ],
+            //         [
+            //             'label' => 'LinkedIn',
+            //             'url' => 'https://www.linkedin.com/in/simon-jeger-714a8a14b/',
+            //         ],
+            //         [
+            //             'label' => 'Email',
+            //             'url' => 'simon.jeger@epfl.ch',
+            //             'type' => 'email',
+            //         ]
+            //     ],
+            //     'date' => '12.1994',
+            // ],
             [
                 'key' => 'liseagle_perching',
                 'title' => 'LisEagle perching',
