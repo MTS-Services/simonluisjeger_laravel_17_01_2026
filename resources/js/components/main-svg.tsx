@@ -85,7 +85,8 @@ export default function MainSvg({ onSelect, activeId }: MainSvgProps) {
         <SnowborderOutline />
 
         {/* 11 INTERACTIVE ELEMENTS */}
-        <InteractiveGroup id="snowboarder"><Snowboarder /><SimonJeger /></InteractiveGroup>
+        <InteractiveGroup id="snowboarder"><SimonJeger /></InteractiveGroup>
+        <InteractiveGroup id="snowboarder"><Snowboarder /></InteractiveGroup>
         <InteractiveGroup id="liseagle_perching"><LisEaglePerching /></InteractiveGroup>
         <InteractiveGroup id="art_calder"><ArtProjectInStudioCalder /></InteractiveGroup>
         <InteractiveGroup id="triamp"><ElectricJaguarEType /></InteractiveGroup>
