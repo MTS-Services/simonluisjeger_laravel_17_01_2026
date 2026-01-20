@@ -29,24 +29,24 @@ class AdminDashboardController extends Controller
             'title'       => 'required|string|max:255',
             'description' => 'required|string',
             'date'        => 'nullable|string|max:100',
-            'video'       => 'nullable|file|mimetypes:video/mp4,video/quicktime,video/x-m4v|mimes:mp4,mov,m4v|max:512000',
+            'file'        => 'nullable|file|mimetypes:video/mp4,video/quicktime,video/x-m4v,image/jpeg,image/png,image/gif|max:512000',
             'urls'        => 'nullable|array',
         ]);
 
-        // Remove video from validated array to prevent null overwrite
-        unset($validated['video']);
-
-        // Only process video if a new file is uploaded
-        if ($request->hasFile('video')) {
-            // Delete old video if exists
-            if ($information->video) {
-                Storage::disk('public')->delete($information->video);
+        if ($request->hasFile('file')) {
+            // Delete old file if exists
+            if ($information->file_path) {
+                Storage::disk('public')->delete($information->file_path);
             }
 
-            // Store new video
-            $path = $request->file('video')->store('projects/videos', 'public');
-            $validated['video'] = $path;
+            // Store new file
+            $path = $request->file('file')->store('projects/files', 'public');
+            $validated['file_path'] = $path;
+            $validated['mime_type'] = $request->file('file')->getMimeType();
         }
+
+        // Remove file from validated array to prevent errors
+        unset($validated['file']);
 
         // Update the information record
         $information->update($validated);

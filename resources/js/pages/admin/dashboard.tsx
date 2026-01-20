@@ -8,6 +8,7 @@ import FileUpload from '@/components/file-upload';
 import CustomToast, { ToastType } from '@/components/ui/custom-toast';
 import { useEffect, useState } from 'react';
 import { MousePointer2, Plus, Trash2, Link as LinkIcon, Save } from 'lucide-react';
+import InputError from '@/components/input-error';
 
 export default function Dashboard() {
     const { information, currentKey, errors, flash } = usePage<any>().props;
@@ -18,7 +19,7 @@ export default function Dashboard() {
         title: '',
         description: '',
         date: '',
-        video: null as File | null,
+        file: null as File | null,
         urls: [] as { label: string; url: string }[],
         _method: 'PATCH',
     });
@@ -36,18 +37,18 @@ export default function Dashboard() {
                 description: information.description || '',
                 date: information.date || '',
                 urls: Array.isArray(information.urls) ? information.urls : [],
-                video: null,
+                file: null,
                 _method: 'PATCH',
             });
 
             // Update existing files whenever information changes
-            if (information.video) {
+            if (information.file_path) {
                 setExistingFiles([{
                     id: information.id,
-                    url: `${information.video_url}`,
-                    name: information.video.split('/').pop(),
-                    mime_type: 'video/mp4',
-                    path: information.video,
+                    url: `${information.file_url}`,
+                    name: information.file_path.split('/').pop(),
+                    mime_type: information.mime_type,
+                    path: information.file_path,
                 }]);
             } else {
                 setExistingFiles([]);
@@ -63,8 +64,8 @@ export default function Dashboard() {
             forceFormData: true,
             onSuccess: () => {
                 // Clear the "New Files" preview after successful upload
-                setData('video', null);
-                reset('video');
+                setData('file', null);
+                reset('file');
                 setToast({ message: "Updated successfully!", type: 'success' });
             },
             onError: () => {
@@ -74,10 +75,8 @@ export default function Dashboard() {
     };
 
     const handleRemoveExisting = () => {
-        if (confirm('Are you sure you want to remove this video? You must upload a new video to save the changes.')) {
+        if (confirm('Are you sure you want to remove this file? You must upload a new file to save the changes.')) {
             setExistingFiles([]);
-            // Optionally, you could add a flag to delete the video on next save
-            // or make a separate API call to delete it immediately
         }
     };
 
@@ -175,18 +174,44 @@ export default function Dashboard() {
                             </div>
 
                             <div className="space-y-4">
-                                <Label>Project Video</Label>
+                                <div className="flex justify-between items-center">
+                                    <Label>Project File</Label>
+                                    {/* Badge for image or video based on mime type both are disabled and showing.but active based on existing mimetype with a indicator*/}
+                                    <div className="mb-4 flex items-center gap-2">
+                                        <span
+                                            className={`px-2 py-1 rounded-full text-xs font-medium ${information.mime_type && information.mime_type.startsWith('image/')
+                                                ? 'bg-green-100 text-green-800'
+                                                : 'bg-gray-200 text-gray-800'
+                                                }`}
+                                        >
+                                            {information.mime_type && information.mime_type.startsWith('image/') && (
+                                                <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-1 animate-pulse"></span>
+                                            )}
+                                            Image
+                                        </span>
+                                        <span
+                                            className={`px-2 py-1 rounded-full text-xs font-medium ${information.mime_type && information.mime_type.startsWith('video/')
+                                                ? 'bg-green-100 text-green-800'
+                                                : 'bg-gray-200 text-gray-800'
+                                                }`}
+                                        >
+                                            {information.mime_type && information.mime_type.startsWith('video/') && (
+                                                <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-1 animate-pulse"></span>
+                                            )}
+                                            Video
+                                        </span>
+                                    </div>
+                                </div>
+
                                 <FileUpload
-                                    value={data.video}
-                                    onChange={(file) => setData('video', file as File | null)}
+                                    value={data.file}
+                                    onChange={(file) => setData('file', file as File | null)}
                                     existingFiles={existingFiles}
                                     onRemoveExisting={handleRemoveExisting}
-                                    accept="video/*"
-                                    maxSize={500} // 500MB for videos
+                                    accept="video/*,image/*"
+                                    maxSize={500}
                                 />
-                                {errors.video && (
-                                    <p className="text-red-500 text-xs mt-1">{errors.video}</p>
-                                )}
+                                <InputError message={errors.file} />
                             </div>
                         </div>
                     </form>

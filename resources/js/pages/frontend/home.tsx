@@ -15,8 +15,9 @@ interface ProjectRecord {
   key: string;
   title: string;
   description: string;
-  video: string;
-  video_url: string;
+  file_path: string;
+  mime_type: string;
+  file_url: string;
   urls: ProjectUrl[];
   date: string | null;
 }
@@ -29,7 +30,6 @@ export default function Home({ projectData }: Props) {
   const [selectedId, setSelectedId] = useState<ProjectID | null>(null);
   const { appearance, updateAppearance } = useAppearance();
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoLoading, setIsVideoLoading] = useState(false);
 
   useEffect(() => {
     if (appearance !== 'light') {
@@ -41,31 +41,15 @@ export default function Home({ projectData }: Props) {
     return projectData.find(p => p.key === selectedId);
   }, [selectedId, projectData]);
 
-  // Reset video when project changes
   useEffect(() => {
-    if (videoRef.current && activeProject) {
-      setIsVideoLoading(true);
+    if (videoRef.current && activeProject && activeProject.mime_type.startsWith('video/')) {
       videoRef.current.load();
     }
   }, [activeProject?.key]);
 
-  // Video event handlers
-  const handleVideoLoadStart = () => {
-    setIsVideoLoading(true);
-  };
-
-  const handleVideoCanPlay = () => {
-    setIsVideoLoading(false);
-  };
-
-  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    console.error('Video error:', e);
-    setIsVideoLoading(false);
-  };
-
   return (
     <main className="min-h-screen bg-white w-full">
-      {/* <Head title="Simon Jeger" /> */}
+      <Head title="Simon Jeger" />
 
       <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen">
         <div className="w-full flex-1 flex items-center justify-center overflow-hidden pb-0 pt-6 lg:py-0 lg:h-full">
@@ -78,28 +62,26 @@ export default function Home({ projectData }: Props) {
           {activeProject ? (
             <div className="w-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="aspect-video bg-zinc-900 border-b border-zinc-800 relative">
-                {isVideoLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10">
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin" />
-                      <span className="text-sm text-white/70">Loading video...</span>
-                    </div>
-                  </div>
+                {activeProject.mime_type.startsWith('image/') && (
+                  <img
+                    src={activeProject.file_url}
+                    alt={activeProject.title}
+                    className="w-full h-full object-cover"
+                  />
                 )}
-                <video
-                  ref={videoRef}
-                  key={activeProject.video_url}
-                  className="w-full h-full aspect-video bg-zinc-900"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  onLoadStart={handleVideoLoadStart}
-                  onCanPlay={handleVideoCanPlay}
-                  onError={handleVideoError}
-                >
-                  <source src={activeProject.video_url} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                {activeProject.mime_type.startsWith('video/') && (
+                  <video
+                    ref={videoRef}
+                    key={activeProject.file_url}
+                    className="w-full h-full aspect-video bg-zinc-900"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src={activeProject.file_url} type={activeProject.mime_type} />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
               </div>
 
               <div className="bg-[#FF0000] p-6 lg:p-8">

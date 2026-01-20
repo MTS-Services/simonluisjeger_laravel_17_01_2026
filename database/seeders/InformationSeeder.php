@@ -45,7 +45,8 @@ class InformationSeeder extends Seeder
                 'key' => 'liseagle_perching',
                 'title' => 'LisEagle perching',
                 'description' => "Replicating and explaining agile perching maneuvers in birds using an avian inspired drone.",
-                'video' => 'videos/liseagle_perching.mp4', // Just filename - model will convert to route
+                'file_path' => 'videos/liseagle_perching.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -62,7 +63,8 @@ class InformationSeeder extends Seeder
                 'key' => 'art_calder',
                 'title' => 'Artwork with N-04008',
                 'description' => "Piece with Sarah Oppenheimer that invites communication through a tactile, luminous network.",
-                'video' => 'videos/art_calder.mov',
+                'file_path' => 'videos/art_calder.mov',
+                'mime_type' => 'video/quicktime',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -75,7 +77,8 @@ class InformationSeeder extends Seeder
                 'key' => 'triamp',
                 'title' => 'Triamp',
                 'description' => "Conversion of three vintage cars to fully electric vehicles.",
-                'video' => 'videos/triamp.mp4',
+                'file_path' => 'videos/triamp.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -92,7 +95,8 @@ class InformationSeeder extends Seeder
                 'key' => 'balloon',
                 'title' => 'Autonomous Balloon',
                 'description' => "Reinforcement learning leverages wind for outdoor balloon navigation.",
-                'video' => 'videos/balloon.mp4',
+                'file_path' => 'videos/balloon.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -109,7 +113,8 @@ class InformationSeeder extends Seeder
                 'key' => 'tensegrity',
                 'title' => 'Tensegrity Drone',
                 'description' => "Collision-resilient winged drones enabled by tensegrity structures",
-                'video' => 'videos/tensegrity.mp4',
+                'file_path' => 'videos/tensegrity.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -126,7 +131,8 @@ class InformationSeeder extends Seeder
                 'key' => 'liseagle_morphing',
                 'title' => 'LisEagle morphing',
                 'description' => "Adaptive morphing of wing and tail for stable, resilient, and energy-efficient flight of avian-inspired drone.",
-                'video' => 'videos/liseagle_morphing.mp4',
+                'file_path' => 'videos/liseagle_morphing.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -143,7 +149,8 @@ class InformationSeeder extends Seeder
                 'key' => 'dipper',
                 'title' => 'Dipper',
                 'description' => "An aerial aquatic uncrewed vehicle, capable of flying, diving, and transitioning between the two media.",
-                'video' => 'videos/dipper.mp4',
+                'file_path' => 'videos/dipper.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -160,7 +167,8 @@ class InformationSeeder extends Seeder
                 'key' => 'art_parasit',
                 'title' => 'Artwork Parasit',
                 'description' => "Connecting existing park benches and translating touch into sound.",
-                'video' => 'videos/parasit.mp4',
+                'file_path' => 'videos/parasit.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -177,7 +185,8 @@ class InformationSeeder extends Seeder
                 'key' => 'airflow',
                 'title' => 'Airflow Sensor',
                 'description' => "Lightweight sensor that measures airspeed, angle of attack and angle of side slip.",
-                'video' => 'videos/airflow.mp4',
+                'file_path' => 'videos/airflow.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Publication',
@@ -194,7 +203,8 @@ class InformationSeeder extends Seeder
                 'key' => 'art_mit',
                 'title' => 'Artwork N-05001',
                 'description' => "Permanent Piece with Sarah Oppenheimer for MIT's Metropolitan Warehouse that reacts to its surroundings",
-                'video' => 'videos/demo.mp4',
+                'file_path' => 'videos/demo.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Website',
@@ -211,7 +221,8 @@ class InformationSeeder extends Seeder
                 'key' => 'snowboarder',
                 'title' => 'Simon Jeger',
                 'description' => "Outside of research I snowboard, travel and pet all animals I come across.",
-                'video' => 'videos/simon_jeger.mp4',
+                'file_path' => 'videos/simon_jeger.mp4',
+                'mime_type' => 'video/mp4',
                 'urls' => [
                     [
                         'label' => 'Google Scholar',
