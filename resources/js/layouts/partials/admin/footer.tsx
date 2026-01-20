@@ -9,7 +9,7 @@ export function AdminFooter() {
                 <span className="mx-1">•</span>
                 <span className="flex items-center gap-1">
                     Made with <Heart className="h-3.5 w-3.5 fill-red-500 text-red-500 animate-pulse" /> by
-                    <a href="https://maktechsolution.com/" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary hover:underline">MackTech Solutions</a>
+                    <a href="https://maktechsolution.com/" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary hover:underline">MackTech Solution</a>
                 </span>
             </div>
         </footer>
