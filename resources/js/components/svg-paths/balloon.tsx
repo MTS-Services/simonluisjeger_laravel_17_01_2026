@@ -2,7 +2,7 @@ export default function Balloon() {
     return (
         <g
             id="g1157"
-            transform="translate(-25.873221,717.98189)">
+            transform="translate(-26.873221,820)">
             <path
                 d="m 1745.55,745.424 24.31,-63.598 h -64.06 l 20.11,63.598 z"
                 fill="#ffffff"
