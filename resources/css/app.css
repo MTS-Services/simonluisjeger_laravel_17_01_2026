@@ -15,6 +15,11 @@
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 
+    --font-open-sans:
+        'Open Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
@@ -170,11 +175,11 @@
 
 @layer base {
     * {
-        @apply border-border;
+        @apply border-border font-open-sans;
     }
 
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground font-open-sans;
     }
 }
 
@@ -197,7 +202,7 @@
 
 /* HOVER EFFECT: Scale + Thick Black Outline */
 .map-element:hover {
-    transform: scale(1.02);
+    transform: scale(1.15);
     /* Increased scale from 1.1 to 1.2 */
     z-index: 50;
 }

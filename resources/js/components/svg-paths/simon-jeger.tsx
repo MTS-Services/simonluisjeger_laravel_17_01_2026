@@ -52,12 +52,12 @@ export default function SimonJeger() {
             xmlSpace="preserve"
             style={textStyle}
             x="400"
-            y="950"
+            y="900"
             id="text97"
         >
             <tspan
                 x="400"
-                y="950"
+                y="900"
                 style={textStyle}
                 id="tspan98"
             >
