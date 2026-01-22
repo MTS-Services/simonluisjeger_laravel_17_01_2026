@@ -13,5 +13,4 @@ Route::group([], function () {
     Route::get('/videos/{filename}', [VideoController::class, 'stream'])
         ->where('filename', '.*')
         ->name('video.stream');
-    Route::resource('fileupload', FileUploadController::class);
 });
