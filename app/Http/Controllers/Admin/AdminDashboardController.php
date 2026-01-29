@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\BackgroundText;
 use App\Models\Information;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -13,12 +14,44 @@ class AdminDashboardController extends Controller
     public function dashboard(Request $request)
     {
         $key = $request->query('key');
-        $information = $key ? Information::where('key', $key)->first() : null;
+        $information = null;
+        if($key == 'background_text') {
+            $information = BackgroundText::first();
+        }else{
+            $information = $key ? Information::where('key', $key)->first() : null;
+        }
+        
 
         return Inertia::render('admin/dashboard', [
             'information' => $information,
             'currentKey' => $key,
         ]);
+    }
+
+    public function backgroundText(Request $request)
+    {
+        $backgroundText = BackgroundText::first();
+
+        return Inertia::render('admin/backgroundtext', [
+            'information' => $backgroundText,
+        ]);
+    }
+
+    public function backgroundTextUpdate(Request $request)
+    {
+
+        $validated = $request->validate([
+            'text1' => 'required|string',
+            'text2' => 'required|string',
+        ]);
+
+        $backgroundText = BackgroundText::first();
+        if (!$backgroundText) {
+            $backgroundText = BackgroundText::create($validated);
+        }else{
+            $backgroundText->update($validated);
+        }
+        return redirect()->back()->with('message', 'Background text updated successfully!');
     }
 
     public function update(Request $request, string $key)

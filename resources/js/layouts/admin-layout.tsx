@@ -19,7 +19,7 @@ export default function AdminLayout({ children, activeSlug }: AdminLayoutProps) 
     }, [appearance, updateAppearance]);
     return (
         <div className="relative flex h-full max-h-screen min-h-screen bg-background flex-col">
-            <AdminHeader />
+            <AdminHeader activeSlug={activeSlug} />
             <main className="flex-1 overflow-y-auto overflow-x-hidden p-6 space-y-6">
                 {children}
             </main>

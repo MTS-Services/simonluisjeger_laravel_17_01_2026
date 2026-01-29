@@ -20,12 +20,20 @@ interface ProjectRecord {
   urls: ProjectUrl[];
   date: string | null;
 }
+interface BackgroundRecord {
+  id: number;
+  text1?: string | null;
+  text2?: string | null;
+}
 
 interface Props {
   projectData: ProjectRecord[];
+  backgroundText: BackgroundRecord[];
 }
 
-export default function Home({ projectData }: Props) {
+
+
+export default function Home({ projectData, backgroundText }: Props) {
   const [selectedId, setSelectedId] = useState<ProjectID | null>(null);
   const { appearance, updateAppearance } = useAppearance();
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -133,15 +141,35 @@ export default function Home({ projectData }: Props) {
               </div>
             </div>
           ) : (
-            <div className="">
-              <Text>Salut</Text>
-              <Text>I'm Simon, a</Text>
-              <Text>Roboticist and Artist,</Text>
-              <Text>currently doing my</Text>
-              <Text>PhD at EPFL.</Text>
-              <Text className="text-[#e6e6e6]">Click on one of my</Text>
-              <Text className="text-[#e6e6e6]">projects to learn</Text>
-              <Text className="text-[#e6e6e6]">more.</Text>
+            // <div className="">
+            //   <Text>Salut</Text>
+            //   <Text>I'm Simon, a</Text>
+            //   <Text>Roboticist and Artist,</Text>
+            //   <Text>currently doing my</Text>
+            //   <Text>PhD at EPFL.</Text>
+            //   <Text className="text-[#e6e6e6]">Click on one of my</Text>
+            //   <Text className="text-[#e6e6e6]">projects to learn</Text>
+            //   <Text className="text-[#e6e6e6]">more.</Text>
+            // </div>
+
+             <div className="">
+              <Text>
+                {backgroundText.text1
+                  .split(/<br\s*\/?>/gi)
+                  .map((line: string, index: number) => (
+                    <Text key={index}>
+                      {line}
+                      {'\n'}
+                    </Text>
+                  ))}
+              </Text>
+
+              <Text>{backgroundText.text2.split(/<br\s*\/?>/gi).map((line: string, index:number) => (
+                <Text className="text-[#e6e6e6]" key={index}>
+                  {line}
+                  {'\n'}
+                </Text>
+              ))}</Text>
             </div>
           )}
         </div>
@@ -149,3 +177,4 @@ export default function Home({ projectData }: Props) {
     </main>
   );
 }
+  

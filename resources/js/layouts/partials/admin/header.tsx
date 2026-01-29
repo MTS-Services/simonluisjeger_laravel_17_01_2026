@@ -9,7 +9,7 @@ import { LogOut } from 'lucide-react';
 import { useMobileNavigation } from '@/hooks/use-mobile-navigation';
 import { logout } from '@/routes';
 
-export function AdminHeader() {
+export function AdminHeader({ activeSlug }: { activeSlug?: string | null }) {
     const { auth } = usePage<SharedData>().props;
     const getInitials = useInitials();
 
@@ -23,6 +23,14 @@ export function AdminHeader() {
         <header className="border-b border-border/40 bg-background/80 backdrop-blur-md max-w-480">
             <div className='flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8'>
                 <Link href={route('admin.dashboard')}>Simon Jeger</Link>
+                <div className="flex items-center gap-4">
+                    <Button variant={activeSlug === 'dashboard' ? 'default' : 'ghost'} size="sm" className="capitalize">
+                        <Link href={route('admin.dashboard')}>Information</Link>
+                    </Button>
+                    <Button variant={activeSlug === 'background_text' ? 'default' : 'ghost'} size="sm" className="capitalize">
+                        <Link href={route('admin.background_text')}>Background Text</Link>
+                    </Button>
+                </div>
                 <Button asChild>
                     <Link
                         className="cursor-pointer flex items-center gap-2"
