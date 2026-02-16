@@ -41,13 +41,25 @@ class Frame extends Model
 
     public function getBgImageUrlAttribute(): ?string
     {
-        return $this->bg_image ? Storage::disk('public')->url($this->bg_image) : null;
+        if (! $this->bg_image) {
+            return null;
+        }
+
+        /** @var \Illuminate\Filesystem\FilesystemAdapter $disk */
+        $disk = Storage::disk('public');
+
+        return $disk->url($this->bg_image);
     }
 
     public function getBaseSvgUrlAttribute(): ?string
     {
-        return $this->base_svg
-            ? Storage::disk('public')->url($this->base_svg)
-            : null;
+        if (! $this->base_svg) {
+            return null;
+        }
+
+        /** @var \Illuminate\Filesystem\FilesystemAdapter $disk */
+        $disk = Storage::disk('public');
+
+        return $disk->url($this->base_svg);
     }
 }
