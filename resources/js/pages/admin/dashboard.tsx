@@ -1,5 +1,5 @@
 import AdminLayout from '@/layouts/admin-layout';
-import { Head, usePage, router, useForm } from '@inertiajs/react';
+import { Head, usePage, router, useForm, Link } from '@inertiajs/react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import FileUpload from '@/components/file-upload';
 import CustomToast, { ToastType } from '@/components/ui/custom-toast';
 import { useEffect, useState } from 'react';
-import { MousePointer2, Plus, Trash2, Link as LinkIcon, Save } from 'lucide-react';
+import { MousePointer2, Plus, Trash2, Link as LinkIcon, Save, Eye } from 'lucide-react';
 import InputError from '@/components/input-error';
 
 export default function Dashboard() {
@@ -94,21 +94,30 @@ export default function Dashboard() {
             <Head title="Admin Dashboard" />
             {toast && <CustomToast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
 
-            <section className="max-w-6xl mx-auto px-4 py-6">
-                {/* Project Tabs */}
-                <div className='flex flex-wrap gap-2 mb-8 border-b pb-4'>
-                    {['snowboarder', 'liseagle_perching', 'art_calder', 'triamp', 'balloon', 'tensegrity', 'liseagle_morphing', 'dipper', 'art_parasit', 'airflow', 'art_mit'].map((key) => (
-                        <Button
-                            key={key}
-                            variant={currentKey === key ? "default" : "outline"}
-                            size="sm"
-                            className='cursor-pointer capitalize'
-                            onClick={() => router.get(route('admin.dashboard'), { key })}
-                        >
-                            {key.replace('_', ' ')}
-                        </Button>
-                    ))}
+            <section className="max-w-6xl mx-auto px-4 py-6 space-y-6">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className='flex flex-wrap gap-2'>
+                        {['snowboarder', 'liseagle_perching', 'art_calder', 'triamp', 'balloon', 'tensegrity', 'liseagle_morphing', 'dipper', 'art_parasit', 'airflow', 'art_mit'].map((key) => (
+                            <Button
+                                key={key}
+                                variant={currentKey === key ? "default" : "outline"}
+                                size="sm"
+                                className='cursor-pointer capitalize'
+                                onClick={() => router.get(route('admin.dashboard'), { key })}
+                            >
+                                {key.replace('_', ' ')}
+                            </Button>
+                        ))}
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                        <Link href={route('admin.frame.preview')} target="_blank">
+                            <Eye className="w-4 h-4 mr-2" /> View SVG Preview
+                        </Link>
+                    </Button>
                 </div>
+
+                {/* Project Tabs */}
+                <div className='border-b pb-4' />
 
                 {!information ? (
                     <div className="h-full flex flex-col items-center justify-center py-20 text-center border border-dashed rounded-lg">
