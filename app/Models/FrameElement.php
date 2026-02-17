@@ -24,6 +24,7 @@ class FrameElement extends Model
         'w_pct',
         'h_pct',
         'z_index',
+        'rotation',
         'sort_order',
     ];
 
@@ -40,6 +41,7 @@ class FrameElement extends Model
             'w_pct' => 'float',
             'h_pct' => 'float',
             'z_index' => 'integer',
+            'rotation' => 'float',
             'sort_order' => 'integer',
         ];
     }

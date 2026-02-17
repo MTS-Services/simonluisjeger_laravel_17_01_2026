@@ -19,6 +19,7 @@ class FrameElementController extends Controller
             'description' => 'nullable|string|max:5000',
             'media_type' => 'nullable|in:image,video',
             'media_file' => 'nullable|file|mimetypes:image/jpeg,image/png,image/gif,image/webp,video/mp4,video/quicktime,video/x-m4v|max:512000',
+            'rotation' => 'nullable|numeric|min:-360|max:360',
         ]);
 
         $overlayPath = $request->file('overlay_image')->store('frames/elements', 'public');
@@ -53,6 +54,7 @@ class FrameElementController extends Controller
             'w_pct' => 10,
             'h_pct' => 10,
             'z_index' => 1,
+            'rotation' => $validated['rotation'] ?? 0,
             'sort_order' => $maxSort + 1,
         ]);
 
@@ -69,6 +71,7 @@ class FrameElementController extends Controller
             'media_type' => 'nullable|in:image,video',
             'media_file' => 'nullable|file|mimetypes:image/jpeg,image/png,image/gif,image/webp,video/mp4,video/quicktime,video/x-m4v|max:512000',
             'z_index' => 'nullable|integer|min:0|max:9999',
+            'rotation' => 'nullable|numeric|min:-360|max:360',
         ]);
 
         if ($request->hasFile('overlay_image')) {
@@ -96,6 +99,10 @@ class FrameElementController extends Controller
         }
 
         unset($validated['media_file']);
+
+        if (isset($validated['rotation'])) {
+            $validated['rotation'] = (float) $validated['rotation'];
+        }
 
         $element->update($validated);
 

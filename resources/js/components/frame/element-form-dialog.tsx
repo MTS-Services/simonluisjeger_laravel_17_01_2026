@@ -33,6 +33,7 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
         media_file: File | null;
         media_type: string;
         z_index: number;
+        rotation: number;
     }>({
         name: element?.name ?? '',
         title: element?.title ?? '',
@@ -41,6 +42,7 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
         media_file: null,
         media_type: element?.media_type ?? '',
         z_index: element?.z_index ?? 1,
+        rotation: element?.rotation ?? 0,
     });
 
     function handleSubmit(e: FormEvent) {
@@ -150,6 +152,20 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
                             onChange={(e) => setData('z_index', parseInt(e.target.value) || 0)}
                         />
                         {errors.z_index && <p className="text-sm text-destructive">{errors.z_index}</p>}
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="rotation">Rotation (degrees)</Label>
+                        <Input
+                            id="rotation"
+                            type="number"
+                            min={-360}
+                            max={360}
+                            step={1}
+                            value={data.rotation}
+                            onChange={(e) => setData('rotation', parseFloat(e.target.value) || 0)}
+                        />
+                        {errors.rotation && <p className="text-sm text-destructive">{errors.rotation}</p>}
                     </div>
 
                     <DialogFooter>

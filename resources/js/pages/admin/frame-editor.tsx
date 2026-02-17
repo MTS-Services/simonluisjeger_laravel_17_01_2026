@@ -40,6 +40,7 @@ export default function FrameEditor({ frame }: Props) {
             w_pct: el.w_pct,
             h_pct: el.h_pct,
             z_index: el.z_index,
+            rotation: el.rotation ?? 0,
         })),
     );
 
@@ -52,6 +53,7 @@ export default function FrameEditor({ frame }: Props) {
                 w_pct: el.w_pct,
                 h_pct: el.h_pct,
                 z_index: el.z_index,
+                rotation: el.rotation ?? 0,
             })),
         );
         setBgPreviewUrl(null);
@@ -83,7 +85,8 @@ export default function FrameEditor({ frame }: Props) {
                 Math.abs(el.y_pct - layout.y_pct) > 0.001 ||
                 Math.abs(el.w_pct - layout.w_pct) > 0.001 ||
                 Math.abs(el.h_pct - layout.h_pct) > 0.001 ||
-                el.z_index !== layout.z_index
+                el.z_index !== layout.z_index ||
+                Math.abs((el.rotation ?? 0) - (layout.rotation ?? 0)) > 0.001
             );
         });
     }, [frame.elements, layouts]);
@@ -100,6 +103,7 @@ export default function FrameEditor({ frame }: Props) {
                     w_pct: parseFloat(l.w_pct.toFixed(4)),
                     h_pct: parseFloat(l.h_pct.toFixed(4)),
                     z_index: l.z_index,
+                    rotation: parseFloat((l.rotation ?? 0).toFixed(2)),
                 })),
             },
             {
@@ -196,7 +200,7 @@ export default function FrameEditor({ frame }: Props) {
                 */}
                 <div className="flex gap-0  overflow-hidden rounded-lg border bg-background min-h-[calc(100vh-200px)]">
                     {/* Left sidebar: element list */}
-                    <div className="w-64 shrink-0">
+                    <div className="w-84 shrink-0">
                         <ElementListSidebar
                             frame={frame}
                             selectedElementId={selectedElementId}

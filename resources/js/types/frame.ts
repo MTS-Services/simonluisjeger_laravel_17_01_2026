@@ -14,6 +14,7 @@ export interface FrameElement {
     w_pct: number;
     h_pct: number;
     z_index: number;
+    rotation: number;
     sort_order: number;
     created_at: string;
     updated_at: string;
@@ -41,6 +42,7 @@ export interface ElementLayout {
     w_pct: number;
     h_pct: number;
     z_index: number;
+    rotation: number;
 }
 
 /**
@@ -51,7 +53,7 @@ export interface ElementLayout {
  *   "elements": [
  *     { "id": 1, "x_pct": 12.5, "y_pct": 20.0, "w_pct": 8.333, "h_pct": 14.286, "z_index": 1 },
  *     { "id": 2, "x_pct": 45.0, "y_pct": 30.0, "w_pct": 15.0,  "h_pct": 20.0,   "z_index": 2 },
- *     { "id": 3, "x_pct": 70.0, "y_pct": 10.0, "w_pct": 10.0,  "h_pct": 12.0,   "z_index": 3 }
+ *     { "id": 3, "x_pct": 70.0, "y_pct": 10.0, "w_pct": 10.0,  "h_pct": 12.0,   "z_index": 3, "rotation": -12 }
  *   ]
  * }
  *

@@ -49,6 +49,7 @@ export function FrameCanvas({
             w_pct: element.w_pct,
             h_pct: element.h_pct,
             z_index: element.z_index,
+            rotation: element.rotation ?? 0,
         };
     };
 
@@ -60,7 +61,13 @@ export function FrameCanvas({
         const yPct = pxToPct(y, containerSize.height);
 
         const updated = layouts.map((l) =>
-            l.id === elementId ? { ...l, x_pct: Math.max(0, xPct), y_pct: Math.max(0, yPct) } : l,
+            l.id === elementId
+                ? {
+                    ...l,
+                    x_pct: Math.max(0, xPct),
+                    y_pct: Math.max(0, yPct),
+                }
+                : l,
         );
         onLayoutChange(updated);
     };
@@ -77,17 +84,19 @@ export function FrameCanvas({
         const xPct = pxToPct(x, containerSize.width);
         const yPct = pxToPct(y, containerSize.height);
 
-        const updated = layouts.map((l) =>
-            l.id === elementId
-                ? {
-                    ...l,
-                    w_pct: Math.max(0.5, wPct),
-                    h_pct: Math.max(0.5, hPct),
-                    x_pct: Math.max(0, xPct),
-                    y_pct: Math.max(0, yPct),
-                }
-                : l,
-        );
+        const updated = layouts.map((l) => {
+            if (l.id !== elementId) {
+                return l;
+            }
+
+            return {
+                ...l,
+                w_pct: Math.max(0.5, wPct),
+                h_pct: Math.max(0.5, hPct),
+                x_pct: Math.max(0, xPct),
+                y_pct: Math.max(0, yPct),
+            };
+        });
         onLayoutChange(updated);
     };
 
@@ -184,15 +193,20 @@ export function FrameCanvas({
                                     right: barHandleV,
                                 }}
                             >
-                                <img
-                                    src={element.overlay_image_url ?? toStorageUrl(element.overlay_image) ?? ''}
-                                    alt={element.name}
-                                    className="h-full w-full object-contain pointer-events-none select-none"
-                                    draggable={false}
-                                />
+                                <div
+                                    className="h-full w-full"
+                                    style={{ transform: `rotate(${layout.rotation ?? 0}deg)` }}
+                                >
+                                    <img
+                                        src={element.overlay_image_url ?? toStorageUrl(element.overlay_image) ?? ''}
+                                        alt={element.name}
+                                        className="h-full w-full object-contain pointer-events-none select-none"
+                                        draggable={false}
+                                    />
+                                </div>
                                 <div className="absolute inset-0 border-2 border-dashed border-blue-400/50 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                                 <span className="absolute -top-5 left-0 bg-blue-600 text-white text-[10px] px-1.5 py-0.5 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                    {element.name} (z: {layout.z_index})
+                                    {element.name} (z: {layout.z_index}, r: {layout.rotation ?? 0}°)
                                 </span>
                             </Rnd>
                         );
@@ -212,12 +226,17 @@ export function FrameCanvas({
                             }}
                             onClick={() => onElementClick(element)}
                         >
-                            <img
-                                src={element.overlay_image_url ?? toStorageUrl(element.overlay_image) ?? ''}
-                                alt={element.name}
-                                className="h-full w-full object-contain"
-                                draggable={false}
-                            />
+                            <div
+                                className="h-full w-full"
+                                style={{ transform: `rotate(${layout.rotation ?? 0}deg)` }}
+                            >
+                                <img
+                                    src={element.overlay_image_url ?? toStorageUrl(element.overlay_image) ?? ''}
+                                    alt={element.name}
+                                    className="h-full w-full object-contain"
+                                    draggable={false}
+                                />
+                            </div>
                         </div>
                     );
                 })}

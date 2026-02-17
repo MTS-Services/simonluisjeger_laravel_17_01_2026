@@ -97,6 +97,7 @@ class FrameController extends Controller
             'elements.*.w_pct' => 'required|numeric|min:0.1|max:100',
             'elements.*.h_pct' => 'required|numeric|min:0.1|max:100',
             'elements.*.z_index' => 'required|integer|min:0|max:9999',
+            'elements.*.rotation' => 'nullable|numeric|min:-360|max:360',
         ]);
 
         foreach ($validated['elements'] as $elementData) {
@@ -106,6 +107,7 @@ class FrameController extends Controller
                 'w_pct' => $elementData['w_pct'],
                 'h_pct' => $elementData['h_pct'],
                 'z_index' => $elementData['z_index'],
+                'rotation' => $elementData['rotation'] ?? 0,
             ]);
         }
 
