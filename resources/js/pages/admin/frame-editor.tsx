@@ -194,7 +194,7 @@ export default function FrameEditor({ frame }: Props) {
                     />
                 </div>
                 */}
-                <div className="flex gap-0 overflow-hidden rounded-lg border bg-background" style={{ height: 'calc(100vh - 200px)' }}>
+                <div className="flex gap-0  overflow-hidden rounded-lg border bg-background min-h-[calc(100vh-200px)]">
                     {/* Left sidebar: element list */}
                     <div className="w-64 shrink-0">
                         <ElementListSidebar
