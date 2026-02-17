@@ -1,4 +1,4 @@
-import React, { useState, useRef, DragEvent, ChangeEvent } from 'react';
+import React, { useState, useRef, DragEvent, ChangeEvent, useEffect } from 'react';
 import { X, Upload, FileText, FileImage, FileVideo, File as FileIcon, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -64,6 +64,14 @@ export default function FileUpload({
 
     // Convert File to preview
     const createFilePreview = (file: File): Promise<FilePreview> => {
+        const hasExtension = (extensions: string[]): boolean => {
+            const name = file.name.toLowerCase();
+            return extensions.some((ext) => name.endsWith(ext));
+        };
+
+        const isImage = file.type.startsWith('image/') || hasExtension(['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.bmp', '.heic', '.heif']);
+        const isVideo = file.type.startsWith('video/') || hasExtension(['.mp4', '.mov', '.webm', '.mkv', '.avi']);
+
         return new Promise((resolve) => {
             const reader = new FileReader();
 
@@ -71,9 +79,9 @@ export default function FileUpload({
                 const result = e.target?.result as string;
                 let type: 'image' | 'video' | 'other' = 'other';
 
-                if (file.type.startsWith('image/')) {
+                if (isImage) {
                     type = 'image';
-                } else if (file.type.startsWith('video/')) {
+                } else if (isVideo) {
                     type = 'video';
                 }
 
@@ -84,7 +92,7 @@ export default function FileUpload({
                 });
             };
 
-            if (file.type.startsWith('image/') || file.type.startsWith('video/')) {
+            if (isImage || isVideo) {
                 reader.readAsDataURL(file);
             } else {
                 resolve({
@@ -212,6 +220,19 @@ export default function FileUpload({
 
     const showUploadArea = (!multiple && filePreviews.length === 0 && existingFiles.length === 0) ||
         (multiple && (!maxFiles || (filePreviews.length + existingFiles.length) < maxFiles));
+
+
+    useEffect(() => {
+        if (!value) {
+            setFilePreviews([]);
+        } else if (!multiple && value instanceof File) {
+            // If a single file exists but previews are empty (e.g. manual state set)
+            // This part is optional but helps keep things in sync
+            if (filePreviews.length === 0) {
+                createFilePreview(value).then(preview => setFilePreviews([preview]));
+            }
+        }
+    }, [value]);
 
     return (
         <div className={cn('w-full', className)}>

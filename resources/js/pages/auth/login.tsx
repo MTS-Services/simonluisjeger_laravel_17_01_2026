@@ -1,3 +1,4 @@
+import AppearanceToggleTab from '@/components/appearance-tabs';
 import InputError from '@/components/input-error';
 import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
@@ -26,6 +27,10 @@ export default function Login({ status, canResetPassword, canRegister }: LoginPr
             <Head title="Log in" />
 
             <div className="mx-auto w-full max-w-md rounded-2xl border border-border/50 bg-card/50 p-8 shadow-xl backdrop-blur-sm">
+
+                <div className="mb-6 flex justify-center">
+                    <h3 className="text-2xl font-semibold tracking-tight">Sign In</h3>
+                </div>
                 <Form
                     {...store.form()}
                     resetOnSuccess={['password']}
@@ -41,12 +46,12 @@ export default function Login({ status, canResetPassword, canRegister }: LoginPr
                                 </div>
 
                                 <div className="grid gap-2">
-                                    <div className="flex items-center justify-between">
+                                    {/* <div className="flex items-center justify-between">
                                         <Label htmlFor="password">Password</Label>
                                         {canResetPassword && (
                                             <TextLink href={request()} className="text-xs text-violet-600 hover:text-violet-500 transition-colors">Forgot?</TextLink>
                                         )}
-                                    </div>
+                                    </div> */}
                                     <Input id="password" type="password" name="password" required className="bg-background/50" />
                                     <InputError message={errors.password} />
                                 </div>
@@ -64,18 +69,6 @@ export default function Login({ status, canResetPassword, canRegister }: LoginPr
                         </>
                     )}
                 </Form>
-
-                {canRegister && (
-                    <p className="mt-6 text-center text-sm text-muted-foreground">
-                        New here? <TextLink href={register()} className="text-violet-600 font-medium hover:text-violet-500">Create an account</TextLink>
-                    </p>
-                )}
-
-                {status && (
-                    <div className="mt-4 rounded-lg bg-emerald-500/10 p-3 text-center text-sm font-medium text-emerald-600">
-                        {status}
-                    </div>
-                )}
             </div>
         </AuthLayout>
     );

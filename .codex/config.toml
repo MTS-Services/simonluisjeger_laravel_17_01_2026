@@ -1,0 +1,4 @@
+[mcp_servers.laravel-boost]
+command = "php"
+args = ["artisan", "boost:mcp"]
+cwd = "K:\\Laravel_Projects\\2026 Project\\New Projects\\simonluisjeger_laravel_17_01_2026"

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\BackgroundText;
 use App\Models\Information;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -18,6 +19,7 @@ class HomeController extends Controller
         // Get all projects and transform video paths
         return Inertia::render('frontend/home', [
             'projectData' => Information::all(),
+            'backgroundText' => BackgroundText::first(),
         ]);
     }
 }

@@ -39,7 +39,7 @@ const ArtProjectAtMit = lazy(() => import("./svg-paths/art-project-at-mit"));
 
 // The 11 IDs you requested
 export type ProjectID =
-  | 'simon_jeger' | 'liseagle_perching' | 'art_calder' | 'triamp'
+  | 'liseagle_perching' | 'art_calder' | 'triamp'
   | 'balloon' | 'liseagle_morphing' | 'dipper' | 'art_parasit'
   | 'airflow' | 'tensegrity' | 'art_mit' | 'snowboarder';
 
@@ -66,7 +66,7 @@ export default function MainSvg({ onSelect, activeId }: MainSvgProps) {
     <svg
       width="100%"
       height="100%"
-      viewBox="250 600 4500 4500"
+      viewBox="250 600 4500 4000"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid meet"
@@ -85,10 +85,7 @@ export default function MainSvg({ onSelect, activeId }: MainSvgProps) {
         <SnowborderOutline />
 
         {/* 11 INTERACTIVE ELEMENTS */}
-        <InteractiveGroup id="simon_jeger">
-          <SimonJeger />
-        </InteractiveGroup>
-
+        <InteractiveGroup id="snowboarder"><SimonJeger /></InteractiveGroup>
         <InteractiveGroup id="snowboarder"><Snowboarder /></InteractiveGroup>
         <InteractiveGroup id="liseagle_perching"><LisEaglePerching /></InteractiveGroup>
         <InteractiveGroup id="art_calder"><ArtProjectInStudioCalder /></InteractiveGroup>

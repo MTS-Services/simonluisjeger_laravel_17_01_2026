@@ -6,7 +6,7 @@ export default function SimonJeger() {
         fontStretch: 'normal',
         fontSize: '275.249px',
         lineHeight: 'normal',
-        fontFamily: 'Sans',
+        fontFamily: '"Open Sans", sans-serif',
         fontVariantLigatures: 'normal',
         fontVariantPosition: 'normal',
         fontVariantCaps: 'normal',
@@ -52,12 +52,12 @@ export default function SimonJeger() {
             xmlSpace="preserve"
             style={textStyle}
             x="400"
-            y="950"
+            y="900"
             id="text97"
         >
             <tspan
                 x="400"
-                y="950"
+                y="900"
                 style={textStyle}
                 id="tspan98"
             >

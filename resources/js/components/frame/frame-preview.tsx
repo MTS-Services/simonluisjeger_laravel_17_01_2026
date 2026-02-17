@@ -1,0 +1,136 @@
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { cn, toStorageUrl } from '@/lib/utils';
+import type { Frame, FrameElement, ElementLayout } from '@/types/frame';
+
+interface FramePreviewProps {
+    frame: Frame;
+    layouts?: ElementLayout[];
+    className?: string;
+    style?: CSSProperties;
+    onElementClick?: (element: FrameElement) => void;
+    bgPreviewUrl?: string | null;
+    basePreviewUrl?: string | null;
+}
+
+export function FramePreview({
+    frame,
+    layouts,
+    className,
+    style,
+    onElementClick,
+    bgPreviewUrl,
+    basePreviewUrl,
+}: FramePreviewProps) {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+
+    const aspectRatio = frame.design_width / frame.design_height;
+
+    const updateContainerSize = useCallback(() => {
+        if (!containerRef.current) return;
+        const parentWidth = containerRef.current.parentElement?.clientWidth ?? 0;
+        const width = Math.min(parentWidth, frame.design_width);
+        const height = width / aspectRatio;
+        setContainerSize({ width, height });
+    }, [aspectRatio, frame.design_width]);
+
+    useEffect(() => {
+        updateContainerSize();
+        window.addEventListener('resize', updateContainerSize);
+        return () => window.removeEventListener('resize', updateContainerSize);
+    }, [updateContainerSize]);
+
+    const getLayout = (element: FrameElement): ElementLayout => {
+        if (!layouts) {
+            return {
+                id: element.id,
+                x_pct: element.x_pct,
+                y_pct: element.y_pct,
+                w_pct: element.w_pct,
+                h_pct: element.h_pct,
+                z_index: element.z_index,
+            };
+        }
+
+        return (
+            layouts.find((layout) => layout.id === element.id) ?? {
+                id: element.id,
+                x_pct: element.x_pct,
+                y_pct: element.y_pct,
+                w_pct: element.w_pct,
+                h_pct: element.h_pct,
+                z_index: element.z_index,
+            }
+        );
+    };
+
+    return (
+        <div ref={containerRef} className={cn('w-full', className)} style={{ maxWidth: frame.design_width, ...style }}>
+            {containerSize.width > 0 ? (
+                <div
+                    className="relative overflow-hidden rounded-lg"
+                    style={{ width: containerSize.width, height: containerSize.height }}
+                >
+                    {(bgPreviewUrl ?? frame.bg_image_url ?? toStorageUrl(frame.bg_image)) && (
+                        <img
+                            key={bgPreviewUrl ?? frame.bg_image ?? 'bg'}
+                            src={`${(bgPreviewUrl ?? frame.bg_image_url ?? toStorageUrl(frame.bg_image))!}${!bgPreviewUrl && frame.updated_at ? `?v=${frame.updated_at}` : ''}`}
+                            alt="Frame backgrounddd"
+                            className="absolute inset-0 h-full w-full object-cover"
+                            draggable={false}
+                        />
+                    )}
+
+                    {(basePreviewUrl ?? frame.base_svg_url ?? toStorageUrl(frame.base_svg)) && (
+                        <img
+                            key={basePreviewUrl ?? frame.base_svg ?? 'base'}
+                            src={`${(basePreviewUrl ?? frame.base_svg_url ?? toStorageUrl(frame.base_svg))!}${!basePreviewUrl && frame.updated_at ? `?v=${frame.updated_at}` : ''}`}
+                            alt="Base SVG"
+                            className="absolute inset-0 h-full w-full object-contain"
+                            draggable={false}
+                        />
+                    )}
+
+                    {frame.elements.map((element) => {
+                        const layout = getLayout(element);
+                        const x = (layout.x_pct / 100) * containerSize.width;
+                        const y = (layout.y_pct / 100) * containerSize.height;
+                        const w = (layout.w_pct / 100) * containerSize.width;
+                        const h = (layout.h_pct / 100) * containerSize.height;
+
+                        return (
+                            <div
+                                key={element.id}
+                                className="absolute cursor-pointer transition-transform duration-200 ease-out hover:scale-110"
+                                style={{ left: x, top: y, width: w, height: h, zIndex: layout.z_index }}
+                                onClick={() => onElementClick?.(element)}
+                                title={element.title || element.name}
+                            >
+                                {(() => {
+                                    const src = element.overlay_image_url ?? toStorageUrl(element.overlay_image);
+                                    if (!src) return null;
+                                    return (
+                                        <img
+                                            key={element.id}
+                                            src={src}
+                                            alt={element.name}
+                                            className="h-full w-full object-contain drop-shadow-lg"
+                                            draggable={false}
+                                        />
+                                    );
+                                })()}
+                            </div>
+                        );
+                    })}
+                </div>
+            ) : (
+                <div
+                    className="flex items-center justify-center rounded-lg bg-muted"
+                    style={{ aspectRatio: `${frame.design_width}/${frame.design_height}` }}
+                >
+                    <p className="text-muted-foreground text-sm">Loading preview...</p>
+                </div>
+            )}
+        </div>
+    );
+}

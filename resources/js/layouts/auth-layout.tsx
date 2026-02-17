@@ -5,6 +5,7 @@ import { AuthHeader } from '@/layouts/partials/auth/header';
 import { AuthFooter } from '@/layouts/partials/auth/footer';
 import AppLogoIcon from '@/components/app-logo-icon';
 import { home } from '@/routes';
+import { useAppearance } from '@/hooks/use-appearance';
 
 
 interface AuthLayoutProps {
@@ -22,11 +23,22 @@ export default function AuthLayout({
     showHeader = false,
     showFooter = false,
 }: AuthLayoutProps) {
+    const { appearance, updateAppearance } = useAppearance();
+    React.useEffect(() => {
+        if (appearance !== 'light') {
+            updateAppearance('light');
+        }
+    }, [appearance, updateAppearance]);
+
     return (
         <div className="flex min-h-svh flex-col bg-background">
             {showHeader && <AuthHeader />}
 
-            <main className="flex flex-1 items-center justify-center p-6 md:p-10">
+            <main className="animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-1 items-center justify-center">
+                {children}
+            </main>
+
+            {/* <main className="flex flex-1 items-center justify-center p-6 md:p-10">
                 <div className="w-full max-w-sm space-y-8">
                     <div className="flex flex-col items-center gap-6">
                         <Link href={home()} className="flex flex-col items-center gap-2">
@@ -41,12 +53,11 @@ export default function AuthLayout({
                         </div>
                     </div>
 
-                    {/* Content Slot */}
                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                         {children}
                     </div>
                 </div>
-            </main>
+            </main> */}
 
             {showFooter && <AuthFooter />}
         </div>
