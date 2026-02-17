@@ -172,7 +172,7 @@ export default function FrameEditor({ frame }: Props) {
             </div>
 
             <div className="mt-6 space-y-6">
-                <div className="rounded-lg border bg-card p-4">
+                {/* <div className="rounded-lg border bg-card p-4">
                     <div className="flex items-center justify-between pb-4">
                         <div>
                             <h2 className="text-lg font-semibold">Live Preview</h2>
@@ -193,7 +193,7 @@ export default function FrameEditor({ frame }: Props) {
                         className="mx-auto"
                     />
                 </div>
-
+                */}
                 <div className="flex gap-0 overflow-hidden rounded-lg border bg-background" style={{ height: 'calc(100vh - 200px)' }}>
                     {/* Left sidebar: element list */}
                     <div className="w-64 shrink-0">
