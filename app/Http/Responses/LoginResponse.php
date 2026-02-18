@@ -3,7 +3,6 @@
 namespace App\Http\Responses;
 
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
 
 class LoginResponse implements LoginResponseContract
@@ -17,7 +16,8 @@ class LoginResponse implements LoginResponseContract
     public function toResponse($request)
     {
         $redirect = $request->user()->is_admin
-            ? route('admin.dashboard')
+            // ? route('admin.dashboard')
+            ? route('admin.frame.editor')
             : route('user.dashboard');
 
         return $request->wantsJson()

@@ -22,12 +22,12 @@ export function AdminHeader({ activeSlug }: { activeSlug?: string | null }) {
     return (
         <header className="border-b border-border/40 bg-background/80 backdrop-blur-md max-w-480">
             <div className='flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8'>
-                <Link href={route('admin.dashboard')}>Simon Jeger</Link>
+                <Link href={route('admin.frame.editor')}>Simon Jeger</Link>
                 <div className="flex items-center gap-4">
-                    <Button variant={activeSlug === 'dashboard' ? 'default' : 'ghost'} size="sm" className="capitalize">
+                    <Button variant={activeSlug === 'dashboard' ? 'default' : 'ghost'} size="sm" className="capitalize hidden">
                         <Link href={route('admin.dashboard')}>Information</Link>
                     </Button>
-                    <Button variant={activeSlug === 'background_text' ? 'default' : 'ghost'} size="sm" className="capitalize">
+                    <Button variant={activeSlug === 'background_text' ? 'default' : 'ghost'} size="sm" className="capitalize hidden">
                         <Link href={route('admin.background_text')}>Background Text</Link>
                     </Button>
                 </div>

@@ -13,19 +13,20 @@ class AdminDashboardController extends Controller
 {
     public function dashboard(Request $request)
     {
-        $key = $request->query('key');
-        $information = null;
-        if($key == 'background_text') {
-            $information = BackgroundText::first();
-        }else{
-            $information = $key ? Information::where('key', $key)->first() : null;
-        }
-        
+        // $key = $request->query('key');
+        // $information = null;
+        // if ($key == 'background_text') {
+        //     $information = BackgroundText::first();
+        // } else {
+        //     $information = $key ? Information::where('key', $key)->first() : null;
+        // }
 
-        return Inertia::render('admin/dashboard', [
-            'information' => $information,
-            'currentKey' => $key,
-        ]);
+        // return Inertia::render('admin/dashboard', [
+        //     'information' => $information,
+        //     'currentKey' => $key,
+        // ]);
+
+        return redirect()->route('admin.frame.editor');
     }
 
     public function backgroundText(Request $request)
@@ -46,11 +47,12 @@ class AdminDashboardController extends Controller
         ]);
 
         $backgroundText = BackgroundText::first();
-        if (!$backgroundText) {
+        if (! $backgroundText) {
             $backgroundText = BackgroundText::create($validated);
-        }else{
+        } else {
             $backgroundText->update($validated);
         }
+
         return redirect()->back()->with('message', 'Background text updated successfully!');
     }
 
@@ -59,11 +61,11 @@ class AdminDashboardController extends Controller
         $information = Information::where('key', $key)->firstOrFail();
 
         $validated = $request->validate([
-            'title'       => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'date'        => 'nullable|string|max:100',
-            'file'        => 'nullable|file|mimetypes:video/mp4,video/quicktime,video/x-m4v,image/jpeg,image/png,image/gif|max:512000',
-            'urls'        => 'nullable|array',
+            'date' => 'nullable|string|max:100',
+            'file' => 'nullable|file|mimetypes:video/mp4,video/quicktime,video/x-m4v,image/jpeg,image/png,image/gif|max:512000',
+            'urls' => 'nullable|array',
         ]);
 
         if ($request->hasFile('file')) {
