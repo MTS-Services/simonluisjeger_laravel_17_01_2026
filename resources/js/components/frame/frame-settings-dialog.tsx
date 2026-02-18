@@ -17,7 +17,6 @@ interface FrameSettingsDialogProps {
     open: boolean;
     onOpenChange: (open: boolean) => void;
     onBackgroundPreviewChange?: (url: string | null) => void;
-    onBasePreviewChange?: (url: string | null) => void;
     onSaved?: () => void;
 }
 
@@ -26,24 +25,20 @@ export function FrameSettingsDialog({
     open,
     onOpenChange,
     onBackgroundPreviewChange,
-    onBasePreviewChange,
     onSaved,
 }: FrameSettingsDialogProps) {
     const bgRef = useRef<HTMLInputElement>(null);
-    const svgRef = useRef<HTMLInputElement>(null);
 
     const { data, setData, post, processing, errors } = useForm<{
         name: string;
         design_width: number;
         design_height: number;
         bg_image: File | null;
-        base_svg: File | null;
     }>({
         name: frame.name,
         design_width: frame.design_width,
         design_height: frame.design_height,
         bg_image: null,
-        base_svg: null,
     });
 
     function handleSubmit(e: FormEvent) {
@@ -54,7 +49,6 @@ export function FrameSettingsDialog({
             onSuccess: () => {
                 onOpenChange(false);
                 if (bgRef.current) bgRef.current.value = '';
-                if (svgRef.current) svgRef.current.value = '';
                 onSaved?.();
             },
         });
@@ -110,7 +104,7 @@ export function FrameSettingsDialog({
                             ref={bgRef}
                             id="bg-image"
                             type="file"
-                            accept="image/*"
+                            accept="image/svg+xml/*"
                             onChange={(e) => {
                                 const file = e.target.files?.[0] ?? null;
                                 setData('bg_image', file);
@@ -122,27 +116,6 @@ export function FrameSettingsDialog({
                         {errors.bg_image && <p className="text-sm text-destructive">{errors.bg_image}</p>}
                         {frame.bg_image && (
                             <p className="text-xs text-muted-foreground">Current: {frame.bg_image.split('/').pop()}</p>
-                        )}
-                    </div>
-
-                    <div className="space-y-2">
-                        <Label htmlFor="base-svg">Base SVG Overlay</Label>
-                        <Input
-                            ref={svgRef}
-                            id="base-svg"
-                            type="file"
-                            accept=".svg"
-                            onChange={(e) => {
-                                const file = e.target.files?.[0] ?? null;
-                                setData('base_svg', file);
-                                if (onBasePreviewChange) {
-                                    onBasePreviewChange(file ? URL.createObjectURL(file) : null);
-                                }
-                            }}
-                        />
-                        {errors.base_svg && <p className="text-sm text-destructive">{errors.base_svg}</p>}
-                        {frame.base_svg && (
-                            <p className="text-xs text-muted-foreground">Current: {frame.base_svg.split('/').pop()}</p>
                         )}
                     </div>
 

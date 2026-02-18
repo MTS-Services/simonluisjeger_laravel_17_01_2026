@@ -14,7 +14,7 @@ class FrameElementController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'overlay_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp,svg|max:10240',
+            'overlay_image' => 'required|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/webp,image/svg+xml|max:10240',
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string|max:5000',
             'media_type' => 'nullable|in:image,video',

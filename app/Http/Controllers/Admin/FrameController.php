@@ -41,8 +41,7 @@ class FrameController extends Controller
     public function updateBackground(Request $request, Frame $frame)
     {
         $request->validate([
-            'bg_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10240',
-            'base_svg' => 'nullable|file|mimes:svg|max:5120',
+            'bg_image' => 'nullable|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/webp,image/svg+xml|max:10240',
             'name' => 'nullable|string|max:255',
             'design_width' => 'nullable|integer|min:100|max:5000',
             'design_height' => 'nullable|integer|min:100|max:5000',
@@ -67,13 +66,6 @@ class FrameController extends Controller
                 Storage::disk('public')->delete($frame->bg_image);
             }
             $updateData['bg_image'] = $request->file('bg_image')->store('frames/backgrounds', 'public');
-        }
-
-        if ($request->hasFile('base_svg')) {
-            if ($frame->base_svg) {
-                Storage::disk('public')->delete($frame->base_svg);
-            }
-            $updateData['base_svg'] = $request->file('base_svg')->store('frames/svgs', 'public');
         }
 
         if (! empty($updateData)) {
