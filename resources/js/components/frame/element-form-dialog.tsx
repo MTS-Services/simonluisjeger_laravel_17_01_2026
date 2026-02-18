@@ -1,5 +1,5 @@
 import { useForm } from '@inertiajs/react';
-import { FormEvent, useRef } from 'react';
+import { FormEvent, useEffect, useRef } from 'react';
 import {
     Dialog,
     DialogContent,
@@ -44,6 +44,30 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
         z_index: element?.z_index ?? 1,
         rotation: element?.rotation ?? 0,
     });
+
+    useEffect(() => {
+        if (!open) {
+            return;
+        }
+
+        setData({
+            name: element?.name ?? '',
+            title: element?.title ?? '',
+            description: element?.description ?? '',
+            overlay_image: null,
+            media_file: null,
+            media_type: element?.media_type ?? '',
+            z_index: element?.z_index ?? 1,
+            rotation: element?.rotation ?? 0,
+        });
+
+        if (overlayRef.current) {
+            overlayRef.current.value = '';
+        }
+        if (mediaRef.current) {
+            mediaRef.current.value = '';
+        }
+    }, [element, open, setData]);
 
     function handleSubmit(e: FormEvent) {
         e.preventDefault();
