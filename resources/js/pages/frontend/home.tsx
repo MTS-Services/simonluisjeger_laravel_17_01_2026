@@ -168,11 +168,11 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
   }, [selectedId, selectedElement]);
 
   return (
-    <main className="min-h-screen bg-[#d9d9d9] p-20 py-24 h-auto w-full">
+    <main className="min-h-screen bg-[#d9d9d9] p-10 h-auto w-full">
       <Head title="Simon Jeger" />
       <h2 className="text-4xl font-bold text-left mb-15">Simon Jeger</h2>
 
-      <div className="flex flex-col lg:flex-row w-full h-auto items-center lg:items-start">
+      <div className="flex flex-col lg:flex-row w-full h-auto items-center">
         <div ref={previewRef} className="w-full flex-1 flex items-center justify-center overflow-hidden pb-0 pt-6 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center">
             {frame ? (
