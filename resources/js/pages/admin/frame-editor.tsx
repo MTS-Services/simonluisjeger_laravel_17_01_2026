@@ -253,7 +253,6 @@ export default function FrameEditor({ frame }: Props) {
                 open={showSettings}
                 onOpenChange={setShowSettings}
                 onBackgroundPreviewChange={setBgPreviewUrl}
-                onBasePreviewChange={setBasePreviewUrl}
                 onSaved={() => router.reload({ only: ['frame'] })}
             />
         </AdminLayout>

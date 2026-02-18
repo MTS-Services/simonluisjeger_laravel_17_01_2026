@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\BackgroundText;
+use App\Models\Frame;
 use App\Models\Information;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -20,6 +21,7 @@ class HomeController extends Controller
         return Inertia::render('frontend/home', [
             'projectData' => Information::all(),
             'backgroundText' => BackgroundText::first(),
+            'frame' => Frame::with('elements')->where('is_active', true)->first(),
         ]);
     }
 }

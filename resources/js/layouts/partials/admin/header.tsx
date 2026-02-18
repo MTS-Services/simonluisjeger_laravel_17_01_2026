@@ -27,7 +27,7 @@ export function AdminHeader({ activeSlug }: { activeSlug?: string | null }) {
                     <Button variant={activeSlug === 'dashboard' ? 'default' : 'ghost'} size="sm" className="capitalize hidden">
                         <Link href={route('admin.dashboard')}>Information</Link>
                     </Button>
-                    <Button variant={activeSlug === 'background_text' ? 'default' : 'ghost'} size="sm" className="capitalize hidden">
+                    <Button variant={activeSlug === 'background_text' ? 'default' : 'ghost'} size="sm" className="capitalize ">
                         <Link href={route('admin.background_text')}>Background Text</Link>
                     </Button>
                 </div>

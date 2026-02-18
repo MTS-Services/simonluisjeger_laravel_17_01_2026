@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { cn, toStorageUrl } from '@/lib/utils';
 import type { Frame, FrameElement, ElementLayout } from '@/types/frame';
+import { ElementModal } from '@/components/frame/element-modal';
+
+type ElementMediaOverride = Partial<Pick<FrameElement, 'media_type' | 'media_url' | 'media_file_url' | 'title' | 'description'>>;
 
 interface FramePreviewProps {
     frame: Frame;
@@ -10,6 +13,8 @@ interface FramePreviewProps {
     onElementClick?: (element: FrameElement) => void;
     bgPreviewUrl?: string | null;
     basePreviewUrl?: string | null;
+    showElementModal?: boolean;
+    resolveElementMedia?: (element: FrameElement) => ElementMediaOverride | null;
 }
 
 export function FramePreview({
@@ -20,9 +25,13 @@ export function FramePreview({
     onElementClick,
     bgPreviewUrl,
     basePreviewUrl,
+    showElementModal = true,
+    resolveElementMedia,
 }: FramePreviewProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+    const [modalElement, setModalElement] = useState<FrameElement | null>(null);
+    const [modalOpen, setModalOpen] = useState(false);
 
     const aspectRatio = frame.design_width / frame.design_height;
 
@@ -49,6 +58,7 @@ export function FramePreview({
                 w_pct: element.w_pct,
                 h_pct: element.h_pct,
                 z_index: element.z_index,
+                rotation: element.rotation ?? 0,
             };
         }
 
@@ -60,6 +70,7 @@ export function FramePreview({
                 w_pct: element.w_pct,
                 h_pct: element.h_pct,
                 z_index: element.z_index,
+                rotation: element.rotation ?? 0,
             }
         );
     };
@@ -103,7 +114,20 @@ export function FramePreview({
                                 key={element.id}
                                 className="absolute cursor-pointer transition-transform duration-200 ease-out hover:scale-110"
                                 style={{ left: x, top: y, width: w, height: h, zIndex: layout.z_index }}
-                                onClick={() => onElementClick?.(element)}
+                                onClick={() => {
+                                    onElementClick?.(element);
+                                    if (showElementModal) {
+                                        let modalData: FrameElement = element;
+                                        if (resolveElementMedia) {
+                                            const override = resolveElementMedia(element);
+                                            if (override) {
+                                                modalData = { ...element, ...override };
+                                            }
+                                        }
+                                        setModalElement(modalData);
+                                        setModalOpen(true);
+                                    }
+                                }}
                                 title={element.title || element.name}
                             >
                                 {(() => {
@@ -130,6 +154,18 @@ export function FramePreview({
                 >
                     <p className="text-muted-foreground text-sm">Loading preview...</p>
                 </div>
+            )}
+            {showElementModal && (
+                <ElementModal
+                    element={modalElement}
+                    open={modalOpen}
+                    onOpenChange={(open) => {
+                        setModalOpen(open);
+                        if (!open) {
+                            setModalElement(null);
+                        }
+                    }}
+                />
             )}
         </div>
     );
