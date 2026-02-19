@@ -125,7 +125,7 @@ export function FramePreview({
                         return (
                             <div
                                 key={element.id}
-                                className="absolute cursor-pointer transition-all duration-200 ease-out hover:scale-110"
+                                className="absolute cursor-pointer transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105"
                                 style={{
                                     left: x,
                                     top: y,
@@ -133,7 +133,7 @@ export function FramePreview({
                                     height: h,
                                     zIndex: layout.z_index,
                                     filter: highlightColor
-                                        ? `drop-shadow(0 0 8px ${highlightColor}) drop-shadow(0 0 16px ${highlightColor})`
+                                        ? `brightness(1.15) drop-shadow(0 0 1px ${highlightColor}) drop-shadow(0 0 3px ${highlightColor})`
                                         : undefined,
                                 }}
                                 onMouseEnter={() => setHoveredElementId(element.id)}
@@ -162,7 +162,7 @@ export function FramePreview({
                                             key={element.id}
                                             src={src}
                                             alt={element.name}
-                                            className="h-full w-full object-contain drop-shadow-lg"
+                                            className="h-full w-full object-contain"
                                             draggable={false}
                                         />
                                     );
