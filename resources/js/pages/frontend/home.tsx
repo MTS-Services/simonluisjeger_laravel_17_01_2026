@@ -204,10 +204,10 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-full aspect-video bg-zinc-900"
-                    controls
+                    className="w-full h-full aspect-video bg-zinc-900 pointer-events-none"
                     playsInline
                     autoPlay
+                    muted
                     loop
                     preload="metadata"
                   >

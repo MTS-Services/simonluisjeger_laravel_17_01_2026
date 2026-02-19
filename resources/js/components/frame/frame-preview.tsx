@@ -105,7 +105,7 @@ export function FramePreview({
                         />
                     )}
 
-                    {frame.elements.map((element) => {
+                    {frame.elements.map((element, index) => {
                         const layout = getLayout(element);
                         const x = (layout.x_pct / 100) * containerSize.width;
                         const y = (layout.y_pct / 100) * containerSize.height;
@@ -125,7 +125,7 @@ export function FramePreview({
                         return (
                             <div
                                 key={element.id}
-                                className="absolute cursor-pointer transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105"
+                                className="frame-element-clickable absolute cursor-pointer transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105"
                                 style={{
                                     left: x,
                                     top: y,
@@ -133,6 +133,7 @@ export function FramePreview({
                                     height: h,
                                     zIndex: layout.z_index,
                                     rotate: layout.rotation ? `${layout.rotation}deg` : undefined,
+                                    animationDelay: `${index * 0.4}s`,
                                     filter: highlightColor
                                         ? `brightness(1.15) drop-shadow(0 0 1px ${highlightColor}) drop-shadow(0 0 3px ${highlightColor})`
                                         : undefined,

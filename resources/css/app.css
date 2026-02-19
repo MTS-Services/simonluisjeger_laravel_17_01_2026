@@ -228,3 +228,17 @@
     fill: #FF0000 !important;
 
 }
+
+/* Subtle idle float animation for clickable frame elements */
+@keyframes gentle-float {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -2px; }
+}
+
+.frame-element-clickable {
+    animation: gentle-float 3s ease-in-out infinite;
+}
+
+.frame-element-clickable:hover {
+    animation: none;
+}
