@@ -132,7 +132,9 @@ export function FramePreview({
                                     width: w,
                                     height: h,
                                     zIndex: layout.z_index,
-                                    backgroundColor: highlightColor ?? undefined,
+                                    filter: highlightColor
+                                        ? `drop-shadow(0 0 8px ${highlightColor}) drop-shadow(0 0 16px ${highlightColor})`
+                                        : undefined,
                                 }}
                                 onMouseEnter={() => setHoveredElementId(element.id)}
                                 onMouseLeave={() => setHoveredElementId(null)}
