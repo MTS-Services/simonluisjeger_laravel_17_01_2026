@@ -20,6 +20,8 @@ class FrameElementController extends Controller
             'media_type' => 'nullable|in:image,video',
             'media_file' => 'nullable|file|mimetypes:image/jpeg,image/png,image/gif,image/webp,video/mp4,video/quicktime,video/x-m4v|max:512000',
             'rotation' => 'nullable|numeric|min:-360|max:360',
+            'hover_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
+            'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
         ]);
 
         $overlayPath = $request->file('overlay_image')->store('frames/elements', 'public');
@@ -55,6 +57,8 @@ class FrameElementController extends Controller
             'h_pct' => 10,
             'z_index' => 1,
             'rotation' => $validated['rotation'] ?? 0,
+            'hover_color' => $validated['hover_color'] ?? null,
+            'active_color' => $validated['active_color'] ?? null,
             'sort_order' => $maxSort + 1,
         ]);
 
@@ -72,6 +76,8 @@ class FrameElementController extends Controller
             'media_file' => 'nullable|file|mimetypes:image/jpeg,image/png,image/gif,image/webp,video/mp4,video/quicktime,video/x-m4v|max:512000',
             'z_index' => 'nullable|integer|min:0|max:9999',
             'rotation' => 'nullable|numeric|min:-360|max:360',
+            'hover_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
+            'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
         ]);
 
         if ($request->hasFile('overlay_image')) {

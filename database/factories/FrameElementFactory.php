@@ -31,6 +31,8 @@ class FrameElementFactory extends Factory
             'h_pct' => $this->faker->randomFloat(3, 5, 40),
             'z_index' => $this->faker->numberBetween(0, 10),
             'rotation' => $this->faker->numberBetween(-45, 45),
+            'hover_color' => $this->faker->optional()->hexColor(),
+            'active_color' => $this->faker->optional()->hexColor(),
             'sort_order' => 1,
         ];
     }

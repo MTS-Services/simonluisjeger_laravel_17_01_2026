@@ -10,6 +10,7 @@ interface FramePreviewProps {
     layouts?: ElementLayout[];
     className?: string;
     style?: CSSProperties;
+    activeElementId?: number | null;
     onElementClick?: (element: FrameElement) => void;
     bgPreviewUrl?: string | null;
     basePreviewUrl?: string | null;
@@ -22,6 +23,7 @@ export function FramePreview({
     layouts,
     className,
     style,
+    activeElementId,
     onElementClick,
     bgPreviewUrl,
     basePreviewUrl,
@@ -30,6 +32,7 @@ export function FramePreview({
 }: FramePreviewProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+    const [hoveredElementId, setHoveredElementId] = useState<number | null>(null);
     const [modalElement, setModalElement] = useState<FrameElement | null>(null);
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -109,11 +112,30 @@ export function FramePreview({
                         const w = (layout.w_pct / 100) * containerSize.width;
                         const h = (layout.h_pct / 100) * containerSize.height;
 
+                        const isActive = activeElementId === element.id;
+                        const isHovered = hoveredElementId === element.id;
+
+                        let highlightColor: string | null = null;
+                        if (isActive && element.active_color) {
+                            highlightColor = element.active_color;
+                        } else if (isHovered && element.hover_color) {
+                            highlightColor = element.hover_color;
+                        }
+
                         return (
                             <div
                                 key={element.id}
-                                className="absolute cursor-pointer transition-transform duration-200 ease-out hover:scale-110"
-                                style={{ left: x, top: y, width: w, height: h, zIndex: layout.z_index }}
+                                className="absolute cursor-pointer transition-all duration-200 ease-out hover:scale-110"
+                                style={{
+                                    left: x,
+                                    top: y,
+                                    width: w,
+                                    height: h,
+                                    zIndex: layout.z_index,
+                                    backgroundColor: highlightColor ?? undefined,
+                                }}
+                                onMouseEnter={() => setHoveredElementId(element.id)}
+                                onMouseLeave={() => setHoveredElementId(null)}
                                 onClick={() => {
                                     onElementClick?.(element);
                                     if (showElementModal) {

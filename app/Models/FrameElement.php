@@ -25,6 +25,8 @@ class FrameElement extends Model
         'h_pct',
         'z_index',
         'rotation',
+        'hover_color',
+        'active_color',
         'sort_order',
     ];
 

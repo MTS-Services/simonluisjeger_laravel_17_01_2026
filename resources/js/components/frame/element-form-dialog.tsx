@@ -34,6 +34,8 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
         media_type: string;
         z_index: number;
         rotation: number;
+        hover_color: string;
+        active_color: string;
     }>({
         name: element?.name ?? '',
         title: element?.title ?? '',
@@ -43,6 +45,8 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
         media_type: element?.media_type ?? '',
         z_index: element?.z_index ?? 1,
         rotation: element?.rotation ?? 0,
+        hover_color: element?.hover_color ?? '',
+        active_color: element?.active_color ?? '',
     });
 
     useEffect(() => {
@@ -59,6 +63,8 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
             media_type: element?.media_type ?? '',
             z_index: element?.z_index ?? 1,
             rotation: element?.rotation ?? 0,
+            hover_color: element?.hover_color ?? '',
+            active_color: element?.active_color ?? '',
         });
 
         if (overlayRef.current) {
@@ -190,6 +196,72 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
                             onChange={(e) => setData('rotation', parseFloat(e.target.value) || 0)}
                         />
                         {errors.rotation && <p className="text-sm text-destructive">{errors.rotation}</p>}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                            <Label htmlFor="hover_color">Hover Color</Label>
+                            <div className="flex items-center gap-2">
+                                <input
+                                    id="hover_color_picker"
+                                    type="color"
+                                    value={data.hover_color || '#ffffff'}
+                                    onChange={(e) => setData('hover_color', e.target.value)}
+                                    className="h-9 w-9 shrink-0 cursor-pointer rounded border p-0.5"
+                                />
+                                <Input
+                                    id="hover_color"
+                                    value={data.hover_color}
+                                    onChange={(e) => setData('hover_color', e.target.value)}
+                                    placeholder="#ff0000"
+                                    maxLength={9}
+                                />
+                                {data.hover_color && (
+                                    <Button
+                                        type="button"
+                                        variant="ghost"
+                                        size="sm"
+                                        className="shrink-0 px-2 text-xs"
+                                        onClick={() => setData('hover_color', '')}
+                                    >
+                                        Clear
+                                    </Button>
+                                )}
+                            </div>
+                            {errors.hover_color && <p className="text-sm text-destructive">{errors.hover_color}</p>}
+                        </div>
+
+                        <div className="space-y-2">
+                            <Label htmlFor="active_color">Active Color</Label>
+                            <div className="flex items-center gap-2">
+                                <input
+                                    id="active_color_picker"
+                                    type="color"
+                                    value={data.active_color || '#ffffff'}
+                                    onChange={(e) => setData('active_color', e.target.value)}
+                                    className="h-9 w-9 shrink-0 cursor-pointer rounded border p-0.5"
+                                />
+                                <Input
+                                    id="active_color"
+                                    value={data.active_color}
+                                    onChange={(e) => setData('active_color', e.target.value)}
+                                    placeholder="#00ff00"
+                                    maxLength={9}
+                                />
+                                {data.active_color && (
+                                    <Button
+                                        type="button"
+                                        variant="ghost"
+                                        size="sm"
+                                        className="shrink-0 px-2 text-xs"
+                                        onClick={() => setData('active_color', '')}
+                                    >
+                                        Clear
+                                    </Button>
+                                )}
+                            </div>
+                            {errors.active_color && <p className="text-sm text-destructive">{errors.active_color}</p>}
+                        </div>
                     </div>
 
                     <DialogFooter>

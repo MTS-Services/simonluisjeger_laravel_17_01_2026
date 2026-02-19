@@ -15,6 +15,8 @@ export interface FrameElement {
     h_pct: number;
     z_index: number;
     rotation: number;
+    hover_color: string | null;
+    active_color: string | null;
     sort_order: number;
     created_at: string;
     updated_at: string;

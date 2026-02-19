@@ -180,6 +180,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                 frame={frame}
                 className="mx-auto"
                 showElementModal={false}
+                activeElementId={selectedElement?.id ?? null}
                 onElementClick={handleFrameElementClick}
               />
             ) : (
