@@ -132,6 +132,7 @@ export function FramePreview({
                                     width: w,
                                     height: h,
                                     zIndex: layout.z_index,
+                                    rotate: layout.rotation ? `${layout.rotation}deg` : undefined,
                                     filter: highlightColor
                                         ? `brightness(1.15) drop-shadow(0 0 1px ${highlightColor}) drop-shadow(0 0 3px ${highlightColor})`
                                         : undefined,
