@@ -30,6 +30,8 @@ interface BackgroundRecord {
   id: number;
   text1?: string | null;
   text2?: string | null;
+  background_color?: string | null;
+  text_color?: string | null;
 }
 
 interface Props {
@@ -168,7 +170,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
   }, [selectedId, selectedElement]);
 
   return (
-    <main className="min-h-screen bg-[#d9d9d9] p-10 h-auto w-full">
+    <main className="min-h-screen p-10 h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
       <Head title="Simon Jeger" />
       <h2 className="text-4xl font-bold text-left mb-15 hover:cursor-pointer">Simon Jeger</h2>
 
@@ -275,8 +277,8 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
               )}
 
               {backgroundText?.text2 && (
-                <Text>{backgroundText.text2.split(/<br\s*\/?>/gi).map((line: string, index: number) => (
-                  <Text className="text-[#e6e6e6]" key={index}>
+                <Text style={{ color: backgroundText?.text_color || '#e6e6e6' }}>{backgroundText.text2.split(/<br\s*\/?>/gi).map((line: string, index: number) => (
+                  <Text style={{ color: backgroundText?.text_color || '#e6e6e6' }} key={index}>
                     {line}
                     {'\n'}
                   </Text>

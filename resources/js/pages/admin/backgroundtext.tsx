@@ -16,6 +16,8 @@ export default function BackgroundText({information}: any) {
     const { data, setData, post, processing, reset } = useForm({
         text1: '',
         text2: '',
+        background_color: '#d9d9d9',
+        text_color: '#e6e6e6',
     });
 
     useEffect(() => {
@@ -29,6 +31,8 @@ export default function BackgroundText({information}: any) {
             setData({
                 text1: information.text1 || '',
                 text2: information.text2 || '',
+                background_color: information.background_color || '#d9d9d9',
+                text_color: information.text_color || '#e6e6e6',
             });
         }
     }, [information,flash]);
@@ -70,6 +74,44 @@ export default function BackgroundText({information}: any) {
                                 <Label>Text 2</Label>
                                 <Textarea rows={4} value={data.text2} onChange={e => setData('text2', e.target.value)} />
                                 <InputError message={errors.text2} />
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <Label>Background Color</Label>
+                                    <div className="flex items-center gap-3 mt-1">
+                                        <input
+                                            type="color"
+                                            value={data.background_color}
+                                            onChange={e => setData('background_color', e.target.value)}
+                                            className="h-10 w-14 cursor-pointer rounded border p-1"
+                                        />
+                                        <Input
+                                            value={data.background_color}
+                                            onChange={e => setData('background_color', e.target.value)}
+                                            maxLength={7}
+                                            className="w-28 font-mono"
+                                        />
+                                    </div>
+                                    <InputError message={errors.background_color} />
+                                </div>
+                                <div>
+                                    <Label>Text Font Color</Label>
+                                    <div className="flex items-center gap-3 mt-1">
+                                        <input
+                                            type="color"
+                                            value={data.text_color}
+                                            onChange={e => setData('text_color', e.target.value)}
+                                            className="h-10 w-14 cursor-pointer rounded border p-1"
+                                        />
+                                        <Input
+                                            value={data.text_color}
+                                            onChange={e => setData('text_color', e.target.value)}
+                                            maxLength={7}
+                                            className="w-28 font-mono"
+                                        />
+                                    </div>
+                                    <InputError message={errors.text_color} />
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -44,6 +44,8 @@ class AdminDashboardController extends Controller
         $validated = $request->validate([
             'text1' => 'required|string',
             'text2' => 'required|string',
+            'background_color' => 'required|string|max:7',
+            'text_color' => 'required|string|max:7',
         ]);
 
         $backgroundText = BackgroundText::first();

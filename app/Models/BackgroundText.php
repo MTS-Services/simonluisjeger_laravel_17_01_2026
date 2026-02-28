@@ -12,10 +12,7 @@ class BackgroundText extends Model
     protected $fillable = [
         'text1',
         'text2',
+        'background_color',
+        'text_color',
     ];
-
-
-
-
-
 }
