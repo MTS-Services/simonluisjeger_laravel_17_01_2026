@@ -174,7 +174,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
       <Head title="Simon Jeger" />
       <h2 className="text-4xl font-bold text-left mb-15 hover:cursor-pointer">Simon Jeger</h2>
 
-      <div className="flex flex-col lg:flex-row w-full h-auto items-center">
+      <div className="flex flex-col lg:flex-row w-full h-auto lg:items-stretch items-center">
         <div ref={previewRef} className="w-full flex-1 flex items-center justify-center overflow-hidden pb-0 pt-6 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center">
             {frame ? (
@@ -191,10 +191,10 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
           </div>
         </div>
 
-        <div className="w-full flex-1 flex items-start lg:items-center justify-center pt-0 p-6 md:p-8">
+        <div className="w-full flex-1 flex flex-col items-stretch justify-center pt-0 p-6 md:p-8">
           {(activeProject || panelMedia) ? (
-            <div ref={detailsRef} className="w-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
-              <div className="aspect-video bg-zinc-900 border-b border-zinc-800 relative">
+            <div ref={detailsRef} className="w-full h-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col">
+              <div className="flex-1 bg-zinc-900 border-b border-zinc-800 relative min-h-0">
                 {panelMedia?.kind === 'image' && (
                   <img
                     src={panelMedia.src}
@@ -206,7 +206,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-full aspect-video bg-zinc-900 pointer-events-none"
+                    className="w-full h-full bg-zinc-900 object-contain pointer-events-none"
                     playsInline
                     autoPlay
                     muted
