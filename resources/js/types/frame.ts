@@ -1,3 +1,8 @@
+export interface ElementLink {
+    label: string;
+    url: string;
+}
+
 export interface FrameElement {
     id: number;
     frame_id: number;
@@ -17,6 +22,7 @@ export interface FrameElement {
     rotation: number;
     hover_color: string | null;
     active_color: string | null;
+    links?: ElementLink[] | null;
     sort_order: number;
     created_at: string;
     updated_at: string;

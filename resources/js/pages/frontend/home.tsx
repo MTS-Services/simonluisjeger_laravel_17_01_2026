@@ -3,7 +3,7 @@ import { Head } from "@inertiajs/react";
 import { useAppearance } from "@/hooks/use-appearance";
 import Text from "@/components/text";
 import { FramePreview } from "@/components/frame/frame-preview";
-import type { Frame, FrameElement } from "@/types/frame";
+import type { ElementLink, Frame, FrameElement } from "@/types/frame";
 import { toStorageUrl } from "@/lib/utils";
 
 interface ProjectUrl {
@@ -143,6 +143,30 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     return null;
   }, [selectedElementMedia, activeProject]);
 
+  const selectedElementLinks = useMemo<ProjectUrl[]>(() => {
+    if (!selectedElement?.links?.length) {
+      return [];
+    }
+
+    return selectedElement.links
+      .filter((link: ElementLink) => link.label && link.url)
+      .map<ProjectUrl>((link) => ({
+        label: link.label,
+        url: link.url,
+        type: link.url.startsWith('mailto:') ? 'email' : undefined,
+      }));
+  }, [selectedElement]);
+
+  const detailLinks = useMemo<ProjectUrl[]>(() => {
+    if (selectedElementLinks.length) {
+      return selectedElementLinks;
+    }
+    if (activeProject?.urls?.length) {
+      return activeProject.urls;
+    }
+    return [];
+  }, [selectedElementLinks, activeProject]);
+
   useEffect(() => {
     if (panelMedia?.src) {
       setMediaLoading(true);
@@ -212,7 +236,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <img
                     src={panelMedia.src}
                     alt={panelMedia.title ?? 'Selected media'}
-                    className="w-full h-full object-cover"
+                    className="w-full h-75 sm:h-130 object-cover"
                     onLoad={() => setMediaLoading(false)}
                   />
                 )}
@@ -252,21 +276,25 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   {activeProject?.description ?? selectedElementMedia?.description ?? 'Explore the highlighted element to learn more about this project.'}
                 </p>
 
-                {activeProject?.urls?.length ? (
+                {detailLinks.length > 0 && (
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                    {activeProject.urls.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.type === 'email' ? `mailto:${link.url}` : link.url}
-                        target={link.type === 'email' ? '_self' : '_blank'}
-                        rel="noopener noreferrer"
-                        className="text-sm lg:text-base font-bold capitalize hover:underline transition-all"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
+                    {detailLinks.map((link, index) => {
+                      const isEmailLink = link.type === 'email' || link.url.startsWith('mailto:');
+                      const href = isEmailLink && !link.url.startsWith('mailto:') ? `mailto:${link.url}` : link.url;
+                      return (
+                        <a
+                          key={`${link.label}-${index}`}
+                          href={href}
+                          target={isEmailLink ? '_self' : '_blank'}
+                          rel="noopener noreferrer"
+                          className="text-sm lg:text-base font-bold capitalize hover:underline transition-all"
+                        >
+                          {link.label}
+                        </a>
+                      );
+                    })}
                   </div>
-                ) : null}
+                )}
               </div>
             </div>
           ) : (

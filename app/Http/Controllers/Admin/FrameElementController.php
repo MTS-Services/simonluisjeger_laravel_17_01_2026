@@ -22,9 +22,14 @@ class FrameElementController extends Controller
             'rotation' => 'nullable|numeric|min:-360|max:360',
             'hover_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
+            'links' => 'nullable|array|max:10',
+            'links.*.label' => 'required_with:links.*.url|string|max:255',
+            'links.*.url' => 'required_with:links.*.label|url|max:2048',
         ]);
 
         $overlayPath = $request->file('overlay_image')->store('frames/elements', 'public');
+
+        $links = $this->sanitizeLinks($validated['links'] ?? []);
 
         $mediaUrl = null;
         $mediaType = $validated['media_type'] ?? null;
@@ -59,6 +64,7 @@ class FrameElementController extends Controller
             'rotation' => $validated['rotation'] ?? 0,
             'hover_color' => $validated['hover_color'] ?? null,
             'active_color' => $validated['active_color'] ?? null,
+            'links' => empty($links) ? null : $links,
             'sort_order' => $maxSort + 1,
         ]);
 
@@ -78,7 +84,12 @@ class FrameElementController extends Controller
             'rotation' => 'nullable|numeric|min:-360|max:360',
             'hover_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
+            'links' => 'nullable|array|max:10',
+            'links.*.label' => 'required_with:links.*.url|string|max:255',
+            'links.*.url' => 'required_with:links.*.label|url|max:2048',
         ]);
+
+        $links = $this->sanitizeLinks($validated['links'] ?? []);
 
         if ($request->hasFile('overlay_image')) {
             Storage::disk('public')->delete($element->overlay_image);
@@ -86,6 +97,8 @@ class FrameElementController extends Controller
         } else {
             unset($validated['overlay_image']);
         }
+
+        $validated['links'] = empty($links) ? null : $links;
 
         if ($request->hasFile('media_file')) {
             if ($element->media_url) {
@@ -113,6 +126,19 @@ class FrameElementController extends Controller
         $element->update($validated);
 
         return redirect()->back()->with('message', 'Element updated successfully.');
+    }
+
+    protected function sanitizeLinks(array $links): array
+    {
+        return collect($links)
+            ->filter(fn ($link) => ! empty($link['label']) && ! empty($link['url']))
+            ->map(fn ($link) => [
+                'label' => $link['label'],
+                'url' => $link['url'],
+            ])
+            ->take(10)
+            ->values()
+            ->all();
     }
 
     public function destroy(FrameElement $element)

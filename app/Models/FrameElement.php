@@ -27,6 +27,7 @@ class FrameElement extends Model
         'rotation',
         'hover_color',
         'active_color',
+        'links',
         'sort_order',
     ];
 
@@ -45,6 +46,7 @@ class FrameElement extends Model
             'z_index' => 'integer',
             'rotation' => 'float',
             'sort_order' => 'integer',
+            'links' => 'array',
         ];
     }
 
