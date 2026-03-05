@@ -165,12 +165,15 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     };
 
     if (selectedId || selectedElement) {
-      document.addEventListener("click", handleClickOutside);
-    }
+      const timeoutId = setTimeout(() => {
+        document.addEventListener("click", handleClickOutside);
+      }, 0);
 
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
+      return () => {
+        clearTimeout(timeoutId);
+        document.removeEventListener("click", handleClickOutside);
+      };
+    }
   }, [selectedId, selectedElement]);
 
   return (
@@ -217,13 +220,18 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-full bg-zinc-900 object-contain pointer-events-none"
+                    className="w-full h-full bg-zinc-900 object-contain"
+                    controls
                     playsInline
                     autoPlay
                     muted
                     loop
                     preload="metadata"
                     onCanPlay={() => setMediaLoading(false)}
+                    onError={(e) => {
+                      console.error('Video error:', e);
+                      setMediaLoading(false);
+                    }}
                   >
                     <source src={panelMedia.src} />
                     Your browser does not support the video tag.

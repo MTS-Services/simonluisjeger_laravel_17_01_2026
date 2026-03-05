@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties } from 're
 import { cn, toStorageUrl } from '@/lib/utils';
 import type { Frame, FrameElement, ElementLayout } from '@/types/frame';
 import { ElementModal } from '@/components/frame/element-modal';
+import { DynamicSvg } from '@/components/frame/dynamic-svg';
 
 type ElementMediaOverride = Partial<Pick<FrameElement, 'media_type' | 'media_url' | 'media_file_url' | 'title' | 'description'>>;
 
@@ -35,6 +36,7 @@ export function FramePreview({
     const [hoveredElementId, setHoveredElementId] = useState<number | null>(null);
     const [modalElement, setModalElement] = useState<FrameElement | null>(null);
     const [modalOpen, setModalOpen] = useState(false);
+    const [modalElementId, setModalElementId] = useState<number | null>(null);
 
     const aspectRatio = frame.design_width / frame.design_height;
 
@@ -112,7 +114,7 @@ export function FramePreview({
                         const w = (layout.w_pct / 100) * containerSize.width;
                         const h = (layout.h_pct / 100) * containerSize.height;
 
-                        const isActive = activeElementId === element.id;
+                        const isActive = activeElementId === element.id || modalElementId === element.id;
                         const isHovered = hoveredElementId === element.id;
 
                         let highlightColor: string | null = null;
@@ -134,9 +136,6 @@ export function FramePreview({
                                     zIndex: layout.z_index,
                                     rotate: layout.rotation ? `${layout.rotation}deg` : undefined,
                                     animationDelay: `${index * 0.4}s`,
-                                    filter: highlightColor
-                                        ? `brightness(1.15) drop-shadow(0 0 1px ${highlightColor}) drop-shadow(0 0 3px ${highlightColor})`
-                                        : undefined,
                                 }}
                                 onMouseEnter={() => setHoveredElementId(element.id)}
                                 onMouseLeave={() => setHoveredElementId(null)}
@@ -151,6 +150,7 @@ export function FramePreview({
                                             }
                                         }
                                         setModalElement(modalData);
+                                        setModalElementId(element.id);
                                         setModalOpen(true);
                                     }
                                 }}
@@ -159,6 +159,20 @@ export function FramePreview({
                                 {(() => {
                                     const src = element.overlay_image_url ?? toStorageUrl(element.overlay_image);
                                     if (!src) return null;
+                                    const isSvg = src.toLowerCase().endsWith('.svg');
+
+                                    if (isSvg) {
+                                        return (
+                                            <DynamicSvg
+                                                key={element.id}
+                                                src={src}
+                                                strokeColor={highlightColor}
+                                                className="h-full w-full object-contain"
+                                                alt={element.name}
+                                            />
+                                        );
+                                    }
+
                                     return (
                                         <img
                                             key={element.id}
@@ -189,6 +203,7 @@ export function FramePreview({
                         setModalOpen(open);
                         if (!open) {
                             setModalElement(null);
+                            setModalElementId(null);
                         }
                     }}
                 />
