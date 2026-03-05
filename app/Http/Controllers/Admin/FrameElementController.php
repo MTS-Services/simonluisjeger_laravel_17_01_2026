@@ -71,7 +71,7 @@ class FrameElementController extends Controller
             'name' => 'sometimes|string|max:255',
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string|max:5000',
-            'overlay_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:10240',
+            'overlay_image' => 'nullable|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/webp,image/svg+xml|max:10240',
             'media_type' => 'nullable|in:image,video',
             'media_file' => 'nullable|file|mimetypes:image/jpeg,image/png,image/gif,image/webp,video/mp4,video/quicktime,video/x-m4v|max:512000',
             'z_index' => 'nullable|integer|min:0|max:9999',
