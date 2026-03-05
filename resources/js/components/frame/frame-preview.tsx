@@ -127,7 +127,7 @@ export function FramePreview({
                         return (
                             <div
                                 key={element.id}
-                                className="frame-element-clickable absolute cursor-pointer transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105"
+                                className="frame-element-clickable absolute cursor-pointer transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-110"
                                 style={{
                                     left: x,
                                     top: y,
