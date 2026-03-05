@@ -179,9 +179,9 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
   return (
     <main className="min-h-screen p-4 items-center  h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
       <Head title="Simon Jeger" />
-      <h2 className="text-4xl font-bold text-left mb-15 hover:cursor-pointer">Simon Jeger</h2>
+      <h2 className="text-4xl font-bold text-left mb-6 sm:mb-15 hover:cursor-pointer">Simon Jeger</h2>
 
-      <div className="flex flex-col lg:flex-row w-full h-auto lg:items-stretch items-center">
+      <div className="flex flex-col gap-4 lg:flex-row w-full h-auto lg:items-stretch items-center">
         <div ref={previewRef} className="w-full flex-1 flex items-center justify-center overflow-hidden pb-0 pt-6 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center">
             {frame ? (
@@ -220,8 +220,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-full bg-zinc-900 object-contain"
-                    controls
+                    className="w-full h-75 sm:h-130 bg-zinc-900 object-contain"
                     playsInline
                     autoPlay
                     muted
