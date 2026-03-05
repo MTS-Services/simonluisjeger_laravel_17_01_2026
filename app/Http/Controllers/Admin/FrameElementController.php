@@ -23,8 +23,8 @@ class FrameElementController extends Controller
             'hover_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'links' => 'nullable|array|max:10',
-            'links.*.label' => 'required_with:links.*.url|string|max:255',
-            'links.*.url' => 'required_with:links.*.label|url|max:2048',
+            'links.*.label' => 'nullable|string|max:255',
+            'links.*.url' => 'nullable|url|max:2048',
         ]);
 
         $overlayPath = $request->file('overlay_image')->store('frames/elements', 'public');
@@ -85,8 +85,8 @@ class FrameElementController extends Controller
             'hover_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'links' => 'nullable|array|max:10',
-            'links.*.label' => 'required_with:links.*.url|string|max:255',
-            'links.*.url' => 'required_with:links.*.label|url|max:2048',
+            'links.*.label' => 'nullable|string|max:255',
+            'links.*.url' => 'nullable|url|max:2048',
         ]);
 
         $links = $this->sanitizeLinks($validated['links'] ?? []);
