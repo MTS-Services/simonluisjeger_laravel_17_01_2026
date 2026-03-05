@@ -177,7 +177,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
   }, [selectedId, selectedElement]);
 
   return (
-    <main className="min-h-screen p-10 h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
+    <main className="min-h-screen p-4 items-center  h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
       <Head title="Simon Jeger" />
       <h2 className="text-4xl font-bold text-left mb-15 hover:cursor-pointer">Simon Jeger</h2>
 
