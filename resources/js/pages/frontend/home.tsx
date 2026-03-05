@@ -63,6 +63,7 @@ function inferElementMediaType(element: FrameElement): 'video' | 'image' | null 
 export default function Home({ projectData, backgroundText, frame }: Props) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [selectedElement, setSelectedElement] = useState<FrameElement | null>(null);
+  const [mediaLoading, setMediaLoading] = useState(false);
   const { appearance, updateAppearance } = useAppearance();
   const videoRef = useRef<HTMLVideoElement>(null);
   const detailsRef = useRef<HTMLDivElement>(null);
@@ -143,6 +144,9 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
   }, [selectedElementMedia, activeProject]);
 
   useEffect(() => {
+    if (panelMedia?.src) {
+      setMediaLoading(true);
+    }
     if (videoRef.current && panelMedia?.kind === 'video') {
       videoRef.current.load();
     }
@@ -195,11 +199,18 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
           {(activeProject || panelMedia) ? (
             <div ref={detailsRef} className="w-full h-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col">
               <div className="flex-1 bg-zinc-900 border-b border-zinc-800 relative min-h-0">
+                {mediaLoading && (
+                  <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-zinc-900">
+                    <div className="h-10 w-10 rounded-full border-4 border-zinc-600 border-t-white animate-spin" />
+                    <p className="text-xs  tracking-[0.2em] text-zinc-200">Loading…</p>
+                  </div>
+                )}
                 {panelMedia?.kind === 'image' && (
                   <img
                     src={panelMedia.src}
                     alt={panelMedia.title ?? 'Selected media'}
                     className="w-full h-full object-cover"
+                    onLoad={() => setMediaLoading(false)}
                   />
                 )}
                 {panelMedia?.kind === 'video' && (
@@ -212,6 +223,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                     muted
                     loop
                     preload="metadata"
+                    onCanPlay={() => setMediaLoading(false)}
                   >
                     <source src={panelMedia.src} />
                     Your browser does not support the video tag.
