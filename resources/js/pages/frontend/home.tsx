@@ -237,6 +237,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                     src={panelMedia.src}
                     alt={panelMedia.title ?? 'Selected media'}
                     className="w-full h-75 sm:h-130 object-cover"
+                    style={{ willChange: 'auto' }}
                     onLoad={() => setMediaLoading(false)}
                   />
                 )}
@@ -244,7 +245,8 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-75 sm:h-130 bg-zinc-900 object-contain"
+                    className="w-full h-75 sm:h-130 bg-zinc-900 object-cover"
+                    style={{ willChange: 'auto' }}
                     playsInline
                     autoPlay
                     muted
