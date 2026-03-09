@@ -236,7 +236,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <img
                     src={panelMedia.src}
                     alt={panelMedia.title ?? 'Selected media'}
-                    className="w-full h-75 sm:h-130 object-cover"
+                    className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] object-cover"
                     style={{ willChange: 'auto' }}
                     onLoad={() => setMediaLoading(false)}
                   />
@@ -245,7 +245,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-75 sm:h-130 bg-zinc-900 object-cover"
+                    className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] bg-zinc-900 object-cover"
                     style={{ willChange: 'auto' }}
                     playsInline
                     autoPlay
