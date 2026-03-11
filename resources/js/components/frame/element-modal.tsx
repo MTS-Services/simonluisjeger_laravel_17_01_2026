@@ -19,7 +19,11 @@ export function ElementModal({ element, open, onOpenChange }: ElementModalProps)
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="sm:max-w-3xl">
+            <DialogContent
+                className="sm:max-w-3xl"
+                onInteractOutside={(event) => event.preventDefault()}
+                onPointerDownOutside={(event) => event.preventDefault()}
+            >
                 <DialogHeader>
                     <DialogTitle>{element.title || element.name}</DialogTitle>
                     {element.description && (

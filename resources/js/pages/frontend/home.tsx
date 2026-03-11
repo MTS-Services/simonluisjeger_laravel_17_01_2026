@@ -176,29 +176,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     }
   }, [panelMedia?.src]);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Node;
-      const clickedInsideDetails = detailsRef.current?.contains(target);
-      const clickedInsidePreview = previewRef.current?.contains(target);
-      if (clickedInsideDetails || clickedInsidePreview) {
-        return;
-      }
-      setSelectedId(null);
-      setSelectedElement(null);
-    };
-
-    if (selectedId || selectedElement) {
-      const timeoutId = setTimeout(() => {
-        document.addEventListener("click", handleClickOutside);
-      }, 0);
-
-      return () => {
-        clearTimeout(timeoutId);
-        document.removeEventListener("click", handleClickOutside);
-      };
-    }
-  }, [selectedId, selectedElement]);
+  // Keep modal/details open until explicitly cleared by user interaction
 
   return (
     <main className="min-h-screen p-4 items-center  h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
@@ -207,7 +185,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
 
       <div className="flex flex-col gap-4 lg:flex-row w-full h-auto lg:items-stretch items-center">
         <div ref={previewRef} className="w-full flex-1 flex items-center justify-center overflow-hidden pb-0 pt-6 lg:py-0 lg:h-full">
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="w-full h-full flex items-center justify-center mt-20">
             {frame ? (
               <FramePreview
                 frame={frame}
@@ -225,27 +203,31 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
         <div className="w-full flex-1 flex flex-col items-stretch justify-center pt-0 p-6 md:p-8">
           {(activeProject || panelMedia) ? (
             <div ref={detailsRef} className="w-full h-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col">
-              <div className="flex-1 bg-zinc-900 border-b border-zinc-800 relative min-h-0">
+
+              <div className="bg-zinc-900 border-b border-zinc-800 relative overflow-hidden flex-none ">
+
                 {mediaLoading && (
                   <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-zinc-900">
-                    <div className="h-10 w-10 rounded-full border-4 border-zinc-600 border-t-white animate-spin" />
-                    <p className="text-xs  tracking-[0.2em] text-zinc-200">Loading…</p>
+                    <div className="h-10 w-10 animate-spin rounded-full border-4 border-zinc-600 border-t-white" />
+                    <p className="text-xs tracking-widest text-zinc-200">LOADING...</p>
                   </div>
                 )}
+
                 {panelMedia?.kind === 'image' && (
                   <img
                     src={panelMedia.src}
                     alt={panelMedia.title ?? 'Selected media'}
-                    className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] object-cover"
+                    className="w-full h-auto max-h-[30vh] sm:max-h-[40vh] md:max-h-[45vh] lg:max-h-[55vh] xl:max-h-[60vh] object-cover"
                     style={{ willChange: 'auto' }}
                     onLoad={() => setMediaLoading(false)}
                   />
                 )}
+
                 {panelMedia?.kind === 'video' && (
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] bg-zinc-900 object-cover"
+                    className="w-full h-auto bg-zinc-900 object-cover max-h-[30vh] sm:max-h-[40vh] md:max-h-[45vh] lg:max-h-[55vh] xl:max-h-[60vh]"
                     style={{ willChange: 'auto' }}
                     playsInline
                     autoPlay
@@ -259,7 +241,6 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                     }}
                   >
                     <source src={panelMedia.src} />
-                    Your browser does not support the video tag.
                   </video>
                 )}
               </div>
