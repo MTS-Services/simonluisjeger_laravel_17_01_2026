@@ -176,7 +176,22 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     }
   }, [panelMedia?.src]);
 
-  // Keep modal/details open until explicitly cleared by user interaction
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        detailsRef.current &&
+        !detailsRef.current.contains(event.target as Node) &&
+        previewRef.current &&
+        !previewRef.current.contains(event.target as Node)
+      ) {
+        setSelectedElement(null);
+        setSelectedId(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <main className="min-h-screen p-4 items-center  h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
