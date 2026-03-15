@@ -113,7 +113,7 @@ export function FrameCanvas({
     return (
         <div ref={containerRef} className="w-full">
             <div
-                className="relative overflow-hidden rounded-lg border bg-muted"
+                className="relative rounded-lg border bg-muted"
                 style={{
                     width: containerSize.width,
                     height: containerSize.height,

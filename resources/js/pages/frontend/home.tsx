@@ -199,7 +199,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
       <h2 className="text-4xl font-bold text-left mb-6 sm:mb-15 hover:cursor-pointer">Simon Jeger</h2>
 
       <div className="flex flex-col gap-4 lg:flex-row w-full h-auto lg:items-stretch items-center">
-        <div ref={previewRef} className="w-full flex-1 flex items-center justify-center overflow-hidden pb-0 pt-6 lg:py-0 lg:h-full">
+        <div ref={previewRef} className="w-full flex-1 flex items-center justify-center  pb-0 pt-6 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center mt-20">
             {frame ? (
               <FramePreview

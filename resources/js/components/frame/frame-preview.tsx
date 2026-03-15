@@ -84,7 +84,7 @@ export function FramePreview({
         <div ref={containerRef} className={cn('w-full', className)} style={{ maxWidth: frame.design_width, ...style }}>
             {containerSize.width > 0 ? (
                 <div
-                    className="relative overflow-hidden rounded-lg"
+                    className="relative rounded-lg"
                     style={{ width: containerSize.width, height: containerSize.height }}
                 >
                     {(bgPreviewUrl ?? frame.bg_image_url ?? toStorageUrl(frame.bg_image)) && (
