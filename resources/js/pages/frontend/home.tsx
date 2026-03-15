@@ -176,13 +176,15 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     }
   }, [panelMedia?.src]);
 
-  useEffect(() => {
+ useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      const isFrameElement = (target as Element).closest?.('.frame-element-clickable');
+
       if (
         detailsRef.current &&
-        !detailsRef.current.contains(event.target as Node) &&
-        previewRef.current &&
-        !previewRef.current.contains(event.target as Node)
+        !detailsRef.current.contains(target) &&
+        !isFrameElement
       ) {
         setSelectedElement(null);
         setSelectedId(null);
