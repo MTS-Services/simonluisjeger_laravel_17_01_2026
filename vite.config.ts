@@ -22,15 +22,15 @@ export default defineConfig({
             formVariants: true,
         }),
     ],
-    server: {
-        host: '0.0.0.0',
-        port: 3334,
-        strictPort: true,
-        hmr: {
-            host: '192.168.100.24',
-        },
-        cors: true,
-    },
+    // server: {
+    //     host: '0.0.0.0',
+    //     port: 3334,
+    //     strictPort: true,
+    //     hmr: {
+    //         host: '192.168.100.24',
+    //     },
+    //     cors: true,
+    // },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './resources/js'),
