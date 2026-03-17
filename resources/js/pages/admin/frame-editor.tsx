@@ -200,7 +200,7 @@ export default function FrameEditor({ frame }: Props) {
                 */}
                 <div className="flex gap-0  overflow-hidden rounded-lg border bg-background min-h-[calc(100vh-200px)]">
                     {/* Left sidebar: element list */}
-                    <div className="w-84 shrink-0">
+                    <div className="w-88 shrink-0">
                         <ElementListSidebar
                             frame={frame}
                             selectedElementId={selectedElementId}

@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
-import { Head } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
 import { useAppearance } from "@/hooks/use-appearance";
 import Text from "@/components/text";
 import { FramePreview } from "@/components/frame/frame-preview";
@@ -28,10 +28,13 @@ interface ProjectRecord {
 }
 interface BackgroundRecord {
   id: number;
+  title?: string | null;
   text1?: string | null;
   text2?: string | null;
   background_color?: string | null;
   text_color?: string | null;
+  text1_link_word?: string | null;
+  text1_link_element_name?: string | null;
 }
 
 interface Props {
@@ -58,6 +61,27 @@ function inferElementMediaType(element: FrameElement): 'video' | 'image' | null 
   return null;
 }
 
+function getMediaForElement(
+  element: FrameElement,
+  projects: ProjectRecord[]
+): { kind: 'video' | 'image'; src: string } | null {
+  const normalizedType = inferElementMediaType(element);
+  let src = element.media_file_url ?? toStorageUrl(element.media_url);
+
+  if (!normalizedType || !src) {
+    const fallback = matchProjectForElement(element, projects);
+    if (!fallback) return null;
+    const isVideo = fallback.mime_type.startsWith('video/');
+    const isImage = fallback.mime_type.startsWith('image/');
+    if (!isVideo && !isImage) return null;
+    return {
+      kind: isVideo ? 'video' : 'image',
+      src: fallback.file_url,
+    };
+  }
+  return { kind: normalizedType, src };
+}
+
 
 
 export default function Home({ projectData, backgroundText, frame }: Props) {
@@ -66,6 +90,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
   const [mediaLoading, setMediaLoading] = useState(false);
   const { appearance, updateAppearance } = useAppearance();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const prefetchVideoRef = useRef<HTMLVideoElement>(null);
   const detailsRef = useRef<HTMLDivElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
 
@@ -84,7 +109,31 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     const match = matchProjectForElement(element, projectData);
     setSelectedElement(element);
     setSelectedId(match ? match.key : null);
+    setMediaLoading(true);
   };
+
+  const handleElementHover = useCallback(
+    (element: FrameElement | null) => {
+      if (!element) {
+        if (prefetchVideoRef.current) {
+          prefetchVideoRef.current.removeAttribute('src');
+          prefetchVideoRef.current.load();
+        }
+        return;
+      }
+      const media = getMediaForElement(element, projectData);
+      if (!media?.src) return;
+      if (media.kind === 'video' && prefetchVideoRef.current) {
+        prefetchVideoRef.current.src = media.src;
+        prefetchVideoRef.current.load();
+      }
+      if (media.kind === 'image') {
+        const img = new Image();
+        img.src = media.src;
+      }
+    },
+    [projectData]
+  );
 
   const selectedElementMedia = useMemo(() => {
     if (!selectedElement) return null;
@@ -176,7 +225,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     }
   }, [panelMedia?.src]);
 
- useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
       const isFrameElement = (target as Element).closest?.('.frame-element-clickable');
@@ -195,22 +244,55 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  return (
-    <main className="min-h-screen p-4 items-center  h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
-      <Head title="Simon Jeger" />
-      <h2 className="text-4xl font-bold text-left mb-6 sm:mb-15 hover:cursor-pointer">Simon Jeger</h2>
+  const titleLinkElementName = backgroundText?.text1_link_element_name?.trim();
+  const titleLinkElement = useMemo(
+    () =>
+      frame?.elements?.find(
+        (el) => el.name?.toLowerCase() === titleLinkElementName?.toLowerCase()
+      ) ?? null,
+    [frame?.elements, titleLinkElementName]
+  );
 
+  const titleAssignedUrl = useMemo(() => {
+    const elementName = backgroundText?.text1_link_element_name?.trim();
+    if (
+      elementName &&
+      (elementName.startsWith('http://') ||
+        elementName.startsWith('https://') ||
+        elementName.startsWith('mailto:'))
+    ) {
+      return elementName;
+    }
+    if (!titleLinkElement?.links?.length) {
+      return null;
+    }
+    const primary = titleLinkElement.links.find((link) => link.url)?.url;
+    return primary ?? null;
+  }, [titleLinkElement, backgroundText?.text1_link_element_name]);
+
+  return (
+    <main className="min-h-screen p-4 items-center h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
+      <Head title={backgroundText?.title?.trim() ?? 'Simon Jeger'} />
       <div className="flex flex-col gap-4 lg:flex-row w-full h-auto lg:items-stretch items-center">
         <div ref={previewRef} className="w-full flex-1 flex items-center justify-center  pb-0 pt-6 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center mt-20">
             {frame ? (
-              <FramePreview
-                frame={frame}
-                className="mx-auto"
-                showElementModal={false}
-                activeElementId={selectedElement?.id ?? null}
-                onElementClick={handleFrameElementClick}
-              />
+              <>
+                <video
+                  ref={prefetchVideoRef}
+                  preload="auto"
+                  className="absolute w-0 h-0 overflow-hidden opacity-0 pointer-events-none"
+                  aria-hidden
+                />
+                <FramePreview
+                  frame={frame}
+                  className="mx-auto"
+                  showElementModal={false}
+                  activeElementId={selectedElement?.id ?? null}
+                  onElementClick={handleFrameElementClick}
+                  onElementHover={handleElementHover}
+                />
+              </>
             ) : (
               <div className="text-center text-gray-500">Frame preview unavailable.</div>
             )}
@@ -218,14 +300,32 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
         </div>
 
         <div className="w-full flex-1 flex flex-col items-stretch justify-center pt-0 p-6 md:p-8">
+          <div className="w-full flex justify-center mb-6">
+            {titleAssignedUrl ? (
+              <a
+                href={titleAssignedUrl}
+                target={titleAssignedUrl.startsWith('mailto:') ? '_self' : '_blank'}
+                rel="noopener noreferrer"
+                className="text-4xl font-bold text-center hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 rounded"
+              >
+                {backgroundText?.title?.trim() ?? 'Simon Jeger'}
+              </a>
+            ) : (
+              <h2 className="text-4xl font-bold text-center">
+                {backgroundText?.title?.trim() ?? 'Simon Jeger'}
+              </h2>
+            )}
+          </div>
           {(activeProject || panelMedia) ? (
             <div ref={detailsRef} className="w-full h-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col">
 
-              <div className="bg-zinc-900 border-b border-zinc-800 relative overflow-hidden flex-none ">
-
+              <div
+                className="relative aspect-video w-full max-h-[30vh] sm:max-h-[40vh] md:max-h-[45vh] lg:max-h-[55vh] xl:max-h-[60vh] bg-zinc-900 border-b border-zinc-800 overflow-hidden flex-none flex items-center justify-center"
+                style={{ minHeight: '12rem' }}
+              >
                 {mediaLoading && (
                   <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-zinc-900">
-                    <div className="h-10 w-10 animate-spin rounded-full border-4 border-zinc-600 border-t-white" />
+                    <div className="h-10 w-10 shrink-0 animate-spin rounded-full border-4 border-zinc-600 border-t-white" />
                     <p className="text-xs tracking-widest text-zinc-200">LOADING...</p>
                   </div>
                 )}
@@ -234,7 +334,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <img
                     src={panelMedia.src}
                     alt={panelMedia.title ?? 'Selected media'}
-                    className="w-full h-auto max-h-[30vh] sm:max-h-[40vh] md:max-h-[45vh] lg:max-h-[55vh] xl:max-h-[60vh] object-cover"
+                    className="absolute inset-0 h-full w-full object-cover"
                     style={{ willChange: 'auto' }}
                     onLoad={() => setMediaLoading(false)}
                   />
@@ -244,13 +344,13 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   <video
                     ref={videoRef}
                     key={panelMedia.src}
-                    className="w-full h-auto bg-zinc-900 object-cover max-h-[30vh] sm:max-h-[40vh] md:max-h-[45vh] lg:max-h-[55vh] xl:max-h-[60vh]"
+                    className="absolute inset-0 h-full w-full bg-zinc-900 object-cover"
                     style={{ willChange: 'auto' }}
                     playsInline
                     autoPlay
                     muted
                     loop
-                    preload="metadata"
+                    preload="auto"
                     onCanPlay={() => setMediaLoading(false)}
                     onError={(e) => {
                       console.error('Video error:', e);
@@ -314,12 +414,50 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                 <Text>
                   {backgroundText.text1
                     .split(/<br\s*\/?>/gi)
-                    .map((line: string, index: number) => (
-                      <Text key={index}>
-                        {line}
-                        {'\n'}
-                      </Text>
-                    ))}
+                    .map((line: string, lineIndex: number) => {
+                      const linkWord = backgroundText.text1_link_word?.trim();
+                      const elementName = backgroundText.text1_link_element_name?.trim();
+                      const linkElement =
+                        frame?.elements?.find(
+                          (el) => el.name?.toLowerCase() === elementName?.toLowerCase()
+                        );
+
+                      if (
+                        !linkWord ||
+                        !elementName ||
+                        !linkElement ||
+                        !line.includes(linkWord)
+                      ) {
+                        return (
+                          <Text key={lineIndex}>
+                            {line}
+                            {'\n'}
+                          </Text>
+                        );
+                      }
+
+                      const escaped = linkWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                      const parts = line.split(new RegExp(`(${escaped})`, 'gi'));
+                      return (
+                        <Text key={lineIndex}>
+                          {parts.map((part, i) =>
+                            part.toLowerCase() === linkWord.toLowerCase() ? (
+                              <button
+                                key={i}
+                                type="button"
+                                onClick={() => handleFrameElementClick(linkElement)}
+                                className="font-bold underline decoration-2 underline-offset-2 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white/50 rounded"
+                              >
+                                {part}
+                              </button>
+                            ) : (
+                              part
+                            )
+                          )}
+                          {'\n'}
+                        </Text>
+                      );
+                    })}
                 </Text>
               )}
 

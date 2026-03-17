@@ -132,7 +132,9 @@ export function ElementListSidebar({
 
                                             <div className="flex-1 min-w-0">
                                                 <p className="truncate text-xs font-medium">
-                                                    {element.name}
+                                                    {element.name.length > 18
+                                                        ? `${element.name.slice(0, 18)}...`
+                                                        : element.name}
                                                 </p>
                                                 <div className="flex items-center gap-1">
                                                     <Badge variant="outline" className="text-[10px] px-1 py-0">

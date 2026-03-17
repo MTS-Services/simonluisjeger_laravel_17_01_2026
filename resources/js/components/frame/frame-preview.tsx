@@ -13,6 +13,7 @@ interface FramePreviewProps {
     style?: CSSProperties;
     activeElementId?: number | null;
     onElementClick?: (element: FrameElement) => void;
+    onElementHover?: (element: FrameElement | null) => void;
     bgPreviewUrl?: string | null;
     basePreviewUrl?: string | null;
     showElementModal?: boolean;
@@ -26,6 +27,7 @@ export function FramePreview({
     style,
     activeElementId,
     onElementClick,
+    onElementHover,
     bgPreviewUrl,
     basePreviewUrl,
     showElementModal = true,
@@ -137,8 +139,14 @@ export function FramePreview({
                                     rotate: layout.rotation ? `${layout.rotation}deg` : undefined,
                                     animationDelay: `${index * 0.4}s`,
                                 }}
-                                onMouseEnter={() => setHoveredElementId(element.id)}
-                                onMouseLeave={() => setHoveredElementId(null)}
+                                onMouseEnter={() => {
+                                    setHoveredElementId(element.id);
+                                    onElementHover?.(element);
+                                }}
+                                onMouseLeave={() => {
+                                    setHoveredElementId(null);
+                                    onElementHover?.(null);
+                                }}
                                 onClick={() => {
                                     onElementClick?.(element);
                                     if (showElementModal) {
