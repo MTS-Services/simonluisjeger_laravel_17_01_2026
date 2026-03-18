@@ -1,11 +1,11 @@
 import AdminLayout from '@/layouts/admin-layout';
-import { Head, usePage, router, useForm } from '@inertiajs/react';
+import { Head, usePage, useForm } from '@inertiajs/react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import CustomToast, { ToastType } from '@/components/ui/custom-toast';
 import { useEffect, useState } from 'react';
-import { MousePointer2, Plus, Trash2, Link as LinkIcon, Save } from 'lucide-react';
+import { Save } from 'lucide-react';
 import InputError from '@/components/input-error';
 import { Textarea } from '@/components/ui/textarea';
 
@@ -13,7 +13,7 @@ export default function BackgroundText({ information }: any) {
     const { errors, flash } = usePage<any>().props;
     const [toast, setToast] = useState<{ message: string; type: ToastType } | null>(null);
 
-    const { data, setData, post, processing, reset } = useForm({
+    const { data, setData, post, processing } = useForm({
         title: '',
         text1: '',
         text2: '',
@@ -96,7 +96,7 @@ export default function BackgroundText({ information }: any) {
                                 <Label>Text 1</Label>
                                 <Textarea rows={4} value={data.text1} onChange={e => setData('text1', e.target.value)} />
                                 <InputError message={errors.text1} />
-                            </div>
+                                </div>
                             <div>
                                 <Label>Text 2</Label>
                                 <Textarea rows={4} value={data.text2} onChange={e => setData('text2', e.target.value)} />

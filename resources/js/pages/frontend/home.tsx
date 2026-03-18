@@ -5,6 +5,7 @@ import Text from "@/components/text";
 import { FramePreview } from "@/components/frame/frame-preview";
 import type { ElementLink, Frame, FrameElement } from "@/types/frame";
 import { toStorageUrl } from "@/lib/utils";
+import BackgroundTextRenderer from "@/components/background-text-renderer";
 
 interface ProjectUrl {
   label: string;
@@ -300,7 +301,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
         </div>
 
         <div className="w-full flex-1 flex flex-col items-stretch justify-center pt-0 p-6 md:p-8">
-          <div className="w-full flex justify-center mb-6">
+          {/* <div className="w-full flex justify-center mb-6">
             {titleAssignedUrl ? (
               <a
                 href={titleAssignedUrl}
@@ -315,7 +316,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                 {backgroundText?.title?.trim() ?? 'Simon Jeger'}
               </h2>
             )}
-          </div>
+          </div> */}
           {(activeProject || panelMedia) ? (
             <div ref={detailsRef} className="w-full h-full bg-black text-white shadow-2xl rounded-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col">
 
@@ -411,54 +412,13 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
 
             <div className="">
               {backgroundText?.text1 && (
-                <Text>
-                  {backgroundText.text1
-                    .split(/<br\s*\/?>/gi)
-                    .map((line: string, lineIndex: number) => {
-                      const linkWord = backgroundText.text1_link_word?.trim();
-                      const elementName = backgroundText.text1_link_element_name?.trim();
-                      const linkElement =
-                        frame?.elements?.find(
-                          (el) => el.name?.toLowerCase() === elementName?.toLowerCase()
-                        );
-
-                      if (
-                        !linkWord ||
-                        !elementName ||
-                        !linkElement ||
-                        !line.includes(linkWord)
-                      ) {
-                        return (
-                          <Text key={lineIndex}>
-                            {line}
-                            {'\n'}
-                          </Text>
-                        );
-                      }
-
-                      const escaped = linkWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                      const parts = line.split(new RegExp(`(${escaped})`, 'gi'));
-                      return (
-                        <Text key={lineIndex}>
-                          {parts.map((part, i) =>
-                            part.toLowerCase() === linkWord.toLowerCase() ? (
-                              <button
-                                key={i}
-                                type="button"
-                                onClick={() => handleFrameElementClick(linkElement)}
-                                className="font-bold underline decoration-2 underline-offset-2 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white/50 rounded"
-                              >
-                                {part}
-                              </button>
-                            ) : (
-                              part
-                            )
-                          )}
-                          {'\n'}
-                        </Text>
-                      );
-                    })}
-                </Text>
+                <BackgroundTextRenderer
+                  text={backgroundText.text1}
+                  linkWord={backgroundText.text1_link_word}
+                  linkTarget={backgroundText.text1_link_element_name}
+                  frameElements={frame?.elements}
+                  onElementClick={handleFrameElementClick}
+                />
               )}
 
               {backgroundText?.text2 && (
