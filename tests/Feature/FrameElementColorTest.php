@@ -52,6 +52,23 @@ it('stores an element without colors when not provided', function () {
     ]);
 });
 
+it('stores an element without overlay image when not provided', function () {
+    $response = $this->actingAs($this->admin)->post(
+        "/admin/frames/{$this->frame->id}/elements",
+        [
+            'name' => 'No Overlay Element',
+        ]
+    );
+
+    $response->assertRedirect();
+
+    $this->assertDatabaseHas('frame_elements', [
+        'frame_id' => $this->frame->id,
+        'name' => 'No Overlay Element',
+        'overlay_image' => null,
+    ]);
+});
+
 it('updates an element with new hover and active colors', function () {
     $element = FrameElement::factory()->create([
         'frame_id' => $this->frame->id,
@@ -156,4 +173,63 @@ it('includes color fields in frontend home page data', function () {
             ->etc()
         )
     );
+});
+
+it('updates element with internal link to another frame element', function () {
+    $a = FrameElement::factory()->create([
+        'frame_id' => $this->frame->id,
+        'name' => 'Element A',
+    ]);
+    $b = FrameElement::factory()->create([
+        'frame_id' => $this->frame->id,
+        'name' => 'Element B',
+    ]);
+
+    $response = $this->actingAs($this->admin)->post(
+        "/admin/frame-elements/{$a->id}",
+        [
+            'name' => $a->name,
+            'links' => [
+                [
+                    'label' => 'View B',
+                    'type' => 'internal',
+                    'target_element_id' => $b->id,
+                ],
+            ],
+        ]
+    );
+
+    $response->assertRedirect();
+
+    $a->refresh();
+    expect($a->links)->toBeArray()
+        ->and($a->links)->toHaveCount(1)
+        ->and($a->links[0]['label'])->toBe('View B')
+        ->and($a->links[0]['type'])->toBe('internal')
+        ->and($a->links[0]['target_element_id'])->toBe($b->id);
+});
+
+it('drops internal link when target element is on another frame', function () {
+    $otherFrame = Frame::factory()->create();
+    $a = FrameElement::factory()->create(['frame_id' => $this->frame->id]);
+    $b = FrameElement::factory()->create(['frame_id' => $otherFrame->id]);
+
+    $response = $this->actingAs($this->admin)->post(
+        "/admin/frame-elements/{$a->id}",
+        [
+            'name' => $a->name,
+            'links' => [
+                [
+                    'label' => 'Bad',
+                    'type' => 'internal',
+                    'target_element_id' => $b->id,
+                ],
+            ],
+        ]
+    );
+
+    $response->assertRedirect();
+
+    $a->refresh();
+    expect($a->links)->toBeNull();
 });

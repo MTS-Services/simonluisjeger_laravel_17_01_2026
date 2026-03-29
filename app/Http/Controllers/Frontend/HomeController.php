@@ -18,7 +18,10 @@ class HomeController extends Controller
         return Inertia::render('frontend/home', [
             'projectData' => Information::all(),
             'backgroundText' => $backgroundText?->toArray(),
-            'frame' => Frame::with('elements')->where('is_active', true)->first(),
+            'frame' => Frame::with('elements')
+                ->where('is_active', true)
+                ->orderBy('id')
+                ->first(),
         ]);
     }
 }

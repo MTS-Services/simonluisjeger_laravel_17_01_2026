@@ -123,11 +123,25 @@ export function ElementListSidebar({
                                             )}
 
                                             <div className="flex size-8 shrink-0 items-center justify-center overflow-hidden rounded border bg-background">
-                                                <img
-                                                    src={element.overlay_image_url ?? toStorageUrl(element.overlay_image) ?? ''}
-                                                    alt={element.name}
-                                                    className="h-full w-full object-contain"
-                                                />
+                                                {(() => {
+                                                    const thumbSrc =
+                                                        element.overlay_image_url ??
+                                                        toStorageUrl(element.overlay_image);
+                                                    if (!thumbSrc) {
+                                                        return (
+                                                            <span className="text-[10px] font-medium text-muted-foreground">
+                                                                {(element.name || '?').slice(0, 1).toUpperCase()}
+                                                            </span>
+                                                        );
+                                                    }
+                                                    return (
+                                                        <img
+                                                            src={thumbSrc}
+                                                            alt={element.name}
+                                                            className="h-full w-full object-contain"
+                                                        />
+                                                    );
+                                                })()}
                                             </div>
 
                                             <div className="flex-1 min-w-0">

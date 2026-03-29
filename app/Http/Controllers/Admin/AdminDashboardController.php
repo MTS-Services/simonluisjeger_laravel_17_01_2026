@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\BackgroundText;
+use App\Models\Frame;
+use App\Models\FrameElement;
 use App\Models\Information;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -31,10 +33,24 @@ class AdminDashboardController extends Controller
 
     public function backgroundText(Request $request)
     {
-        $backgroundText = BackgroundText::first();
+        $backgroundText = BackgroundText::query()->first();
+        $activeFrame = Frame::with('elements')
+            ->where('is_active', true)
+            ->orderBy('id')
+            ->first();
 
         return Inertia::render('admin/backgroundtext', [
             'information' => $backgroundText,
+            'frame' => $activeFrame,
+            'projectPreview' => Information::query()
+                ->orderBy('id')
+                ->get(['key', 'title'])
+                ->map(fn (Information $row) => [
+                    'key' => (string) $row->key,
+                    'title' => (string) $row->title,
+                ])
+                ->values()
+                ->all(),
         ]);
     }
 
@@ -47,11 +63,36 @@ class AdminDashboardController extends Controller
             'text2' => 'required|string',
             'background_color' => 'required|string|max:7',
             'text_color' => 'required|string|max:7',
-            'text1_link_word' => 'nullable|string|max:100',
             'text1_link_element_name' => 'nullable|string|max:100',
+            'text1_link_frame_element_id' => 'nullable|integer|exists:frame_elements,id',
+            'text1_link_color' => 'nullable|string|max:7',
+            'text1_link_underline' => 'sometimes|boolean',
         ]);
 
-        $backgroundText = BackgroundText::first();
+        $validated['text1_link_word'] = null;
+
+        $payload = $request->all();
+        if (array_key_exists('text1_link_frame_element_id', $payload)) {
+            $raw = $payload['text1_link_frame_element_id'];
+            if ($raw === '' || $raw === null) {
+                $validated['text1_link_frame_element_id'] = null;
+            } else {
+                $validated['text1_link_frame_element_id'] = (int) $raw;
+            }
+        }
+
+        $eid = $validated['text1_link_frame_element_id'] ?? null;
+        if ($eid) {
+            $belongs = FrameElement::query()
+                ->where('id', $eid)
+                ->whereHas('frame', fn ($q) => $q->where('is_active', true))
+                ->exists();
+            if (! $belongs) {
+                $validated['text1_link_frame_element_id'] = null;
+            }
+        }
+
+        $backgroundText = BackgroundText::query()->first();
         if (! $backgroundText) {
             $backgroundText = BackgroundText::create($validated);
         } else {

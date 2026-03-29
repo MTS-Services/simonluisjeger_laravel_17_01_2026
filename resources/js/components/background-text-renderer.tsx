@@ -1,11 +1,25 @@
+import { useMemo } from 'react';
 import Text from '@/components/text';
+import { cn } from '@/lib/utils';
 import type { FrameElement } from '@/types/frame';
+
+/** Minimal project shape for resolving text links to the same frame element as canvas clicks. */
+export interface BackgroundTextLinkProject {
+    key: string;
+    title: string;
+}
 
 interface BackgroundTextRendererProps {
     text: string;
     linkWord?: string | null;
     linkTarget?: string | null;
+    /** When set, opens this frame element (same as canvas). Takes precedence over name/key matching. */
+    linkFrameElementId?: number | null;
+    linkColor?: string | null;
+    linkUnderline?: boolean;
     frameElements?: FrameElement[] | null;
+    /** When set, internal targets can match project key or title (same as canvas → panel behavior). */
+    projects?: BackgroundTextLinkProject[] | null;
     onElementClick?: (element: FrameElement) => void;
     previewMode?: boolean;
     className?: string;
@@ -20,11 +34,77 @@ function escapeRegExp(value: string): string {
     return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+/**
+ * Resolve an internal link string to a frame element, matching how the home page maps
+ * canvas clicks to projects: element.name / element.title, then project key / title.
+ */
+export function resolveFrameElementForTextLink(
+    target: string | null | undefined,
+    frameElements: FrameElement[] | null | undefined,
+    projects: BackgroundTextLinkProject[] | null | undefined,
+    linkFrameElementId?: number | null
+): FrameElement | null {
+    const id = linkFrameElementId != null ? Number(linkFrameElementId) : NaN;
+    if (!Number.isNaN(id) && id > 0 && frameElements?.length) {
+        const byId = frameElements.find((el) => el.id === id) ?? null;
+        if (byId) {
+            return byId;
+        }
+    }
+
+    const trimmed = target?.trim();
+    if (!trimmed || !frameElements?.length) {
+        return null;
+    }
+
+    if (/^\d+$/.test(trimmed)) {
+        const byNumericId = frameElements.find((el) => String(el.id) === trimmed) ?? null;
+        if (byNumericId) {
+            return byNumericId;
+        }
+    }
+
+    const lower = trimmed.toLowerCase();
+
+    const byElement =
+        frameElements.find(
+            (el) =>
+                el.name.toLowerCase() === lower ||
+                (el.title?.trim() && el.title.trim().toLowerCase() === lower)
+        ) ?? null;
+    if (byElement) {
+        return byElement;
+    }
+
+    if (!projects?.length) {
+        return null;
+    }
+
+    const project = projects.find(
+        (p) => p.key.toLowerCase() === lower || p.title.trim().toLowerCase() === lower
+    );
+    if (!project) {
+        return null;
+    }
+
+    return (
+        frameElements.find(
+            (el) =>
+                el.name === project.key ||
+                (el.title?.trim() && el.title.trim() === project.title.trim())
+        ) ?? null
+    );
+}
+
 export default function BackgroundTextRenderer({
     text,
     linkWord,
     linkTarget,
+    linkFrameElementId,
+    linkColor,
+    linkUnderline = true,
     frameElements,
+    projects,
     onElementClick,
     previewMode = false,
     className,
@@ -32,16 +112,30 @@ export default function BackgroundTextRenderer({
 }: BackgroundTextRendererProps) {
     const normalizedLinkWord = linkWord?.trim() || '';
     const normalizedLinkTarget = linkTarget?.trim() || '';
+    const resolvedLinkColor = linkColor?.trim() || undefined;
 
-    if (!text) {
-        return null;
-    }
+    const matchedElement = useMemo(
+        () =>
+            resolveFrameElementForTextLink(
+                normalizedLinkTarget,
+                frameElements ?? null,
+                projects ?? null,
+                linkFrameElementId ?? null
+            ),
+        [normalizedLinkTarget, frameElements, projects, linkFrameElementId]
+    );
 
-    const matchedElement =
-        frameElements?.find(
-            (element) => element.name?.toLowerCase() === normalizedLinkTarget.toLowerCase()
-        ) ?? null;
-    const externalLink = normalizedLinkTarget && isExternalLink(normalizedLinkTarget) ? normalizedLinkTarget : null;
+    const externalLink =
+        normalizedLinkTarget && isExternalLink(normalizedLinkTarget) && !(linkFrameElementId != null && linkFrameElementId > 0)
+            ? normalizedLinkTarget
+            : null;
+
+    const linkClassName = cn(
+        'font-bold hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white/50 rounded',
+        linkUnderline && 'underline decoration-2 underline-offset-2'
+    );
+
+    const linkStyle: React.CSSProperties | undefined = resolvedLinkColor ? { color: resolvedLinkColor } : undefined;
 
     const renderLinkedText = (content: string, key: string | number) => {
         if (externalLink) {
@@ -51,7 +145,8 @@ export default function BackgroundTextRenderer({
                     href={externalLink}
                     target={externalLink.startsWith('mailto:') ? '_self' : '_blank'}
                     rel="noopener noreferrer"
-                    className="font-bold underline decoration-2 underline-offset-2 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white/50 rounded"
+                    className={linkClassName}
+                    style={linkStyle}
                 >
                     {content}
                 </a>
@@ -63,8 +158,10 @@ export default function BackgroundTextRenderer({
                 <button
                     key={key}
                     type="button"
+                    data-background-text-internal-link="true"
                     onClick={() => onElementClick?.(matchedElement)}
-                    className="font-bold underline decoration-2 underline-offset-2 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white/50 rounded"
+                    className={linkClassName}
+                    style={linkStyle}
                 >
                     {content}
                 </button>
@@ -72,11 +169,15 @@ export default function BackgroundTextRenderer({
         }
 
         return (
-            <span key={key} className="font-bold underline decoration-2 underline-offset-2 rounded">
+            <span key={key} className={linkClassName} style={linkStyle}>
                 {content}
             </span>
         );
     };
+
+    if (!text) {
+        return null;
+    }
 
     return (
         <>

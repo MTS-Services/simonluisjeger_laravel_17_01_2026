@@ -14,7 +14,7 @@ class FrameElementController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'overlay_image' => 'required|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/webp,image/svg+xml|max:10240',
+            'overlay_image' => 'nullable|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/webp,image/svg+xml|max:10240',
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string|max:5000',
             'media_type' => 'nullable|in:image,video',
@@ -24,12 +24,16 @@ class FrameElementController extends Controller
             'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'links' => 'nullable|array|max:10',
             'links.*.label' => 'nullable|string|max:255',
-            'links.*.url' => 'nullable|url|max:2048',
+            'links.*.type' => 'nullable|in:external,internal',
+            'links.*.url' => 'nullable|string|max:2048',
+            'links.*.target_element_id' => 'nullable|integer',
         ]);
 
-        $overlayPath = $request->file('overlay_image')->store('frames/elements', 'public');
+        $overlayPath = $request->hasFile('overlay_image')
+            ? $request->file('overlay_image')->store('frames/elements', 'public')
+            : null;
 
-        $links = $this->sanitizeLinks($validated['links'] ?? []);
+        $links = $this->sanitizeLinks($validated['links'] ?? [], $frame->id, null);
 
         $mediaUrl = null;
         $mediaType = $validated['media_type'] ?? null;
@@ -86,10 +90,12 @@ class FrameElementController extends Controller
             'active_color' => ['nullable', 'string', 'max:9', 'regex:/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/'],
             'links' => 'nullable|array|max:10',
             'links.*.label' => 'nullable|string|max:255',
-            'links.*.url' => 'nullable|url|max:2048',
+            'links.*.type' => 'nullable|in:external,internal',
+            'links.*.url' => 'nullable|string|max:2048',
+            'links.*.target_element_id' => 'nullable|integer',
         ]);
 
-        $links = $this->sanitizeLinks($validated['links'] ?? []);
+        $links = $this->sanitizeLinks($validated['links'] ?? [], $element->frame_id, $element->id);
 
         if ($request->hasFile('overlay_image')) {
             Storage::disk('public')->delete($element->overlay_image);
@@ -128,22 +134,69 @@ class FrameElementController extends Controller
         return redirect()->back()->with('message', 'Element updated successfully.');
     }
 
-    protected function sanitizeLinks(array $links): array
+    /**
+     * @param  array<int, array<string, mixed>>  $links
+     * @return array<int, array<string, mixed>>
+     */
+    protected function sanitizeLinks(array $links, int $frameId, ?int $excludeElementId): array
     {
-        return collect($links)
-            ->filter(fn ($link) => ! empty($link['label']) && ! empty($link['url']))
-            ->map(fn ($link) => [
-                'label' => $link['label'],
-                'url' => $link['url'],
-            ])
-            ->take(10)
-            ->values()
-            ->all();
+        $out = [];
+
+        foreach ($links as $link) {
+            $label = trim((string) ($link['label'] ?? ''));
+            if ($label === '') {
+                continue;
+            }
+
+            $type = $link['type'] ?? 'external';
+            if ($type !== 'internal') {
+                $type = 'external';
+            }
+
+            if ($type === 'internal') {
+                $tid = isset($link['target_element_id']) ? (int) $link['target_element_id'] : 0;
+                if ($tid <= 0) {
+                    continue;
+                }
+                if ($excludeElementId !== null && $tid === $excludeElementId) {
+                    continue;
+                }
+                $exists = FrameElement::query()
+                    ->where('id', $tid)
+                    ->where('frame_id', $frameId)
+                    ->exists();
+                if (! $exists) {
+                    continue;
+                }
+                $out[] = [
+                    'label' => $label,
+                    'type' => 'internal',
+                    'target_element_id' => $tid,
+                ];
+
+                continue;
+            }
+
+            $url = trim((string) ($link['url'] ?? ''));
+            if ($url === '' || filter_var($url, FILTER_VALIDATE_URL) === false) {
+                continue;
+            }
+
+            $out[] = [
+                'label' => $label,
+                'type' => 'external',
+                'url' => $url,
+            ];
+        }
+
+        return collect($out)->take(10)->values()->all();
     }
 
     public function destroy(FrameElement $element)
     {
-        Storage::disk('public')->delete($element->overlay_image);
+        if ($element->overlay_image) {
+            Storage::disk('public')->delete($element->overlay_image);
+        }
 
         if ($element->media_url) {
             Storage::disk('public')->delete($element->media_url);

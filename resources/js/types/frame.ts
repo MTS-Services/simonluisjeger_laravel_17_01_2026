@@ -1,13 +1,18 @@
 export interface ElementLink {
     label: string;
-    url: string;
+    /** Omit or `external`: open `url` in a new tab (legacy rows only had `url`). */
+    type?: 'external' | 'internal';
+    /** External link destination. */
+    url?: string;
+    /** When `type` is `internal`, frame element id to open (same panel as canvas click). */
+    target_element_id?: number | null;
 }
 
 export interface FrameElement {
     id: number;
     frame_id: number;
     name: string;
-    overlay_image: string;
+    overlay_image: string | null;
     overlay_image_url?: string | null;
     title: string | null;
     description: string | null;

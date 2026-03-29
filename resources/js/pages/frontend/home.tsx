@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
-import { Head, Link } from "@inertiajs/react";
+import { Head } from "@inertiajs/react";
 import { useAppearance } from "@/hooks/use-appearance";
 import Text from "@/components/text";
 import { FramePreview } from "@/components/frame/frame-preview";
@@ -9,8 +9,10 @@ import BackgroundTextRenderer from "@/components/background-text-renderer";
 
 interface ProjectUrl {
   label: string;
-  url: string;
+  url?: string;
   type?: 'email';
+  /** Open this frame element in the detail panel (same as canvas click). */
+  internalTargetId?: number;
 }
 
 function matchProjectForElement(element: FrameElement, projects: ProjectRecord[]): ProjectRecord | undefined {
@@ -36,6 +38,9 @@ interface BackgroundRecord {
   text_color?: string | null;
   text1_link_word?: string | null;
   text1_link_element_name?: string | null;
+  text1_link_frame_element_id?: number | null;
+  text1_link_color?: string | null;
+  text1_link_underline?: boolean | null;
 }
 
 interface Props {
@@ -199,12 +204,27 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     }
 
     return selectedElement.links
-      .filter((link: ElementLink) => link.label && link.url)
-      .map<ProjectUrl>((link) => ({
-        label: link.label,
-        url: link.url,
-        type: link.url.startsWith('mailto:') ? 'email' : undefined,
-      }));
+      .filter((link: ElementLink) => {
+        const label = link.label?.trim();
+        if (!label) {
+          return false;
+        }
+        if (link.type === 'internal') {
+          return typeof link.target_element_id === 'number' && link.target_element_id > 0;
+        }
+        return Boolean(link.url?.trim());
+      })
+      .map<ProjectUrl>((link) => {
+        if (link.type === 'internal' && typeof link.target_element_id === 'number') {
+          return { label: link.label, internalTargetId: link.target_element_id };
+        }
+        const url = link.url ?? '';
+        return {
+          label: link.label,
+          url,
+          type: url.startsWith('mailto:') ? 'email' : undefined,
+        };
+      });
   }, [selectedElement]);
 
   const detailLinks = useMemo<ProjectUrl[]>(() => {
@@ -230,11 +250,13 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
       const isFrameElement = (target as Element).closest?.('.frame-element-clickable');
+      const isTextInternalLink = (target as Element).closest?.('[data-background-text-internal-link="true"]');
 
       if (
         detailsRef.current &&
         !detailsRef.current.contains(target) &&
-        !isFrameElement
+        !isFrameElement &&
+        !isTextInternalLink
       ) {
         setSelectedElement(null);
         setSelectedId(null);
@@ -245,35 +267,9 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const titleLinkElementName = backgroundText?.text1_link_element_name?.trim();
-  const titleLinkElement = useMemo(
-    () =>
-      frame?.elements?.find(
-        (el) => el.name?.toLowerCase() === titleLinkElementName?.toLowerCase()
-      ) ?? null,
-    [frame?.elements, titleLinkElementName]
-  );
-
-  const titleAssignedUrl = useMemo(() => {
-    const elementName = backgroundText?.text1_link_element_name?.trim();
-    if (
-      elementName &&
-      (elementName.startsWith('http://') ||
-        elementName.startsWith('https://') ||
-        elementName.startsWith('mailto:'))
-    ) {
-      return elementName;
-    }
-    if (!titleLinkElement?.links?.length) {
-      return null;
-    }
-    const primary = titleLinkElement.links.find((link) => link.url)?.url;
-    return primary ?? null;
-  }, [titleLinkElement, backgroundText?.text1_link_element_name]);
-
   return (
     <main className="min-h-screen p-4 items-center h-auto w-full" style={{ backgroundColor: backgroundText?.background_color || '#d9d9d9' }}>
-      <Head title={backgroundText?.title?.trim() ?? 'Simon Jeger'} />
+      <Head title="Simon Jeger" />
       <div className="flex flex-col gap-4 lg:flex-row w-full h-auto lg:items-stretch items-center">
         <div ref={previewRef} className="w-full flex-1 flex items-center justify-center  pb-0 pt-6 lg:py-0 lg:h-full">
           <div className="w-full h-full flex items-center justify-center mt-20">
@@ -380,8 +376,26 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                 {detailLinks.length > 0 && (
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                     {detailLinks.map((link, index) => {
-                      const isEmailLink = link.type === 'email' || link.url.startsWith('mailto:');
-                      const href = isEmailLink && !link.url.startsWith('mailto:') ? `mailto:${link.url}` : link.url;
+                      if (link.internalTargetId != null) {
+                        const targetEl = frame?.elements?.find((e) => e.id === link.internalTargetId);
+                        if (!targetEl) {
+                          return null;
+                        }
+                        return (
+                          <button
+                            key={`${link.label}-internal-${index}`}
+                            type="button"
+                            data-background-text-internal-link="true"
+                            onClick={() => handleFrameElementClick(targetEl)}
+                            className="text-sm lg:text-base font-bold capitalize hover:underline transition-all"
+                          >
+                            {link.label}
+                          </button>
+                        );
+                      }
+                      const url = link.url ?? '';
+                      const isEmailLink = link.type === 'email' || url.startsWith('mailto:');
+                      const href = isEmailLink && !url.startsWith('mailto:') ? `mailto:${url}` : url;
                       return (
                         <a
                           key={`${link.label}-${index}`}
@@ -414,9 +428,16 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
               {backgroundText?.text1 && (
                 <BackgroundTextRenderer
                   text={backgroundText.text1}
-                  linkWord={backgroundText.text1_link_word}
                   linkTarget={backgroundText.text1_link_element_name}
+                  linkFrameElementId={backgroundText.text1_link_frame_element_id ?? null}
+                  linkColor={backgroundText.text1_link_color ?? undefined}
+                  linkUnderline={
+                    backgroundText.text1_link_underline === undefined || backgroundText.text1_link_underline === null
+                      ? true
+                      : Boolean(backgroundText.text1_link_underline)
+                  }
                   frameElements={frame?.elements}
+                  projects={projectData}
                   onElementClick={handleFrameElementClick}
                 />
               )}

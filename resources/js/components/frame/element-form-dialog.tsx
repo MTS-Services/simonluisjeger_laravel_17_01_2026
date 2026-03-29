@@ -13,6 +13,34 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import type { ElementLink, Frame, FrameElement } from '@/types/frame';
 import { Plus, Trash2 } from 'lucide-react';
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select';
+
+function createEmptyLink(): ElementLink {
+    return { label: '', type: 'external', url: '', target_element_id: null };
+}
+
+function normalizeElementLink(raw: Partial<ElementLink>): ElementLink {
+    if (raw.type === 'internal' && raw.target_element_id != null && Number(raw.target_element_id) > 0) {
+        return {
+            label: String(raw.label ?? ''),
+            type: 'internal',
+            url: '',
+            target_element_id: Number(raw.target_element_id),
+        };
+    }
+    return {
+        label: String(raw.label ?? ''),
+        type: 'external',
+        url: String(raw.url ?? ''),
+        target_element_id: null,
+    };
+}
 
 interface ElementFormDialogProps {
     frame: Frame;
@@ -29,19 +57,25 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
     const minimumLinkRows = 1;
 
     const emptyLinks = useMemo<ElementLink[]>(
-        () =>
-            Array.from({ length: minimumLinkRows }, () => ({
-                label: '',
-                url: '',
-            })),
+        () => Array.from({ length: minimumLinkRows }, () => createEmptyLink()),
         [],
     );
 
     const initialLinks = useMemo(() => {
-        const existing = element?.links?.length ? element.links.slice(0, 10) : [];
+        const existing = element?.links?.length
+            ? element.links.slice(0, 10).map((l) => normalizeElementLink(l))
+            : [];
         const rowsNeeded = Math.max(minimumLinkRows - existing.length, 0);
         return [...existing, ...emptyLinks.slice(0, rowsNeeded)];
     }, [element?.links, emptyLinks]);
+
+    const linkTargetElements = useMemo(
+        () =>
+            [...frame.elements]
+                .filter((e) => !isEditing || e.id !== element?.id)
+                .sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0) || a.name.localeCompare(b.name)),
+        [frame.elements, isEditing, element?.id],
+    );
 
     const { data, setData, post, processing, errors, reset } = useForm<{
         name: string;
@@ -87,7 +121,7 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
             active_color: element?.active_color ?? '',
             links: element?.links?.length
                 ? (() => {
-                    const existing = element.links!.slice(0, 10);
+                    const existing = element.links!.slice(0, 10).map((l) => normalizeElementLink(l));
                     const rowsNeeded = Math.max(minimumLinkRows - existing.length, 0);
                     return [...existing, ...emptyLinks.slice(0, rowsNeeded)];
                 })()
@@ -121,21 +155,36 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
         });
     }
 
-    function handleLinkChange(index: number, field: keyof ElementLink, value: string) {
-        const updated = data.links.map((link, i) => (i === index ? { ...link, [field]: value } : link));
+    function handleLinkChange(index: number, field: keyof ElementLink, value: string | number | null) {
+        const updated = data.links.map((link, i) =>
+            i === index ? ({ ...link, [field]: value } as ElementLink) : link,
+        );
         setData('links', updated);
+    }
+
+    function setLinkType(index: number, type: 'external' | 'internal') {
+        setData(
+            'links',
+            data.links.map((link, i) =>
+                i === index
+                    ? type === 'external'
+                        ? { ...link, type: 'external', url: link.url ?? '', target_element_id: null }
+                        : { ...link, type: 'internal', url: '', target_element_id: link.target_element_id ?? null }
+                    : link,
+            ),
+        );
     }
 
     function addLinkRow() {
         if (data.links.length >= 10) {
             return;
         }
-        setData('links', [...data.links, { label: '', url: '' }]);
+        setData('links', [...data.links, createEmptyLink()]);
     }
 
     function removeLinkRow(index: number) {
         if (data.links.length <= minimumLinkRows) {
-            const updated = data.links.map((link, i) => (i === index ? { label: '', url: '' } : link));
+            const updated = data.links.map((link, i) => (i === index ? createEmptyLink() : link));
             setData('links', updated);
             return;
         }
@@ -194,15 +243,12 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
                     {/* Row 3: Overlay Image + Detail Media */}
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <Label htmlFor="overlay_image">
-                                Overlay Image {!isEditing && '*'}
-                            </Label>
+                            <Label htmlFor="overlay_image">Overlay Image (optional)</Label>
                             <Input
                                 ref={overlayRef}
                                 id="overlay_image"
                                 type="file"
                                 accept="image/*"
-                                required={!isEditing}
                                 onChange={(e) => setData('overlay_image', e.target.files?.[0] ?? null)}
                             />
                             {errors.overlay_image && <p className="text-sm text-destructive">{errors.overlay_image}</p>}
@@ -274,34 +320,106 @@ export function ElementFormDialog({ frame, element, open, onOpenChange }: Elemen
                                 <Plus className="h-4 w-4" /> Add Link
                             </Button>
                         </div>
-                        <div className="space-y-2">
-                            {data.links.map((link, index) => (
-                                <div key={index} className="grid grid-cols-[1fr_1fr_auto] gap-2 items-center">
-                                    <Input
-                                        placeholder="Label"
-                                        value={link.label}
-                                        onChange={(e) => handleLinkChange(index, 'label', e.target.value)}
-                                        maxLength={255}
-                                    />
-                                    <Input
-                                        placeholder="https://example.com"
-                                        value={link.url}
-                                        onChange={(e) => handleLinkChange(index, 'url', e.target.value)}
-                                        type="url"
-                                    />
-                                    <Button
-                                        type="button"
-                                        variant="ghost"
-                                        size="icon"
-                                        onClick={() => removeLinkRow(index)}
-                                    >
-                                        <Trash2 className="h-4 w-4 text-red-500" />
-                                    </Button>
-                                </div>
-                            ))}
+                        <div className="space-y-3">
+                            {data.links.map((link, index) => {
+                                const linkType = link.type ?? 'external';
+                                const internalValue =
+                                    link.target_element_id != null && link.target_element_id > 0
+                                        ? String(link.target_element_id)
+                                        : '__none__';
+                                return (
+                                    <div key={index} className="rounded-md border p-3 space-y-2">
+                                        <div className="grid grid-cols-1 gap-3 md:grid-cols-12 md:items-end">
+                                            <div className="md:col-span-4 space-y-1">
+                                                <Label className="text-xs text-muted-foreground">Label</Label>
+                                                <Input
+                                                    placeholder="Link label"
+                                                    value={link.label}
+                                                    onChange={(e) => handleLinkChange(index, 'label', e.target.value)}
+                                                    maxLength={255}
+                                                />
+                                            </div>
+                                            <div className="md:col-span-3 space-y-1">
+                                                <Label className="text-xs text-muted-foreground">Type</Label>
+                                                <Select
+                                                    value={linkType}
+                                                    onValueChange={(v) => setLinkType(index, v as 'external' | 'internal')}
+                                                >
+                                                    <SelectTrigger className="w-full">
+                                                        <SelectValue />
+                                                    </SelectTrigger>
+                                                    <SelectContent>
+                                                        <SelectItem value="external">External (URL)</SelectItem>
+                                                        <SelectItem value="internal">Internal (element)</SelectItem>
+                                                    </SelectContent>
+                                                </Select>
+                                            </div>
+                                            <div className="md:col-span-4 space-y-1">
+                                                {linkType === 'external' ? (
+                                                    <>
+                                                        <Label className="text-xs text-muted-foreground">URL</Label>
+                                                        <Input
+                                                            placeholder="https://example.com"
+                                                            value={link.url ?? ''}
+                                                            onChange={(e) => handleLinkChange(index, 'url', e.target.value)}
+                                                            type="url"
+                                                        />
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <Label className="text-xs text-muted-foreground">Target element</Label>
+                                                        {linkTargetElements.length === 0 ? (
+                                                            <p className="text-xs text-muted-foreground py-2">
+                                                                Add another frame element first to link internally.
+                                                            </p>
+                                                        ) : (
+                                                            <Select
+                                                                value={internalValue}
+                                                                onValueChange={(v) =>
+                                                                    handleLinkChange(
+                                                                        index,
+                                                                        'target_element_id',
+                                                                        v === '__none__' ? null : parseInt(v, 10),
+                                                                    )
+                                                                }
+                                                            >
+                                                                <SelectTrigger className="w-full">
+                                                                    <SelectValue placeholder="Select element…" />
+                                                                </SelectTrigger>
+                                                                <SelectContent>
+                                                                    <SelectItem value="__none__">Select element…</SelectItem>
+                                                                    {linkTargetElements.map((el) => (
+                                                                        <SelectItem key={el.id} value={String(el.id)}>
+                                                                            {el.name}
+                                                                            {el.title ? ` — ${el.title}` : ''}
+                                                                        </SelectItem>
+                                                                    ))}
+                                                                </SelectContent>
+                                                            </Select>
+                                                        )}
+                                                    </>
+                                                )}
+                                            </div>
+                                            <div className="md:col-span-1 flex justify-end pb-0.5">
+                                                <Button
+                                                    type="button"
+                                                    variant="ghost"
+                                                    size="icon"
+                                                    onClick={() => removeLinkRow(index)}
+                                                    aria-label="Remove link"
+                                                >
+                                                    <Trash2 className="h-4 w-4 text-red-500" />
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                         {hasLinkFieldErrors && (
-                            <p className="text-sm text-destructive">Please ensure each link has a label and valid URL (max 10).</p>
+                            <p className="text-sm text-destructive">
+                                Check each link: external needs a valid URL; internal needs a target element (max 10 links).
+                            </p>
                         )}
                     </div>
 

@@ -15,6 +15,21 @@ class BackgroundText extends Model
         'text2',
         'background_color',
         'text_color',
+        'text1_link_word',
         'text1_link_element_name',
+        'text1_link_frame_element_id',
+        'text1_link_color',
+        'text1_link_underline',
     ];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'text1_link_underline' => 'boolean',
+            'text1_link_frame_element_id' => 'integer',
+        ];
+    }
 }

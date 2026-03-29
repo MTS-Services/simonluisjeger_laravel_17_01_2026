@@ -197,12 +197,25 @@ export function FrameCanvas({
                                     className="h-full w-full"
                                     style={{ transform: `rotate(${layout.rotation ?? 0}deg)` }}
                                 >
-                                    <img
-                                        src={element.overlay_image_url ?? toStorageUrl(element.overlay_image) ?? ''}
-                                        alt={element.name}
-                                        className="h-full w-full object-contain pointer-events-none select-none"
-                                        draggable={false}
-                                    />
+                                    {(() => {
+                                        const src =
+                                            element.overlay_image_url ?? toStorageUrl(element.overlay_image);
+                                        if (!src) {
+                                            return (
+                                                <div className="flex h-full w-full items-center justify-center rounded border border-dashed border-muted-foreground/40 bg-muted/30 text-center text-[10px] text-muted-foreground px-1">
+                                                    {element.name}
+                                                </div>
+                                            );
+                                        }
+                                        return (
+                                            <img
+                                                src={src}
+                                                alt={element.name}
+                                                className="h-full w-full object-contain pointer-events-none select-none"
+                                                draggable={false}
+                                            />
+                                        );
+                                    })()}
                                 </div>
                                 <div className="absolute inset-0 border-2 border-dashed border-blue-400/50 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                                 <span className="absolute -top-5 left-0 bg-blue-600 text-white text-[10px] px-1.5 py-0.5 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
@@ -230,12 +243,25 @@ export function FrameCanvas({
                                 className="h-full w-full"
                                 style={{ transform: `rotate(${layout.rotation ?? 0}deg)` }}
                             >
-                                <img
-                                    src={element.overlay_image_url ?? toStorageUrl(element.overlay_image) ?? ''}
-                                    alt={element.name}
-                                    className="h-full w-full object-contain"
-                                    draggable={false}
-                                />
+                                {(() => {
+                                    const src =
+                                        element.overlay_image_url ?? toStorageUrl(element.overlay_image);
+                                    if (!src) {
+                                        return (
+                                            <div className="flex h-full w-full items-center justify-center rounded border border-dashed border-muted-foreground/40 bg-muted/30 text-center text-[10px] text-muted-foreground px-1">
+                                                {element.name}
+                                            </div>
+                                        );
+                                    }
+                                    return (
+                                        <img
+                                            src={src}
+                                            alt={element.name}
+                                            className="h-full w-full object-contain"
+                                            draggable={false}
+                                        />
+                                    );
+                                })()}
                             </div>
                         </div>
                     );
