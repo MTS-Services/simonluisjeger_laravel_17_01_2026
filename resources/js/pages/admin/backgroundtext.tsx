@@ -42,6 +42,7 @@ function buildFormStateFromInformation(info: Record<string, unknown>) {
         text1_link_element_name: String(info.text1_link_element_name ?? ''),
         text1_link_frame_element_id: parseLinkFrameElementId(info.text1_link_frame_element_id),
         text1_link_color: String(info.text1_link_color || '#2563eb'),
+        text1_link_hover_color: String(info.text1_link_hover_color || ''),
         text1_link_underline:
             info.text1_link_underline === undefined || info.text1_link_underline === null
                 ? true
@@ -69,6 +70,7 @@ export default function BackgroundText({
         text1_link_element_name: '',
         text1_link_frame_element_id: null as number | null,
         text1_link_color: '#2563eb',
+        text1_link_hover_color: '',
         text1_link_underline: true,
     });
 
@@ -107,6 +109,7 @@ export default function BackgroundText({
                     text1_link_element_name: information.text1_link_element_name,
                     text1_link_frame_element_id: information.text1_link_frame_element_id,
                     text1_link_color: information.text1_link_color,
+                    text1_link_hover_color: information.text1_link_hover_color,
                     text1_link_underline: information.text1_link_underline,
                 }),
         [information]
@@ -271,6 +274,37 @@ export default function BackgroundText({
                                     </div>
                                     <InputError message={errors.text1_link_color} />
                                 </div>
+                                <div>
+                                    <Label>Link hover color (optional)</Label>
+                                    <div className="mt-1 flex items-center gap-3">
+                                        <input
+                                            type="color"
+                                            value={
+                                                data.text1_link_hover_color?.startsWith('#')
+                                                    ? data.text1_link_hover_color
+                                                    : '#1d4ed8'
+                                            }
+                                            onChange={(e) => setData('text1_link_hover_color', e.target.value)}
+                                            className="h-10 w-14 cursor-pointer rounded border p-1"
+                                        />
+                                        <Input
+                                            value={data.text1_link_hover_color}
+                                            onChange={(e) => setData('text1_link_hover_color', e.target.value)}
+                                            maxLength={7}
+                                            className="w-28 font-mono"
+                                            placeholder="(none)"
+                                        />
+                                        <Button
+                                            type="button"
+                                            variant="secondary"
+                                            onClick={() => setData('text1_link_hover_color', '')}
+                                            className="capitalize"
+                                        >
+                                            Clear
+                                        </Button>
+                                    </div>
+                                    <InputError message={errors.text1_link_hover_color} />
+                                </div>
                                 <div className="flex items-end gap-3 pb-2">
                                     <Checkbox
                                         id="text1_link_underline"
@@ -298,6 +332,7 @@ export default function BackgroundText({
                                         linkTarget={data.text1_link_element_name}
                                         linkFrameElementId={savedLinkElementId}
                                         linkColor={data.text1_link_color}
+                                        linkHoverColor={data.text1_link_hover_color || undefined}
                                         linkUnderline={data.text1_link_underline}
                                         frameElements={frame?.elements}
                                         projects={projectPreview}

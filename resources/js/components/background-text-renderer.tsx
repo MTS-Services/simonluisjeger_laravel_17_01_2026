@@ -16,6 +16,7 @@ interface BackgroundTextRendererProps {
     /** When set, opens this frame element (same as canvas). Takes precedence over name/key matching. */
     linkFrameElementId?: number | null;
     linkColor?: string | null;
+    linkHoverColor?: string | null;
     linkUnderline?: boolean;
     frameElements?: FrameElement[] | null;
     /** When set, internal targets can match project key or title (same as canvas → panel behavior). */
@@ -102,6 +103,7 @@ export default function BackgroundTextRenderer({
     linkTarget,
     linkFrameElementId,
     linkColor,
+    linkHoverColor,
     linkUnderline = true,
     frameElements,
     projects,
@@ -113,6 +115,7 @@ export default function BackgroundTextRenderer({
     const normalizedLinkWord = linkWord?.trim() || '';
     const normalizedLinkTarget = linkTarget?.trim() || '';
     const resolvedLinkColor = linkColor?.trim() || undefined;
+    const resolvedLinkHoverColor = linkHoverColor?.trim() || undefined;
 
     const matchedElement = useMemo(
         () =>
@@ -131,11 +134,24 @@ export default function BackgroundTextRenderer({
             : null;
 
     const linkClassName = cn(
-        'font-bold hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white/50 rounded',
+        'font-bold focus:outline-none focus:ring-2 focus:ring-white/50 rounded',
+        // When no hover color is provided, keep the old behavior (slight fade on hover).
+        !resolvedLinkHoverColor && 'hover:opacity-80',
+        // When hover color is provided, use CSS variables so hover can override base color.
+        (resolvedLinkColor || resolvedLinkHoverColor) && 'text-[color:var(--bt-link-color)]',
+        resolvedLinkHoverColor && 'hover:text-[color:var(--bt-link-hover-color)]',
         linkUnderline && 'underline decoration-2 underline-offset-2'
     );
 
-    const linkStyle: React.CSSProperties | undefined = resolvedLinkColor ? { color: resolvedLinkColor } : undefined;
+    const linkStyle: React.CSSProperties | undefined =
+        resolvedLinkColor || resolvedLinkHoverColor
+            ? ({
+                  ...(resolvedLinkColor ? { ['--bt-link-color' as any]: resolvedLinkColor } : null),
+                  ...(resolvedLinkHoverColor
+                      ? { ['--bt-link-hover-color' as any]: resolvedLinkHoverColor }
+                      : null),
+              } satisfies React.CSSProperties)
+            : undefined;
 
     const renderLinkedText = (content: string, key: string | number) => {
         if (externalLink) {

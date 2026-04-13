@@ -40,6 +40,7 @@ interface BackgroundRecord {
   text1_link_element_name?: string | null;
   text1_link_frame_element_id?: number | null;
   text1_link_color?: string | null;
+  text1_link_hover_color?: string | null;
   text1_link_underline?: boolean | null;
 }
 
@@ -431,6 +432,7 @@ export default function Home({ projectData, backgroundText, frame }: Props) {
                   linkTarget={backgroundText.text1_link_element_name}
                   linkFrameElementId={backgroundText.text1_link_frame_element_id ?? null}
                   linkColor={backgroundText.text1_link_color ?? undefined}
+                  linkHoverColor={backgroundText.text1_link_hover_color ?? undefined}
                   linkUnderline={
                     backgroundText.text1_link_underline === undefined || backgroundText.text1_link_underline === null
                       ? true

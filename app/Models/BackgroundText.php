@@ -19,6 +19,7 @@ class BackgroundText extends Model
         'text1_link_element_name',
         'text1_link_frame_element_id',
         'text1_link_color',
+        'text1_link_hover_color',
         'text1_link_underline',
     ];
 

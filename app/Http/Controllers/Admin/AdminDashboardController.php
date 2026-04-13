@@ -66,10 +66,15 @@ class AdminDashboardController extends Controller
             'text1_link_element_name' => 'nullable|string|max:100',
             'text1_link_frame_element_id' => 'nullable|integer|exists:frame_elements,id',
             'text1_link_color' => 'nullable|string|max:7',
+            'text1_link_hover_color' => 'nullable|string|max:7',
             'text1_link_underline' => 'sometimes|boolean',
         ]);
 
         $validated['text1_link_word'] = null;
+        if (array_key_exists('text1_link_hover_color', $validated)) {
+            $hover = trim((string) ($validated['text1_link_hover_color'] ?? ''));
+            $validated['text1_link_hover_color'] = $hover !== '' ? $hover : null;
+        }
 
         $payload = $request->all();
         if (array_key_exists('text1_link_frame_element_id', $payload)) {

@@ -24,6 +24,7 @@ test('admin can create background text with colors', function () {
         'text2' => 'Click to explore',
         'background_color' => '#ff0000',
         'text_color' => '#00ff00',
+        'text1_link_hover_color' => '#123456',
     ]);
 
     $response->assertRedirect();
@@ -33,7 +34,8 @@ test('admin can create background text with colors', function () {
         ->and($backgroundText->text1)->toBe('Hello World')
         ->and($backgroundText->text2)->toBe('Click to explore')
         ->and($backgroundText->background_color)->toBe('#ff0000')
-        ->and($backgroundText->text_color)->toBe('#00ff00');
+        ->and($backgroundText->text_color)->toBe('#00ff00')
+        ->and($backgroundText->text1_link_hover_color)->toBe('#123456');
 });
 
 test('admin can update background text with colors', function () {
@@ -44,6 +46,7 @@ test('admin can update background text with colors', function () {
         'text2' => 'Original 2',
         'background_color' => '#d9d9d9',
         'text_color' => '#e6e6e6',
+        'text1_link_hover_color' => null,
     ]);
 
     $response = $this->actingAs($admin)->post(route('admin.background_text.update'), [
@@ -51,13 +54,15 @@ test('admin can update background text with colors', function () {
         'text2' => 'Updated 2',
         'background_color' => '#000000',
         'text_color' => '#ffffff',
+        'text1_link_hover_color' => '#abcdef',
     ]);
 
     $response->assertRedirect();
 
     $backgroundText = BackgroundText::first();
     expect($backgroundText->background_color)->toBe('#000000')
-        ->and($backgroundText->text_color)->toBe('#ffffff');
+        ->and($backgroundText->text_color)->toBe('#ffffff')
+        ->and($backgroundText->text1_link_hover_color)->toBe('#abcdef');
 });
 
 test('background text color fields are required', function () {
