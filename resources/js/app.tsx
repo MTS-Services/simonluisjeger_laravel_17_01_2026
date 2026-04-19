@@ -8,10 +8,10 @@ import { initializeTheme } from './hooks/use-appearance';
 import ErrorFallback from './components/error-fallback';
 import { ErrorBoundary } from 'react-error-boundary';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME;
 
 createInertiaApp({
-    title: (title) => (title ? `${title} - ${appName}` : appName),
+    title: (title) => (title ?? "" ),
     resolve: (name) =>
         resolvePageComponent(
             `./pages/${name}.tsx`,
