@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{-- Google Site Verification --}}
+    <meta name="google-site-verification" content="MQAmcdPGR948LYOxVln9pLINL3l4CJhE1Es6ROH2vZQ" />
+
     {{-- Inline script to detect system dark mode preference and apply it immediately --}}
     <script>
         (function() {
@@ -19,6 +22,63 @@
             }
         })();
     </script>
+
+    @verbatim
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://www.simonjeger.ch/#website",
+                    "url": "https://www.simonjeger.ch/",
+                    "name": "Robotics Art Research & Creative Projects | Simon Jeger",
+                    "description": "Robotics Art by Simon Jeger | Explore innovative robotics and art projects combining AI, autonomous systems, and creative technology at EPFL research.",
+                    "publisher": {
+                        "@id": "https://www.simonjeger.ch/#person"
+                    },
+                    "inLanguage": "en"
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://www.simonjeger.ch/#person",
+                    "name": "Simon Jeger",
+                    "url": "https://www.simonjeger.ch/",
+                    "description": "Robotics researcher and creative technologist working at the intersection of robotics, AI, and art.",
+                    "jobTitle": "Robotics Researcher",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Lausanne",
+                        "postalCode": "1015",
+                        "addressCountry": "CH"
+                    },
+                    "affiliation": {
+                        "@type": "Organization",
+                        "name": "EPFL",
+                        "url": "https://www.epfl.ch/"
+                    },
+                    "knowsAbout": [
+                        "Robotics",
+                        "Robotics Art",
+                        "Reinforcement Learning",
+                        "Autonomous Systems",
+                        "Drone Navigation",
+                        "Aerial Robotics",
+                        "Artificial Intelligence",
+                        "Control Systems"
+                    ],
+                    "sameAs": [
+                        "https://scholar.google.com/citations?user=OGc_xMIAAAAJ",
+                        "https://www.epfl.ch/",
+                        "https://lis.epfl.ch/"
+                    ]
+                }
+            ]
+        }
+    </script>
+    @endverbatim
+
+
 
     {{-- Inline style to set the HTML background color based on our theme in app.css --}}
     <style>
